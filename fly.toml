@@ -1,0 +1,49 @@
+# fly.toml app configuration file generated for noteos on 2024-09-26T21:37:47+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'noteos'
+primary_region = 'cdg'
+console_command = '/rails/bin/rails console'
+
+[build]
+
+[env]
+  DATABASE_URL = 'sqlite3:///data/production.sqlite3'
+
+[[mounts]]
+  source = 'data'
+  destination = '/data'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[checks]
+  [checks.status]
+    port = 3000
+    type = 'http'
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/up'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [checks.status.headers]
+      X-Forwarded-Proto = 'https'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[[statics]]
+  guest_path = '/rails/public'
+  url_prefix = '/'
