@@ -1,3 +1,9 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
-<%= link_to 'Sign in', new_user_session_path %>
+<% if user_signed_in? %>
+  <p>Welcome, <%= current_user.email %>.
+    <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+  </p>
+<% else %>
+  <%= link_to "Sign in", new_user_session_path %>
+<% end %>
