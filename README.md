@@ -12,4 +12,6 @@
 * setup local development.sqlite3 (wsl -> windows)
 * add views: Home#index, Home#about
 * manual prettier in RubyMine: `shift + alt + F`
-* integrate with Devise
+* [integrate with Devise](https://dev.to/kevinluo201/how-to-setup-very-basic-devise-in-rails-7-55ia)
+* [setup CD](https://fly.io/docs/launch/continuous-deployment-with-github-actions/#speed-run-your-way-to-continuous-deployment) (continuous deployment)
+* 
