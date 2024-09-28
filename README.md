@@ -19,4 +19,5 @@
 * install paper_trail, friendly_id
 * generate model Article (title, slug, author)
 * update Article model
-* generate friendly_id
+* generate friendly_id_slugs
+* generate versions: g paper_trail:install
