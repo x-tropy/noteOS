@@ -17,3 +17,5 @@
 * Sign out: use turbo_method to send DELETE request to server
 * set up action text
 * install paper_trail, friendly_id
+* generate model Article (title, slug, author)
+* update Article model
