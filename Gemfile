@@ -58,3 +58,5 @@ end
 
 gem "dockerfile-rails", ">= 1.6", :group => :development
 gem "devise"
+gem "paper_trail"
+gem "friendly_id"

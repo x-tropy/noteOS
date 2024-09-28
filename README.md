@@ -16,3 +16,4 @@
 * [setup CD](https://fly.io/docs/launch/continuous-deployment-with-github-actions/#speed-run-your-way-to-continuous-deployment) (continuous deployment)
 * Sign out: use turbo_method to send DELETE request to server
 * set up action text
+* install paper_trail, friendly_id
