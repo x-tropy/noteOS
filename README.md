@@ -21,3 +21,4 @@
 * update Article model
 * generate friendly_id_slugs
 * generate versions: g paper_trail:install
+* generate model Comment & 1 migration
