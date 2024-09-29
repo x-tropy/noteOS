@@ -24,3 +24,5 @@
 * generate model Comment & 1 migration
 * generate controller Articles
 * customized article views (time to reboot sever!)
+* rails generate migration FixArticleAuthorForeignKey
+* 
