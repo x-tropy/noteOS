@@ -1,2 +1,11 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1>Articles</h1>
+
+<% @articles.each do |article| %>
+  <div>
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <p>By <%= article.author.email %></p>
+    <p><%= truncate(strip_tags(article.content.to_s), length: 100) %></p>
+  </div>
+<% end %>
+
+<%= link_to 'New Article', new_article_path if user_signed_in? %>

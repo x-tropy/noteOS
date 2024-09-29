@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get "articles/index"
-  get "articles/show"
-  get "articles/new"
-  get "articles/create"
-  get "articles/edit"
-  get "articles/update"
+  resources :articles
   devise_for :users
   root "home#index"
   get "/about", to: "home#about"

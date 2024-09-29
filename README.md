@@ -23,3 +23,4 @@
 * generate versions: g paper_trail:install
 * generate model Comment & 1 migration
 * generate controller Articles
+* customized article views (time to reboot sever!)
