@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+
   def index
     @articles = Article.all
   end
 
   def show
-    @article = Article.friendly.find(params[:id])
   end
 
   def new
@@ -21,7 +22,6 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.friendly.find(params[:id])
   end
 
   def update
@@ -30,6 +30,11 @@ class ArticlesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to articles_url, notice: "Article was successfully destroyed."
   end
 
   private
