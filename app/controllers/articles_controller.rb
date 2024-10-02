@@ -1,12 +1,10 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update]
-  before_action :authenticate_user!, except: [:index, :show]
-
   def index
     @articles = Article.all
   end
 
   def show
+    @article = Article.friendly.find(params[:id])
   end
 
   def new
