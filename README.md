@@ -34,3 +34,4 @@
 * put stimulus under vite's control
 * fly deploy (with vite & node)
 * add Tailwind
+* add Vue

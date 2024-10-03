@@ -1,5 +1,5 @@
 <h1 class="text-3xl font-bold underline">Articles</h1>
-<div data-controller="hello"></div>
+<div id="app"></div>
 <% @articles.each do |article| %>
   <div>
     <h2><%= link_to article.title, article_path(article) %></h2>

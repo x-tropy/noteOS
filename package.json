@@ -30,6 +30,8 @@
   "repository": "https://github.com/x-tropy/noteos.git",
   "author": "x-tropy <buweiliao@gmail.com>",
   "dependencies": {
-    "vite-plugin-full-reload": "^1.2.0"
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vue": "^3.5.11"
   }
 }
