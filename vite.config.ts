@@ -10,11 +10,10 @@ export default defineConfig({
     FullReload(["config/routes.rb", "app/views/**/*"], { delay: 200 }),
     StimulusHMR()
   ],
-  root: "./app/assets",
   build: {
     manifest: true,
     rollupOptions: {
-      input: "/app/javascript/entrypoints/application.js"
+      input: "app/javascript/entrypoints/application.js"
     }
   }
 })
