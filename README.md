@@ -33,3 +33,4 @@
 * use yarn to add node packages (run "yarn" to init yarn.lock file)
 * put stimulus under vite's control
 * fly deploy (with vite & node)
+* add Tailwind
