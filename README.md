@@ -36,3 +36,5 @@
 * add Tailwind
 * add Vue
 * use Tailwind in Vue
+* install [Tiptap](https://tiptap.dev/docs/editor/getting-started/install/vue3)
+* 
