@@ -29,3 +29,6 @@
 * ~~install @hotwired/stimulus~~ stimulus is built-in
 * use tiptap (instead of trix)
 * add gem "vite_rails"
+* [use stimulus with vite](https://sasikala-r.medium.com/rails-7-with-vite-stimulus-tailwind-c3ecf2191ea9)
+* use yarn to add node packages (run "yarn" to init yarn.lock file)
+* put stimulus under vite's control
