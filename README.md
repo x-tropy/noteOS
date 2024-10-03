@@ -25,4 +25,6 @@
 * generate controller Articles
 * customized article views (time to reboot sever!)
 * rails generate migration FixArticleAuthorForeignKey
+* set node environment for RubyMine
+* ~~install @hotwired/stimulus~~ stimulus is built-in
 * 
