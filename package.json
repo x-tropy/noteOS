@@ -9,7 +9,10 @@
     "vite-plugin-ruby": "^5.1.0",
     "vite-plugin-stimulus-hmr": "^3.0.0"
   },
-  "name": "noteOS",
+  "scripts": {
+    "build": "vite build"
+  },
+  "name": "note-os",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/x-tropy/noteos.git",
