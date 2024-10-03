@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ message }}</h1>
+  <h1 class="font-bold underline">{{ message }}</h1>
 </template>
 
 <script>

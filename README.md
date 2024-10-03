@@ -35,3 +35,4 @@
 * fly deploy (with vite & node)
 * add Tailwind
 * add Vue
+* use Tailwind in Vue
