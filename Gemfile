@@ -59,3 +59,4 @@ end
 gem "dockerfile-rails", ">= 1.6", :group => :development
 gem "devise"
 gem "friendly_id"
+gem "vite_rails"

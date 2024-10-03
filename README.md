@@ -27,4 +27,5 @@
 * rails generate migration FixArticleAuthorForeignKey
 * set node environment for RubyMine
 * ~~install @hotwired/stimulus~~ stimulus is built-in
-* 
+* use tiptap (instead of trix)
+* add gem "vite_rails"
