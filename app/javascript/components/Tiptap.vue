@@ -7,14 +7,28 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { Editor, EditorContent } from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 
+const props = defineProps({
+  initialContent: {
+    type: String,
+    default: '<p>(default)</p>'
+  },
+  onUpdateContent: {
+    type: Function,
+    required: true
+  }
+})
+
 // Create a ref to hold the editor instance
 const editor = ref(null)
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
-    content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
+    content: props.initialContent,
     extensions: [StarterKit],
+    onUpdate: ({ editor }) => {
+      props.onUpdateContent(editor.getHTML())
+    }
   })
 })
 

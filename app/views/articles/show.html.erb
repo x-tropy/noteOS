@@ -3,7 +3,7 @@
 <p>By <%= @article.author.email %></p>
 
 <div>
-  <%= @article.content %>
+  <%= raw @article.content %>
 </div>
 
 <% if user_signed_in? && current_user == @article.author %>
