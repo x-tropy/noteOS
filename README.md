@@ -37,4 +37,6 @@
 * add Vue
 * use Tailwind in Vue
 * install [Tiptap](https://tiptap.dev/docs/editor/getting-started/install/vue3)
+* remove action_text?
+* active record + tigris
 * 
