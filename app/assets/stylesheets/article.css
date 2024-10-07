@@ -1,0 +1,51 @@
+#tiptap-editor .ProseMirror, .article {
+    width: 750px;
+    margin: 0 auto;
+    @apply focus:outline-none text-gray-900;
+    strong, h1, h2, h3 {
+        @apply font-semibold;
+    }
+
+    h1, h2, h3 {
+        @apply font-sans;
+    }
+
+    h1 {
+        @apply text-3xl my-9 text-center;
+    }
+
+    h2 {
+        @apply text-2xl mb-4 mt-8;
+    }
+
+    h3 {
+        @apply text-xl leading-9;
+    }
+
+    p {
+        @apply font-serif text-xl tracking-tight leading-9 my-4;
+        word-spacing: 1px;
+        code {
+            @apply text-base tracking-tight text-orange-600 rounded-md bg-orange-100 px-1 mx-0.5 border border-orange-200 ;
+            word-spacing: -4px;
+        }
+
+        strong {
+            @apply font-semibold;
+        }
+    }
+
+    h2 + p, h3 + p {
+        @apply mt-0;
+    }
+
+    blockquote {
+        p {
+            @apply text-2xl leading-loose text-center text-gray-500 m-14 relative;
+            &::before {
+                @apply text-gray-300 absolute -ml-14 -mt-10 text-9xl;
+                content: "“";
+            }
+        }
+    }
+}

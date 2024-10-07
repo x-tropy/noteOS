@@ -25,7 +25,11 @@ onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
     content: props.initialContent,
-    extensions: [StarterKit],
+    extensions: [StarterKit.configure({
+      heading: {
+        levels: [1, 2, 3]
+      }
+    })],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML())
     }

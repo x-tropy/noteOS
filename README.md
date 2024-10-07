@@ -40,3 +40,4 @@
 * remove action_text?
 * active record + tigris
 * Tiptap + Vue now works!
+* add fonts: juzhen, jetbrains mono, noto sans sc, source serif pro
