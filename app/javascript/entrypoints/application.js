@@ -33,6 +33,8 @@ console.log(
 
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
+import hljs from "highlight.js";
+import "highlight.js/styles/arduino-light.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");
@@ -48,4 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     app.mount("#tiptap-editor");
   }
+
+  // reparse code syntax
+  document.querySelectorAll("pre code").forEach((block) => {
+    hljs.highlightElement(block); // Apply syntax highlighting
+  });
 });

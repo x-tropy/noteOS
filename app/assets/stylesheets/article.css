@@ -1,17 +1,19 @@
 #tiptap-editor .ProseMirror, .article {
     width: 750px;
     margin: 0 auto;
-    @apply focus:outline-none text-gray-900;
+    @apply font-serif focus:outline-none text-gray-900;
+
     strong, h1, h2, h3 {
         @apply font-semibold;
     }
 
     h1, h2, h3 {
         @apply font-sans;
+        /*word-spacing: 2px;*/
     }
 
     h1 {
-        @apply text-3xl my-9 text-center;
+        @apply text-3xl my-9;
     }
 
     h2 {
@@ -25,8 +27,9 @@
     p {
         @apply font-serif text-xl tracking-tight leading-9 my-4;
         word-spacing: 1px;
+
         code {
-            @apply text-base tracking-tight text-orange-600 rounded-md bg-orange-100 px-1 mx-0.5 border border-orange-200 ;
+            @apply text-base tracking-tight text-orange-600 rounded-md bg-orange-100 px-1 mx-0.5 border border-orange-200;
             word-spacing: -4px;
         }
 
@@ -42,10 +45,18 @@
     blockquote {
         p {
             @apply text-2xl leading-loose text-center text-gray-500 m-14 relative;
+
             &::before {
                 @apply text-gray-300 absolute -ml-14 -mt-10 text-9xl;
                 content: "“";
             }
+        }
+    }
+
+    pre {
+        @apply text-sm overflow-x-auto my-6;
+        code {
+            @apply p-0;
         }
     }
 }
