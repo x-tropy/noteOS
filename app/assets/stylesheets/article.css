@@ -1,7 +1,3 @@
-.code-block {
-    @apply rounded-md bg-orange-100 border border-orange-200;
-}
-
 #tiptap-editor .ProseMirror, .article {
     width: 750px;
     margin: 0 auto;
@@ -33,7 +29,7 @@
         word-spacing: 1px;
 
         code {
-            @apply text-base tracking-tight text-orange-600 rounded-md bg-orange-100 px-1 mx-0.5 border border-orange-200;
+            @apply text-base tracking-tight text-cyan-600 rounded-md bg-stone-200 px-1 mx-0.5;
             word-spacing: -4px;
         }
 
@@ -58,11 +54,12 @@
     }
 
     pre {
-        @apply text-sm overflow-x-auto my-4 code-block pl-3 py-2;
+        @apply text-sm overflow-x-auto my-4 rounded-md bg-stone-200 pl-3 pb-2 pt-9;
 
         code {
             @apply bg-transparent p-0;
         }
+
     }
 
     ul, ol {
@@ -95,5 +92,9 @@
 
     ul li {
         @apply marker:text-lg;
+    }
+
+    p:has(+ol), p:has(+ul) {
+        @apply mb-0;
     }
 }

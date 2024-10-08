@@ -4,10 +4,11 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { Editor, EditorContent } from "@tiptap/vue-3";
+import { Editor, EditorContent, VueNodeViewRenderer } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 import { all, createLowlight } from "lowlight";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
+import CodeBlockWrapper from "./CodeBlockWrapper.vue";
 
 const lowlight = createLowlight(all);
 
@@ -35,9 +36,11 @@ onMounted(() => {
           levels: [1, 2, 3],
         },
       }),
-      CodeBlockLowlight.configure({
-        lowlight,
-      }),
+      CodeBlockLowlight.extend({
+        addNodeView() {
+          return VueNodeViewRenderer(CodeBlockWrapper);
+        },
+      }).configure({ lowlight }),
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

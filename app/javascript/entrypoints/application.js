@@ -34,6 +34,7 @@ console.log(
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import hljs from "highlight.js";
+import CodeLanguageLabel from "../components/CodeLanguageLabel.vue";
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");
@@ -53,5 +54,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // reparse code syntax
   document.querySelectorAll("pre code").forEach((block) => {
     hljs.highlightElement(block); // Apply syntax highlighting
+  });
+
+  //   add code language label
+  // Select all <pre> elements on the page
+  const preElements = document.querySelectorAll("pre");
+
+  preElements.forEach((pre) => {
+    // Extract the language from the class list
+    const languageClass = Array.from(pre.querySelector("code").classList).find((cls) =>
+      cls.startsWith("language-"),
+    );
+    const languageName = languageClass
+      ? languageClass.replace("language-", "")
+      : "Unknown"; // Default to 'Unknown' if not found
+
+    // Create a wrapper div
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-wrapper relative"; // Optional: add a class to the wrapper for styling
+
+    // Create a span for the language name
+    const span = document.createElement("span");
+    span.className = "language-label font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded"; // Optional: add a class for styling
+    span.textContent =
+      languageName.charAt(0).toUpperCase() + languageName.slice(1); // Capitalize the first letter
+
+    // Append the <span> to the wrapper
+    wrapper.appendChild(span);
+
+    // Create a clone of the <pre> element and append it to the wrapper
+    const preClone = pre.cloneNode(true);
+    wrapper.appendChild(preClone);
+
+    // Replace the original <pre> element with the new wrapper
+    pre.parentNode.replaceChild(wrapper, pre);
   });
 });

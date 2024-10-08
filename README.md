@@ -42,3 +42,4 @@
 * Tiptap + Vue now works!
 * add fonts: juzhen, jetbrains mono, noto sans sc, source serif pro
 * add syntax highlight for code block: js, ts, css, html, vue, ruby, erb, sql, bash, json,
+* add tabler icons
