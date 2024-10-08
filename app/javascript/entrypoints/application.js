@@ -34,7 +34,6 @@ console.log(
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import hljs from "highlight.js";
-import "highlight.js/styles/arduino-light.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");

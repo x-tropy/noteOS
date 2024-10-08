@@ -25,7 +25,7 @@
     }
 
     p {
-        @apply font-serif text-xl tracking-tight leading-9 my-4;
+        @apply font-serif text-xl tracking-tight leading-8 my-4;
         word-spacing: 1px;
 
         code {
