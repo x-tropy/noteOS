@@ -11,9 +11,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      serif: ["Source Serif Pro", "FZJuZhenXinFang-R-JF"],
+      serif: ["SourceSerifPro", "Juzhen"],
       sans: [
-        "Inter",
+        "InterTight",
         "BlinkMacSystemFont",
         "Noto Sans",
         "Segoe UI",

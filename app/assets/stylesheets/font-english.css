@@ -1,27 +1,27 @@
 /*Source Serif Pro*/
 @font-face {
-    font-family: 'Source Serif Pro';
+    font-family: 'SourceSerifPro';
     src: url("../fonts/SourceSerifPro/SourceSerifPro-Regular.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Source Serif Pro';
+    font-family: 'SourceSerifPro';
     src: url("../fonts/SourceSerifPro/SourceSerifPro-It.otf") format('opentype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Source Serif Pro';
+    font-family: 'SourceSerifPro';
     src: url("../fonts/SourceSerifPro/SourceSerifPro-Semibold.otf") format('opentype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Source Serif Pro';
+    font-family: 'SourceSerifPro';
     src: url("../fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.otf") format('opentype');
     font-weight: 600;
     font-style: italic;
@@ -29,7 +29,7 @@
 
 /*Inter*/
 @font-face {
-    font-family: 'Inter';
+    font-family: 'InterTight';
     src: url('../fonts/Inter/InterTight-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* Define the weight range for the variable font */
     font-style: normal; /* Regular (non-italic) style */
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-    font-family: 'Inter';
+    font-family: 'InterTight';
     src: url('../fonts/Inter/InterTight-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* Same weight range */
     font-style: italic; /* Italic style */

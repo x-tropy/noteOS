@@ -1,5 +1,10 @@
 @import "../../assets/stylesheets/application.css";
+
+/* custom fonts */
 @import "../../assets/stylesheets/font-juzhen.css";
 @import "../../assets/stylesheets/font-noto-sans-sc.css";
+@import "../../assets/stylesheets/font-english.css";
+
+/* article typography */
 @import "../../assets/stylesheets/article.css";
 @import "highlight.js/styles/arduino-light.css";
