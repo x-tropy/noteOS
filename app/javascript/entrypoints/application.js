@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   preElements.forEach((pre) => {
     // Extract the language from the class list
-    const languageClass = Array.from(pre.querySelector("code").classList).find((cls) =>
-      cls.startsWith("language-"),
+    const languageClass = Array.from(pre.querySelector("code").classList).find(
+      (cls) => cls.startsWith("language-"),
     );
     const languageName = languageClass
       ? languageClass.replace("language-", "")
@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create a span for the language name
     const span = document.createElement("span");
-    span.className = "language-label font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded"; // Optional: add a class for styling
-    span.textContent =
-      languageName.charAt(0).toUpperCase() + languageName.slice(1); // Capitalize the first letter
+    span.className =
+      "language-label font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded"; // Optional: add a class for styling
+    span.textContent = languageName;
 
     // Append the <span> to the wrapper
     wrapper.appendChild(span);

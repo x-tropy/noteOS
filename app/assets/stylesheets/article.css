@@ -29,7 +29,7 @@
         word-spacing: 1px;
 
         code {
-            @apply text-base tracking-tight text-cyan-600 rounded-md bg-stone-200 px-1 mx-0.5;
+            @apply text-base tracking-tight text-cyan-600 rounded-md  border border-gray-300 px-1 mx-0.5;
             word-spacing: -4px;
         }
 
@@ -54,10 +54,10 @@
     }
 
     pre {
-        @apply text-sm overflow-x-auto my-4 rounded-md bg-stone-200 pl-3 pb-2 pt-9;
+        @apply text-sm overflow-x-auto my-4 rounded-md border border-gray-300 bg-stone-50 pl-3 pb-2 pt-9;
 
         code {
-            @apply bg-transparent p-0;
+            @apply bg-transparent !p-0;
         }
 
     }
@@ -86,7 +86,7 @@
         @apply leading-none text-xl;
 
         p {
-            @apply inline-block my-0;
+            @apply my-0;
         }
     }
 
