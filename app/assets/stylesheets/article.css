@@ -1,3 +1,7 @@
+.code-block {
+    @apply rounded-md bg-orange-100 border border-orange-200;
+}
+
 #tiptap-editor .ProseMirror, .article {
     width: 750px;
     margin: 0 auto;
@@ -54,9 +58,42 @@
     }
 
     pre {
-        @apply text-sm overflow-x-auto my-6;
+        @apply text-sm overflow-x-auto my-4 code-block pl-3 py-2;
+
         code {
-            @apply p-0;
+            @apply bg-transparent p-0;
         }
+    }
+
+    ul, ol {
+        @apply list-outside;
+    }
+
+    & > ul, & > ol {
+        @apply ml-6;
+    }
+
+    ol ol, ol ul, ul ol, ul ul {
+        @apply pl-6;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    li {
+        @apply leading-none text-xl;
+
+        p {
+            @apply inline-block my-0;
+        }
+    }
+
+    ul li {
+        @apply marker:text-lg;
     }
 }
