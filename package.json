@@ -29,6 +29,7 @@
   "repository": "https://github.com/x-tropy/noteos.git",
   "author": "x-tropy <buweiliao@gmail.com>",
   "dependencies": {
+    "@tabler/icons-vue": "^3.19.0",
     "@tiptap/extension-code-block-lowlight": "^2.8.0",
     "@tiptap/extension-text-style": "^2.8.0",
     "@tiptap/pm": "^2.8.0",
