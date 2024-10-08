@@ -43,3 +43,24 @@
     font-style: italic; /* Italic style */
     font-display: swap;
 }
+
+/* Jetbrains Mono */
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("../fonts/JetbrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("../fonts/JetbrainsMono/JetBrainsMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("../fonts/JetbrainsMono/JetBrainsMono-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}

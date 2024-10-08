@@ -23,7 +23,7 @@ module.exports = {
         "sans-serif",
       ],
       mono: [
-        "Jetbrains Mono",
+        "JetBrainsMono",
         "Consolas",
         "Menlo",
         "Monaco",
