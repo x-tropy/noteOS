@@ -6,6 +6,8 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Editor, EditorContent, VueNodeViewRenderer } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
+import Typography from "@tiptap/extension-typography";
+import Highlight from "@tiptap/extension-highlight";
 import { all, createLowlight } from "lowlight";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import CodeBlockWrapper from "./CodeBlockWrapper.vue";
@@ -41,6 +43,8 @@ onMounted(() => {
           return VueNodeViewRenderer(CodeBlockWrapper);
         },
       }).configure({ lowlight }),
+      Typography,
+      Highlight,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
