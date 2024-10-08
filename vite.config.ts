@@ -12,7 +12,7 @@ export default defineConfig({
     StimulusHMR(),
     vue(),
   ],
-  assetsInclude: ["**/*.woff", "**/*.woff2"],
+  // assetsInclude: ["**/*.woff", "**/*.woff2"],
   build: {
     manifest: true,
     rollupOptions: {
