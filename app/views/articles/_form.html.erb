@@ -1,4 +1,8 @@
 <%= form_with(model: article, local: true) do |form| %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -22,7 +26,5 @@
     <div id="tiptap-editor" data-content="<%= article.content %>"></div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
 <% end %>

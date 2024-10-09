@@ -43,3 +43,10 @@
 * add fonts: juzhen, jetbrains mono, noto sans sc, source serif pro
 * add syntax highlight for code block: js, ts, css, html, vue, ruby, erb, sql, bash, json,
 * add tabler icons
+* rewrite code language label
+* add image support (use tigris)
+* TODO: add /handle in url 
+* TODO: add image & attachment support in editor
+* TODO: add horizontal rule
+* add syntax highlighting for SFC Vue: https://github.com/highlightjs/highlightjs-vue
+* add syntax highlighting for markdown

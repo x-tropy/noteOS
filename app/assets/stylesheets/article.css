@@ -13,15 +13,15 @@
     }
 
     h1 {
-        @apply text-3xl my-9;
+        @apply text-4xl my-12;
     }
 
     h2 {
-        @apply text-2xl mb-4 mt-8;
+        @apply text-2xl mb-5 mt-12;
     }
 
     h3 {
-        @apply text-xl leading-9 mt-4;
+        @apply text-xl leading-9 mt-5;
     }
 
     p {
@@ -29,7 +29,7 @@
         word-spacing: 1px;
 
         code {
-            @apply text-base tracking-tight text-cyan-700 rounded-md  px-1 ;
+            @apply text-lg tracking-tight text-cyan-700 rounded-md  px-1 ;
             word-spacing: -4px;
         }
 
@@ -96,5 +96,9 @@
 
     p:has(+ol), p:has(+ul) {
         @apply mb-0;
+    }
+
+    ul+p, ol+p {
+        @apply mt-0;
     }
 }
