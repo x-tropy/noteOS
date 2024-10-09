@@ -24,12 +24,17 @@
         @apply text-xl leading-9 mt-5;
     }
 
+    h1 code, h2 code, h3 code {
+        @apply tracking-tight px-1 text-[0.9em];
+        word-spacing: -4px;
+    }
+
     p {
         @apply font-serif text-xl tracking-tight leading-8 my-4;
         word-spacing: 1px;
 
         code {
-            @apply text-lg tracking-tight text-cyan-700 rounded-md  px-1 ;
+            @apply text-base tracking-tight text-fuchsia-600 font-medium rounded-md  px-1 ;
             word-spacing: -4px;
         }
 

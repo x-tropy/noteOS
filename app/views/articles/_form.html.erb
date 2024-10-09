@@ -16,12 +16,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label "slug title" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
     <%= form.hidden_field :content, id: 'hidden-article-content' %>
     <div id="tiptap-editor" data-content="<%= article.content %>"></div>
   </div>

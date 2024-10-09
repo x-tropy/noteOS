@@ -47,6 +47,6 @@
 * add image support (use tigris)
 * TODO: add /handle in url 
 * TODO: add image & attachment support in editor
-* TODO: add horizontal rule
+* TODO: add horizontal rule, link
 * add syntax highlighting for SFC Vue: https://github.com/highlightjs/highlightjs-vue
 * add syntax highlighting for markdown

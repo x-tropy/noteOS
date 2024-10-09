@@ -58,9 +58,17 @@
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'JetBrainsMono';
     src: url("../fonts/JetbrainsMono/JetBrainsMono-Italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("../fonts/JetbrainsMono/JetBrainsMono-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
 }
