@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* simplistic scrollbar */
 @layer utilities {
     ::-webkit-scrollbar {
         @apply h-2 w-2;
@@ -12,10 +13,10 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        @apply bg-gray-200 rounded;
+        @apply bg-gray-300 rounded;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        @apply bg-gray-300;
+        @apply bg-gray-400;
     }
 }
