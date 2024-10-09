@@ -1,7 +1,5 @@
 #tiptap-editor .ProseMirror, .article {
-    width: 750px;
-    margin: 0 auto;
-    @apply font-serif focus:outline-none;
+    @apply font-serif focus:outline-none mx-auto my-0 w-fit pl-4 pr-1 md:w-[750px];
 
     strong, h1, h2, h3 {
         @apply font-semibold;

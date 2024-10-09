@@ -50,3 +50,4 @@
 * TODO: add horizontal rule, link
 * add syntax highlighting for SFC Vue: https://github.com/highlightjs/highlightjs-vue
 * add syntax highlighting for markdown
+* responsive design: /articles/index, /articles/show
