@@ -35,6 +35,9 @@ import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import hljs from "highlight.js";
 import CodeLanguageLabel from "../components/CodeLanguageLabel.vue";
+import hljsVue from "../components/hljs-vue.js"
+
+hljs.registerLanguage("vue", hljsVue)
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");

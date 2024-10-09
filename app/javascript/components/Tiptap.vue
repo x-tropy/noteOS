@@ -9,10 +9,13 @@ import StarterKit from "@tiptap/starter-kit";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
 import { all, createLowlight } from "lowlight";
+import hljsVue from "./hljs-vue.js"
+
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import CodeBlockWrapper from "./CodeBlockWrapper.vue";
 
 const lowlight = createLowlight(all);
+lowlight.register('vue', hljsVue)
 
 const props = defineProps({
   initialContent: {
