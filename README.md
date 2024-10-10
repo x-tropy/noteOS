@@ -46,9 +46,9 @@
 * rewrite code language label
 * TODO: add horizontal rule, link
 * add crelt to simplify HTML element creation
-* add image support (use tigris)
-* TODO: add /handle in url 
-* TODO: add image & attachment support in editor
 * add syntax highlighting for SFC Vue: https://github.com/highlightjs/highlightjs-vue
 * add syntax highlighting for markdown
 * responsive design: /articles/index, /articles/show
+* add image support (use tigris)
+* TODO: add /handle in url 
+* TODO: add image & attachment support in editor
