@@ -1,5 +1,5 @@
 /* tailwind css */
-@import "../../assets/stylesheets/application.css";
+@import "../../assets/stylesheets/tailwind.css";
 
 /* custom fonts */
 @import "../../assets/stylesheets/font-juzhen.css";
@@ -9,3 +9,6 @@
 /* article typography */
 @import "../../assets/stylesheets/article.css";
 @import "highlight.js/styles/arduino-light.css";
+
+/* simplistic scrollbar */
+@import "../../assets/stylesheets/scrollbar.css";
