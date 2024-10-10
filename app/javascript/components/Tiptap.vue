@@ -4,20 +4,14 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { Editor, EditorContent, VueNodeViewRenderer } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
+import { Editor, EditorContent } from "@tiptap/vue-3";
+import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
+import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
-import { all, createLowlight } from "lowlight";
-import hljsVue from "./hljs-vue.js";
-
-import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-import CodeBlockWrapper from "./CodeBlockWrapper.vue";
-
-const lowlight = createLowlight(all);
-lowlight.register("vue", hljsVue);
 
 const props = defineProps({
+  // TODO: how to set initial content?
   initialContent: {
     type: String,
     default: "<p>(default)</p>",
@@ -28,27 +22,14 @@ const props = defineProps({
   },
 });
 
-// Create a ref to hold the editor instance
+// Create a ref to hold the editor instance, so that it can be destroyed later
 const editor = ref(null);
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
     content: props.initialContent,
-    extensions: [
-      StarterKit.configure({
-        heading: {
-          levels: [1, 2, 3],
-        },
-      }),
-      CodeBlockLowlight.extend({
-        addNodeView() {
-          return VueNodeViewRenderer(CodeBlockWrapper);
-        },
-      }).configure({ lowlight }),
-      Typography,
-      Highlight
-    ],
+    extensions: [CustomStarterKit, Typography, Highlight, CustomCodeBlock],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
     },
@@ -56,7 +37,6 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => {
-  // Destroy the editor when the component is unmounted
   editor.value.destroy();
 });
 </script>

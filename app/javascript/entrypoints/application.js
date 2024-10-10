@@ -34,8 +34,8 @@ console.log(
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import hljs from "highlight.js";
-import CodeLanguageLabel from "../components/CodeLanguageLabel.vue";
-import hljsVue from "../components/hljs-vue.js"
+import CodeLanguageLabel from "../components/TipTap/CodeLanguageLabel.vue";
+import hljsVue from "../components/TipTap/hljsVue.js"
 
 hljs.registerLanguage("vue", hljsVue)
 
