@@ -1,5 +1,4 @@
 <template>
-  <button @click.prevent="toggleEditorMode">Toggle Editor Mode</button>
   <editor-content :editor="editor" />
 </template>
 
@@ -10,6 +9,7 @@ import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 
 const props = defineProps({
   initialContent: {
@@ -32,20 +32,12 @@ onMounted(() => {
       `
 <h1>Title</h1>
 `,
-    extensions: [CustomStarterKit, Typography, Highlight, CustomCodeBlock],
+    extensions: [CustomStarterKit, Typography, Highlight, CustomCodeBlock, Link],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
     },
   });
 });
-
-const toggleEditorMode = () => {
-  if (editor.value.isEditable) {
-    editor.value.setEditable(false)
-  } else {
-    editor.value.setEditable(true)
-  }
-};
 
 onBeforeUnmount(() => {
   editor.value.destroy();

@@ -44,10 +44,11 @@
 * add syntax highlight for code block: js, ts, css, html, vue, ruby, erb, sql, bash, json,
 * add tabler icons
 * rewrite code language label
+* TODO: add horizontal rule, link
+* add crelt to simplify HTML element creation
 * add image support (use tigris)
 * TODO: add /handle in url 
 * TODO: add image & attachment support in editor
-* TODO: add horizontal rule, link
 * add syntax highlighting for SFC Vue: https://github.com/highlightjs/highlightjs-vue
 * add syntax highlighting for markdown
 * responsive design: /articles/index, /articles/show
