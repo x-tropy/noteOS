@@ -23,3 +23,9 @@ const increase = () => {
 };
 
 </script>
+
+<style>
+.counter-wrapper {
+  @apply border-2 border-amber-400 rounded block;
+}
+</style>

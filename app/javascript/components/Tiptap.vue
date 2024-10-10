@@ -28,11 +28,19 @@ onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
     content:
-      props.initialContent ||
-      `
-<h1>Title</h1>
-`,
-    extensions: [CustomStarterKit, Typography, Highlight, CustomCodeBlock, Link],
+      props.initialContent || `<h1>Title</h1>`,
+    extensions: [
+      CustomStarterKit,
+      Typography,
+      Highlight,
+      CustomCodeBlock,
+      Link.configure({
+        openOnClick: true,
+        defaultProtocol: "https",
+        autolink: true,
+        linkOnPaste: true
+      }),
+    ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
     },

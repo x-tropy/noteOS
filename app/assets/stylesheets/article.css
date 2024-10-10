@@ -113,7 +113,7 @@
         }
     }
 
-    .counter-wrapper {
-        @apply border-2 border-amber-400 rounded block;
+    a {
+        @apply cursor-pointer underline underline-offset-8;
     }
 }
