@@ -3,7 +3,7 @@
 <div class="grid grid-cols-2 md:grid-cols-4 lg:gird-cols-5 xl:grid-cols-6 gap-2">
   <% @articles.each do |article| %>
     <div class="border rounded border-gray-400 hover:bg-gray-200">
-      <%= link_to article.title, article_path(article), class: "text-base px-3 py-2 block h-full" %>
+      <%= link_to article.title, edit_article_path(article), class: "text-base px-3 py-2 block h-full" %>
       <!--    <p><%#= truncate(strip_tags(article.content.to_s), length: 100) %></p>-->
     </div>
   <% end %>
