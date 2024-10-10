@@ -104,4 +104,16 @@
     ul+p, ol+p {
         @apply mt-0;
     }
+
+    hr {
+        @apply border-0 h-[1.5em] my-16;
+        &:before {
+            @apply block text-center font-mono font-bold;
+            content: "·  ×  ·";
+        }
+    }
+
+    .counter-wrapper {
+        @apply border-2 border-amber-400 rounded block;
+    }
 }

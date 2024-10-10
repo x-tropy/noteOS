@@ -9,12 +9,11 @@ import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
+import CustomCounter from "./TipTap/CustomCounter.js";
 
 const props = defineProps({
-  // TODO: how to set initial content?
   initialContent: {
-    type: String,
-    default: "<p>(default)</p>",
+    type: String
   },
   onUpdateContent: {
     type: Function,
@@ -28,8 +27,17 @@ const editor = ref(null);
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
-    content: props.initialContent,
-    extensions: [CustomStarterKit, Typography, Highlight, CustomCodeBlock],
+    content: props.initialContent || `
+<p>default content</p>
+<counter></counter>
+`,
+    extensions: [
+      CustomStarterKit,
+      Typography,
+      Highlight,
+      CustomCodeBlock,
+      CustomCounter,
+    ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
     },
