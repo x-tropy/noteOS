@@ -13,7 +13,7 @@ export const highlightCodeBlocks = () => {
   });
 };
 
-export const wrapCodeBlocksWithLanguageLabel = () => {
+export const prependLanguageLabels = () => {
   const preElements = document.querySelectorAll("pre");
 
   preElements.forEach((pre) => {

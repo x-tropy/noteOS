@@ -1,7 +1,7 @@
 import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
-import {highlightCodeBlocks, wrapCodeBlocksWithLanguageLabel} from "../components/TipTap/preprocess.js";
+import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");
@@ -18,5 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
     app.mount("#tiptap-editor");
   }
   highlightCodeBlocks()
-  wrapCodeBlocksWithLanguageLabel()
+  prependLanguageLabels()
 });
