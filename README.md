@@ -52,3 +52,12 @@
 * add image support (use tigris)
 * TODO: add /handle in url 
 * TODO: add image & attachment support in editor
+* TODO: table
+* TODO: details
+* TODO: task item
+* TODO: emoji
+* TODO: youtube
+* TODO: bubble & float menu
+* TODO: placeholder
+* FIX: font loading slow
+* TODO: callout
