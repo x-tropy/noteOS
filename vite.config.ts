@@ -1,16 +1,17 @@
 import { defineConfig } from "vite";
-import RubyPlugin from "vite-plugin-ruby";
-import FullReload from "vite-plugin-full-reload";
-import StimulusHMR from "vite-plugin-stimulus-hmr";
+import ViteRails from 'vite-plugin-rails'
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   clearScreen: false,
   plugins: [
-    RubyPlugin(),
-    FullReload(["config/routes.rb", "app/views/**/*"], { delay: 200 }),
-    StimulusHMR(),
     vue(),
+    ViteRails({
+      fullReload: {
+        additionalPaths: ["config/routes.rb", "app/views/**/*"],
+        delay: 200
+      }
+    }),
   ],
   build: {
     manifest: true,
