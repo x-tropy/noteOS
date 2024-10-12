@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/4d2f502271b8d173bcb38d73530fa084.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/4d2f502271b8d173bcb38d73530fa084.woff2") format("woff2"),
+url("../fonts/JuZhen/4d2f502271b8d173bcb38d73530fa084.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -9,7 +10,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/f17be33459d27c894d32ec5acd0ac45c.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/f17be33459d27c894d32ec5acd0ac45c.woff2") format("woff2"),
+url("../fonts/JuZhen/f17be33459d27c894d32ec5acd0ac45c.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -18,7 +20,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/30cfc6a80d9fd283f89fa011d884f98a.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/30cfc6a80d9fd283f89fa011d884f98a.woff2") format("woff2"),
+url("../fonts/JuZhen/30cfc6a80d9fd283f89fa011d884f98a.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -27,7 +30,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/5e5e17398754e7cfd07243e74a2a7b20.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/5e5e17398754e7cfd07243e74a2a7b20.woff2") format("woff2"),
+url("../fonts/JuZhen/5e5e17398754e7cfd07243e74a2a7b20.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -36,7 +40,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/26398f141735418f0a37b0cd9497ea7d.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/26398f141735418f0a37b0cd9497ea7d.woff2") format("woff2"),
+url("../fonts/JuZhen/26398f141735418f0a37b0cd9497ea7d.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -45,7 +50,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/b1c2f02eb338dbee160b7c9851d8608c.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/b1c2f02eb338dbee160b7c9851d8608c.woff2") format("woff2"),
+url("../fonts/JuZhen/b1c2f02eb338dbee160b7c9851d8608c.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -54,7 +60,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/5c05db0cb6b1a5cb6934affb7f90597b.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/5c05db0cb6b1a5cb6934affb7f90597b.woff2") format("woff2"),
+url("../fonts/JuZhen/5c05db0cb6b1a5cb6934affb7f90597b.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -63,7 +70,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/7681324571817d35f1eb5c05322ffb68.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/7681324571817d35f1eb5c05322ffb68.woff2") format("woff2"),
+url("../fonts/JuZhen/7681324571817d35f1eb5c05322ffb68.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -72,7 +80,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/115f982b506e1eaedcaa58ee42047c84.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/115f982b506e1eaedcaa58ee42047c84.woff2") format("woff2"),
+url("../fonts/JuZhen/115f982b506e1eaedcaa58ee42047c84.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -81,7 +90,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/8681e25ab00e96789f6710f566762f5b.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/8681e25ab00e96789f6710f566762f5b.woff2") format("woff2"),
+url("../fonts/JuZhen/8681e25ab00e96789f6710f566762f5b.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -90,7 +100,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/2bce7e6ee06d387e70ddf491b371141e.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/2bce7e6ee06d387e70ddf491b371141e.woff2") format("woff2"),
+url("../fonts/JuZhen/2bce7e6ee06d387e70ddf491b371141e.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -99,7 +110,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/4be4640e5f789de06664f393410acd55.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/4be4640e5f789de06664f393410acd55.woff2") format("woff2"),
+url("../fonts/JuZhen/4be4640e5f789de06664f393410acd55.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -108,7 +120,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/b7488572f0a9b9a1779bb8180e0c5d58.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/b7488572f0a9b9a1779bb8180e0c5d58.woff2") format("woff2"),
+url("../fonts/JuZhen/b7488572f0a9b9a1779bb8180e0c5d58.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -117,7 +130,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/d0071df6965ea8600ef9fe53653795a3.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/d0071df6965ea8600ef9fe53653795a3.woff2") format("woff2"),
+url("../fonts/JuZhen/d0071df6965ea8600ef9fe53653795a3.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -126,7 +140,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/21da18d6e586fde8efe15aa5672e7544.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/21da18d6e586fde8efe15aa5672e7544.woff2") format("woff2"),
+url("../fonts/JuZhen/21da18d6e586fde8efe15aa5672e7544.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -135,7 +150,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/f4446af3eac7ea87d62a30034f7790dd.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/f4446af3eac7ea87d62a30034f7790dd.woff2") format("woff2"),
+url("../fonts/JuZhen/f4446af3eac7ea87d62a30034f7790dd.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -144,7 +160,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/901b83c072ece1494d9825d363fbf266.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/901b83c072ece1494d9825d363fbf266.woff2") format("woff2"),
+url("../fonts/JuZhen/901b83c072ece1494d9825d363fbf266.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -153,7 +170,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/fbea0b0cfebb271ac85264e70fd0c9b1.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/fbea0b0cfebb271ac85264e70fd0c9b1.woff2") format("woff2"),
+url("../fonts/JuZhen/fbea0b0cfebb271ac85264e70fd0c9b1.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -162,7 +180,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/83a3f89a802501a58a43d4b6469e57f5.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/83a3f89a802501a58a43d4b6469e57f5.woff2") format("woff2"),
+url("../fonts/JuZhen/83a3f89a802501a58a43d4b6469e57f5.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -171,7 +190,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/9728760ee48b78f047a0e1cef99a28f5.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/9728760ee48b78f047a0e1cef99a28f5.woff2") format("woff2"),
+url("../fonts/JuZhen/9728760ee48b78f047a0e1cef99a28f5.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -180,7 +200,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/3d9744a17c6e30d7ae3a10f83f8603db.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/3d9744a17c6e30d7ae3a10f83f8603db.woff2") format("woff2"),
+url("../fonts/JuZhen/3d9744a17c6e30d7ae3a10f83f8603db.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -189,7 +210,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/f4b9b25b4901ad94f49414f74044c7a4.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/f4b9b25b4901ad94f49414f74044c7a4.woff2") format("woff2"),
+url("../fonts/JuZhen/f4b9b25b4901ad94f49414f74044c7a4.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -198,7 +220,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/03d960ee77ac27d2ab60efc19317915e.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/03d960ee77ac27d2ab60efc19317915e.woff2") format("woff2"),
+url("../fonts/JuZhen/03d960ee77ac27d2ab60efc19317915e.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -207,7 +230,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/ba0757696f028122e39eb049218ed1bd.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/ba0757696f028122e39eb049218ed1bd.woff2") format("woff2"),
+url("../fonts/JuZhen/ba0757696f028122e39eb049218ed1bd.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -216,7 +240,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/ddce0bcfec832570fa85294dbf1e7380.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/ddce0bcfec832570fa85294dbf1e7380.woff2") format("woff2"),
+url("../fonts/JuZhen/ddce0bcfec832570fa85294dbf1e7380.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -225,7 +250,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/55c95d9cd62c65bd9ecc7cb9a3fe8f39.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/55c95d9cd62c65bd9ecc7cb9a3fe8f39.woff2") format("woff2"),
+url("../fonts/JuZhen/55c95d9cd62c65bd9ecc7cb9a3fe8f39.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -234,7 +260,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/eb2b5dcc8c2db008eac4ea3d109a3f73.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/eb2b5dcc8c2db008eac4ea3d109a3f73.woff2") format("woff2"),
+url("../fonts/JuZhen/eb2b5dcc8c2db008eac4ea3d109a3f73.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -243,7 +270,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/29afe88319dbe918670350ed800b0d54.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/29afe88319dbe918670350ed800b0d54.woff2") format("woff2"),
+url("../fonts/JuZhen/29afe88319dbe918670350ed800b0d54.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -252,7 +280,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/800a4bd7d9e7c9343070a9962bc1caa1.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/800a4bd7d9e7c9343070a9962bc1caa1.woff2") format("woff2"),
+url("../fonts/JuZhen/800a4bd7d9e7c9343070a9962bc1caa1.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -261,7 +290,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/1a8990a1537371208291c793cddbc5e1.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/1a8990a1537371208291c793cddbc5e1.woff2") format("woff2"),
+url("../fonts/JuZhen/1a8990a1537371208291c793cddbc5e1.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -270,7 +300,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/270b2ce4aefef6b45eda47870ac77910.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/270b2ce4aefef6b45eda47870ac77910.woff2") format("woff2"),
+url("../fonts/JuZhen/270b2ce4aefef6b45eda47870ac77910.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -279,7 +310,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/853dda0b3fbae72aab97e01b84c70dc4.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/853dda0b3fbae72aab97e01b84c70dc4.woff2") format("woff2"),
+url("../fonts/JuZhen/853dda0b3fbae72aab97e01b84c70dc4.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -288,7 +320,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/c372e04857f205458074048c072651d3.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/c372e04857f205458074048c072651d3.woff2") format("woff2"),
+url("../fonts/JuZhen/c372e04857f205458074048c072651d3.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -297,7 +330,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/198e3d50565563177396820fe57622b0.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/198e3d50565563177396820fe57622b0.woff2") format("woff2"),
+url("../fonts/JuZhen/198e3d50565563177396820fe57622b0.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -306,7 +340,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/61f224f3b88d5e571fdab6a985f544e4.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/61f224f3b88d5e571fdab6a985f544e4.woff2") format("woff2"),
+url("../fonts/JuZhen/61f224f3b88d5e571fdab6a985f544e4.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -315,7 +350,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/1e0b8c3d92b02b169261ec23ba85e8c6.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/1e0b8c3d92b02b169261ec23ba85e8c6.woff2") format("woff2"),
+url("../fonts/JuZhen/1e0b8c3d92b02b169261ec23ba85e8c6.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -324,7 +360,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/375043210fe8ee2dbe82cf31ca6cde66.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/375043210fe8ee2dbe82cf31ca6cde66.woff2") format("woff2"),
+url("../fonts/JuZhen/375043210fe8ee2dbe82cf31ca6cde66.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -333,7 +370,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/562e4de4d8a4bfd6bbdcadd6d2ee78f3.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/562e4de4d8a4bfd6bbdcadd6d2ee78f3.woff2") format("woff2"),
+url("../fonts/JuZhen/562e4de4d8a4bfd6bbdcadd6d2ee78f3.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -342,7 +380,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/d2d78eb2527289df9d6fe110294c7623.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/d2d78eb2527289df9d6fe110294c7623.woff2") format("woff2"),
+url("../fonts/JuZhen/d2d78eb2527289df9d6fe110294c7623.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -351,7 +390,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/196f41b0c28134f5f5ee9dbb4c22462f.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/196f41b0c28134f5f5ee9dbb4c22462f.woff2") format("woff2"),
+url("../fonts/JuZhen/196f41b0c28134f5f5ee9dbb4c22462f.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -360,7 +400,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/1e8373fb34b9b7b889cce6fae329d373.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/1e8373fb34b9b7b889cce6fae329d373.woff2") format("woff2"),
+url("../fonts/JuZhen/1e8373fb34b9b7b889cce6fae329d373.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -369,7 +410,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/18791afe7952a5dd5f8a7eba1bb9bb76.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/18791afe7952a5dd5f8a7eba1bb9bb76.woff2") format("woff2"),
+url("../fonts/JuZhen/18791afe7952a5dd5f8a7eba1bb9bb76.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -378,7 +420,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/4e96f5ff3b2284d8a124f93c62679896.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/4e96f5ff3b2284d8a124f93c62679896.woff2") format("woff2"),
+url("../fonts/JuZhen/4e96f5ff3b2284d8a124f93c62679896.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -387,7 +430,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/52b5e1a489c24dd83affe84b0fff1339.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/52b5e1a489c24dd83affe84b0fff1339.woff2") format("woff2"),
+url("../fonts/JuZhen/52b5e1a489c24dd83affe84b0fff1339.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -396,7 +440,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/5cbfd2f2c34cc07605bdf1063d157fe9.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/5cbfd2f2c34cc07605bdf1063d157fe9.woff2") format("woff2"),
+url("../fonts/JuZhen/5cbfd2f2c34cc07605bdf1063d157fe9.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -405,7 +450,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/ef3e660645d77a09e5ea55947cb752c5.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/ef3e660645d77a09e5ea55947cb752c5.woff2") format("woff2"),
+url("../fonts/JuZhen/ef3e660645d77a09e5ea55947cb752c5.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -414,7 +460,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/d8b831adcf81caee391b6306e1dbf585.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/d8b831adcf81caee391b6306e1dbf585.woff2") format("woff2"),
+url("../fonts/JuZhen/d8b831adcf81caee391b6306e1dbf585.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -423,7 +470,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/aeb589ba6fce443b542ce140fa1b7769.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/aeb589ba6fce443b542ce140fa1b7769.woff2") format("woff2"),
+url("../fonts/JuZhen/aeb589ba6fce443b542ce140fa1b7769.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -432,7 +480,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/4fcc478d9a06e30772f59e56e082bb03.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/4fcc478d9a06e30772f59e56e082bb03.woff2") format("woff2"),
+url("../fonts/JuZhen/4fcc478d9a06e30772f59e56e082bb03.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -441,7 +490,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/2d06951558010a8fd510e801bd44cb5b.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/2d06951558010a8fd510e801bd44cb5b.woff2") format("woff2"),
+url("../fonts/JuZhen/2d06951558010a8fd510e801bd44cb5b.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -450,7 +500,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/d0dbe84f131ac8730d5284ed34be1b84.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/d0dbe84f131ac8730d5284ed34be1b84.woff2") format("woff2"),
+url("../fonts/JuZhen/d0dbe84f131ac8730d5284ed34be1b84.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -459,7 +510,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/3150a474efc34d0f6a38aec215d43ae5.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/3150a474efc34d0f6a38aec215d43ae5.woff2") format("woff2"),
+url("../fonts/JuZhen/3150a474efc34d0f6a38aec215d43ae5.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -468,7 +520,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/ce04ddd80ef9b56fedfcf1eee58d199c.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/ce04ddd80ef9b56fedfcf1eee58d199c.woff2") format("woff2"),
+url("../fonts/JuZhen/ce04ddd80ef9b56fedfcf1eee58d199c.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -477,7 +530,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/cabc8bd7df4ec5ec21d1cb0b903d75a4.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/cabc8bd7df4ec5ec21d1cb0b903d75a4.woff2") format("woff2"),
+url("../fonts/JuZhen/cabc8bd7df4ec5ec21d1cb0b903d75a4.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -486,7 +540,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/8b59c27a26838d031822ef2f12063221.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/8b59c27a26838d031822ef2f12063221.woff2") format("woff2"),
+url("../fonts/JuZhen/8b59c27a26838d031822ef2f12063221.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -495,7 +550,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/d71344e5f7fac57a4b4916afc458c435.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/d71344e5f7fac57a4b4916afc458c435.woff2") format("woff2"),
+url("../fonts/JuZhen/d71344e5f7fac57a4b4916afc458c435.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -504,7 +560,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/48f32b3d6f5d52247126622faa92dd83.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/48f32b3d6f5d52247126622faa92dd83.woff2") format("woff2"),
+url("../fonts/JuZhen/48f32b3d6f5d52247126622faa92dd83.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -513,7 +570,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/b7aaca9a027a1aa230d1a25207642e8c.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/b7aaca9a027a1aa230d1a25207642e8c.woff2") format("woff2"),
+url("../fonts/JuZhen/b7aaca9a027a1aa230d1a25207642e8c.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -522,7 +580,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/073f439108b246f56130cd578272b891.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/073f439108b246f56130cd578272b891.woff2") format("woff2"),
+url("../fonts/JuZhen/073f439108b246f56130cd578272b891.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -531,7 +590,8 @@
 
 @font-face {
     font-family: "Juzhen";
-    src: url("https://bucket.noteos.org/fonts/JuZhen/c4891c913d8c64284b2b72aa4139bff5.woff2") format("woff2");
+    src: url("https://bucket.noteos.org/fonts/JuZhen/c4891c913d8c64284b2b72aa4139bff5.woff2") format("woff2"),
+url("../fonts/JuZhen/c4891c913d8c64284b2b72aa4139bff5.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
