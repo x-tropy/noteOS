@@ -1,3 +1,4 @@
+import "./application.css";
 import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";

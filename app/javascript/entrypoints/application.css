@@ -6,9 +6,9 @@
 @import "../../assets/stylesheets/font-noto-sans-sc.css";
 @import "../../assets/stylesheets/font-english.css";
 
+/* simplistic scrollbar */
+@import "../../assets/stylesheets/scrollbar.css";
+
 /* article typography */
 @import "../../assets/stylesheets/article.css";
 @import "highlight.js/styles/arduino-light.css";
-
-/* simplistic scrollbar */
-@import "../../assets/stylesheets/scrollbar.css";
