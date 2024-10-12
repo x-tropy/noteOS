@@ -1,4 +1,5 @@
 <div id="app"></div>
+<%#= asset_path 'robots.txt' %>
 <div class="p"><%= link_to 'Create New Article', new_article_path if user_signed_in? %></div>
 <div class="grid grid-cols-2 md:grid-cols-4 lg:gird-cols-5 xl:grid-cols-6 gap-2">
   <% @articles.each do |article| %>
