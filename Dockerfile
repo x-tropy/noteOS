@@ -43,8 +43,9 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Install Vite and build assets
-RUN npm install && \
-    npm run build
+RUN npm install
+#    && \
+#    npm run build
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
