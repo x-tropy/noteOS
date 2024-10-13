@@ -114,6 +114,6 @@
     }
 
     a {
-        @apply cursor-pointer underline underline-offset-8;
+        @apply cursor-pointer underline underline-offset-[6px];
     }
 }
