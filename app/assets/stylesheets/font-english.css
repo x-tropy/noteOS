@@ -1,82 +1,82 @@
 /*Source Serif Pro*/
 @font-face {
     font-family: 'SourceSerifPro';
-    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-Regular.otf") format('opentype'),
-url("../fonts/SourceSerifPro/SourceSerifPro-Regular.otf") format('opentype');
+    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-Regular.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SourceSerifPro';
-    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-It.otf") format('opentype'),
-url("../fonts/SourceSerifPro/SourceSerifPro-It.otf") format('opentype');
+    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-It.otf") format('opentype');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SourceSerifPro';
-    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-Semibold.otf") format('opentype'),
-url("../fonts/SourceSerifPro/SourceSerifPro-Semibold.otf") format('opentype');
+    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-Semibold.otf") format('opentype');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'SourceSerifPro';
-    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.otf") format('opentype'),
-url("../fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.otf") format('opentype');
+    src: url("https://bucket.noteos.org/fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.otf") format('opentype');
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 /*Inter*/
 @font-face {
     font-family: 'InterTight';
-    src: url('https://bucket.noteos.org/fonts/Inter/InterTight-VariableFont_wght.ttf') format('truetype'),
-url('../fonts/Inter/InterTight-VariableFont_wght.ttf') format('truetype');
+    src: url('https://bucket.noteos.org/fonts/Inter/InterTight-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* Define the weight range for the variable font */
     font-style: normal; /* Regular (non-italic) style */
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'InterTight';
-    src: url('https://bucket.noteos.org/fonts/Inter/InterTight-Italic-VariableFont_wght.ttf') format('truetype'),
-url('../fonts/Inter/InterTight-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('https://bucket.noteos.org/fonts/Inter/InterTight-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900; /* Same weight range */
     font-style: italic; /* Italic style */
+    font-display: swap;
 }
 
 /* Jetbrains Mono */
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Regular.ttf") format("truetype"),
-url("../fonts/JetbrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
+    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Bold.ttf") format("truetype"),
-url("../fonts/JetbrainsMono/JetBrainsMono-Bold.ttf") format("truetype");
+    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Italic.ttf") format("truetype"),
-url("../fonts/JetbrainsMono/JetBrainsMono-Italic.ttf") format("truetype");
+    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Italic.ttf") format("truetype");
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'JetBrainsMono';
-    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Medium.ttf") format("truetype"),
-url("../fonts/JetbrainsMono/JetBrainsMono-Medium.ttf") format("truetype");
+    src: url("https://bucket.noteos.org/fonts/JetbrainsMono/JetBrainsMono-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }

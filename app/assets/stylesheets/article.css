@@ -32,7 +32,7 @@
         word-spacing: 1px;
 
         code {
-            @apply text-base tracking-tight text-fuchsia-600 font-medium rounded-md  px-1 ;
+            @apply text-base tracking-tight text-fuchsia-600 font-medium rounded-md px-1;
             word-spacing: -4px;
         }
 
@@ -99,10 +99,6 @@
 
     p:has(+ol), p:has(+ul) {
         @apply mb-0;
-    }
-
-    ul+p, ol+p {
-        @apply mt-0;
     }
 
     hr {
