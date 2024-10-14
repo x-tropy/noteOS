@@ -1,5 +1,8 @@
 <template>
-  <editor-content :editor="editor" />
+  <div v-if="editor">
+    <Toolbar :editor="editor"/>
+    <editor-content :editor="editor" />
+  </div>
 </template>
 
 <script setup>
@@ -9,7 +12,8 @@ import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
-import Link from "@tiptap/extension-link";
+import Toolbar from "./TipTap/Toolbar.vue"
+import CustomLink from "./TipTap/CustomLink.js"
 
 const props = defineProps({
   initialContent: {
@@ -21,27 +25,21 @@ const props = defineProps({
   },
 });
 
-// Create a ref to hold the editor instance, so that it can be destroyed later
 const editor = ref(null);
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
     content:
-      props.initialContent || `<h1>Title</h1>`,
+      props.initialContent ||
+      `<h1>Title</h1>
+<p></p>`,
     extensions: [
       CustomStarterKit,
       Typography,
       Highlight,
       CustomCodeBlock,
-      Link.configure({
-        openOnClick: true,
-        defaultProtocol: "https",
-        autolink: true,
-        linkOnPaste: true,
-      }).extend({
-        exitable: true
-      }),
+      CustomLink,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
