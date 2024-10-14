@@ -55,8 +55,12 @@
         }
     }
 
+    .code-wrapper {
+        @apply overflow-x-auto;
+    }
+
     pre {
-        @apply text-sm overflow-x-auto my-4 rounded-md border border-gray-300 pl-3 pb-2 pt-9;
+        @apply text-sm mb-4 rounded-md border border-gray-300 pl-3 pb-2 pt-9;
 
         code {
             @apply bg-transparent !p-0;
