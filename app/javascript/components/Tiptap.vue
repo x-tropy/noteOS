@@ -38,7 +38,9 @@ onMounted(() => {
         openOnClick: true,
         defaultProtocol: "https",
         autolink: true,
-        linkOnPaste: true
+        linkOnPaste: true,
+      }).extend({
+        exitable: true
       }),
     ],
     onUpdate: ({ editor }) => {
