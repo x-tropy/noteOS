@@ -44,3 +44,7 @@ node_modules
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
 
+# Ignore files generate by `rails g dockerfile --tigris`
+.node-version
+.yarnrc
+/.yarn

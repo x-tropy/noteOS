@@ -36,6 +36,7 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /public/assets
+/public/vite-dev
 
 # Ignore CI service files.
 /.github
@@ -46,3 +47,8 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+# Ignore files generate by `rails g dockerfile --tigris`
+.node-version
+.yarnrc
+/.yarn
