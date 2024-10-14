@@ -1,9 +1,8 @@
-<h1>Home#index</h1>
-<%= link_to "Articles", articles_path, class: "bold text-2xl underline" %>
+<h1 class="font-medium text-2xl">noteOS</h1>
 <% if user_signed_in? %>
-  <p>Welcome, <%= current_user.email %>.
-    <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
-  </p>
+  <p>Welcome, <%= current_user.email %>!</p>
+  <%= link_to "Articles", articles_path %> |
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false } %>
 <% else %>
   <%= link_to "Sign in", new_user_session_path %> |
   <%= link_to "Sign up", new_user_registration_path %>
