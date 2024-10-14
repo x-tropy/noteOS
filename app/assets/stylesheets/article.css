@@ -1,5 +1,5 @@
 #tiptap-editor .ProseMirror, .article {
-    @apply font-serif focus:outline-none mx-auto my-0 w-fit pl-4 pr-1 md:w-[750px];
+    @apply font-serif focus:outline-none mx-auto my-0 pl-4 pr-2 md:w-[750px];
 
     strong, h1, h2, h3 {
         @apply font-semibold;
@@ -7,7 +7,6 @@
 
     h1, h2, h3 {
         @apply font-sans;
-        /*word-spacing: 2px;*/
     }
 
     h1 {
@@ -104,8 +103,9 @@
     hr {
         @apply border-0 h-[1.5em] my-16;
         &:before {
-            @apply block text-center font-mono font-bold;
-            content: "·  ×  ·";
+            @apply block text-center font-mono text-sm;
+            content: "* * *";
+            word-spacing: 16px;
         }
     }
 
