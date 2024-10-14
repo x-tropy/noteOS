@@ -3,6 +3,9 @@ import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
+import Rails from "@rails/ujs";
+
+Rails.start();
 
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");
