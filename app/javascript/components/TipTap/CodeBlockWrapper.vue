@@ -1,9 +1,9 @@
 <template>
-  <node-view-wrapper class="relative">
+  <node-view-wrapper class="relative code-wrapper">
     <span
       class="font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded"
     >
-      <IconCode width="20" height="20" class="mr-1" />
+      <img :src="IconCode" class="mr-1" />
       {{ props.node.attrs.language || "auto" }}
     </span>
     <!--don't split pre tag and code tag-->
@@ -13,7 +13,7 @@
 
 <script setup>
 import { NodeViewContent, nodeViewProps, NodeViewWrapper } from "@tiptap/vue-3";
-import { IconCode } from "@tabler/icons-vue";
+import {IconCode} from "./preprocess.js";
 
 const props = defineProps(nodeViewProps);
 </script>

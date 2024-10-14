@@ -1,5 +1,5 @@
 #tiptap-editor .ProseMirror, .article {
-    @apply font-serif focus:outline-none mx-auto my-0 pl-4 pr-2 md:w-[750px];
+    @apply font-serif focus:outline-none mx-auto my-0 pl-4 md:w-[750px];
 
     strong, h1, h2, h3 {
         @apply font-semibold;
@@ -27,7 +27,7 @@
     }
 
     p {
-        @apply font-serif text-xl tracking-tight leading-8 my-4;
+        @apply font-serif font-normal text-xl tracking-tight leading-8 my-4;
         word-spacing: 1px;
 
         code {
@@ -56,14 +56,14 @@
     }
 
     .code-wrapper {
-        @apply overflow-x-auto;
+        @apply -left-2;
     }
 
     pre {
-        @apply text-sm mb-4 rounded-md border border-gray-300 pl-3 pb-2 pt-9;
+        @apply text-sm mb-4 rounded-md border border-gray-300 pl-2 pb-2 pt-9;
 
         code {
-            @apply bg-transparent !p-0;
+            @apply bg-transparent overflow-x-auto !p-0;
         }
 
     }
@@ -114,6 +114,6 @@
     }
 
     a {
-        @apply cursor-pointer underline underline-offset-[5px];
+        @apply cursor-pointer underline underline-offset-[5px] break-all;
     }
 }
