@@ -60,3 +60,4 @@ gem "dockerfile-rails", ">= 1.6", :group => :development
 gem "devise"
 gem "friendly_id"
 gem "vite_rails"
+gem "aws-sdk-s3", "~> 1.167", :require => false
