@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :items
   resources :articles
   devise_for :users
-  root "home#index"
+  root "home#index", as: :homepage
   get "/about", to: "home#about"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
