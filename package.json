@@ -42,5 +42,6 @@
     "lowlight": "^3.1.0",
     "vite-plugin-rails": "^0.5.0",
     "vue": "^3.5.11"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
