@@ -49,8 +49,7 @@ RUN npm config set "@tiptap-pro:registry" https://registry.tiptap.dev/
 RUN npm config set "//registry.tiptap.dev/:_authToken" ${TIPTAP_PRO_TOKEN}
 
 # Install Vite and build assets
-RUN npm install && \
-    npm run build
+RUN npm install
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
