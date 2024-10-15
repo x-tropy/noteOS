@@ -1,7 +1,7 @@
 import Link from "@tiptap/extension-link";
 
 export default Link.configure({
-    openOnClick: true,
+    openOnClick: false,
     defaultProtocol: "https",
     autolink: true,
     linkOnPaste: true,
