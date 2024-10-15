@@ -42,8 +42,11 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
+# Declare the build argument
+ARG TIPTAP_PRO_TOKEN
+
 # Install Vite and build assets
-RUN npm install && \
+RUN TIPTAP_PRO_TOKEN= npm install && \
     npm run build
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
