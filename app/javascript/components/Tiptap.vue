@@ -1,6 +1,6 @@
 <template>
   <div v-if="editor">
-    <Toolbar :editor="editor"/>
+    <Toolbar :editor="editor" />
     <editor-content :editor="editor" />
   </div>
 </template>
@@ -12,8 +12,10 @@ import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import Typography from "@tiptap/extension-typography";
 import Highlight from "@tiptap/extension-highlight";
-import Toolbar from "./TipTap/Toolbar.vue"
-import CustomLink from "./TipTap/CustomLink.js"
+import Toolbar from "./TipTap/Toolbar.vue";
+import CustomLink from "./TipTap/CustomLink.js";
+import Image from "@tiptap/extension-image";
+import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 
 const props = defineProps({
   initialContent: {
@@ -40,6 +42,8 @@ onMounted(() => {
       Highlight,
       CustomCodeBlock,
       CustomLink,
+      Image,
+      CustomFileHandler,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

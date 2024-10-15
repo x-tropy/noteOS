@@ -31,11 +31,19 @@ export function setLink(editor) {
     .setLink({
       href: url,
       class: isInternalLink ? "internal" : "external",
-      target: isInternalLink ? "_self" : "_blank"
+      target: isInternalLink ? "_self" : "_blank",
     })
     .run();
 }
 
 export function unsetLink(editor) {
   editor.chain().focus().unsetLink().run();
+}
+
+export function addImage(editor) {
+  const url = window.prompt("URL");
+
+  if (url) {
+    editor.chain().focus().setImage({ src: url }).run();
+  }
 }
