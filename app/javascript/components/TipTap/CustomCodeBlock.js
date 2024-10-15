@@ -1,7 +1,7 @@
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import { VueNodeViewRenderer } from "@tiptap/vue-3";
 import { createLowlight } from "lowlight";
-import CodeBlockWrapper from "./CodeBlockWrapper.vue";
+import CodeBlockWrap from "./CodeBlockWrap.vue";
 import hljsVue from "./hljsVue.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import xml from "highlight.js/lib/languages/xml";
@@ -29,7 +29,7 @@ lowlight.register({ typescript });
 
 const CustomCodeBlock = CodeBlockLowlight.configure({ lowlight }).extend({
   addNodeView() {
-    return VueNodeViewRenderer(CodeBlockWrapper);
+    return VueNodeViewRenderer(CodeBlockWrap);
   },
 });
 
