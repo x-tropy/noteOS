@@ -413,6 +413,11 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
+"@tiptap-pro/extension-file-handler@^2.11.9":
+  version "2.11.9"
+  resolved "https://registry.tiptap.dev/@tiptap-pro%2fextension-file-handler/-/extension-file-handler-2.11.9.tgz#8c4b1eae1575413da73168de497698b5ae6a1dd4"
+  integrity sha512-/Aa420i0YfnPdlgS6I4RbWBBmEeFMqNqKnc9D4irklHCuD/SE6z+tdVTZiFFU/66Edza/2AM4IviUNy8tdZWfA==
+
 "@tiptap/core@^2.8.0":
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@tiptap/core/-/core-2.8.0.tgz#4b5707d3ac1d61fcbb840371fc04990c1cb466b8"
@@ -501,6 +506,11 @@
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-horizontal-rule/-/extension-horizontal-rule-2.8.0.tgz#34310d91bac4ddabdcb4b7fc350eea5c87224ab3"
   integrity sha512-Sn/MI8WVFBoIYSIHA9NJryJIyCEzZdRysau8pC5TFnfifre0QV1ksPz2bgF+DyCD69ozQiRdBBHDEwKe47ZbfQ==
+
+"@tiptap/extension-image@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-image/-/extension-image-2.8.0.tgz#e1b135c1fb079048bb4261a0546c3374fe6192d7"
+  integrity sha512-5CReomgHGTUgxaX8P3i6qiC9VRWcWQgVoYtds4ZM52LVx/oGwMxQ4ECyzdVYKaRW+6PrNnAe6ew3Qpd5Wk0cIg==
 
 "@tiptap/extension-italic@^2.8.0":
   version "2.8.0"
