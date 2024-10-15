@@ -13,11 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: |
-          docker build \
-            --build-arg TIPTAP_PRO_TOKEN=${{ secrets.TIPTAP_PRO_TOKEN }} \
-            -t my-app .
-          flyctl deploy --remote-only
+      - run: flyctl deploy --remote-only --build-arg TIPTAP_PRO_TOKEN=${{ secrets.TIPTAP_PRO_TOKEN }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
           TIPTAP_PRO_TOKEN: ${{ secrets.TIPTAP_PRO_TOKEN }}
