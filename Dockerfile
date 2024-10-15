@@ -45,11 +45,11 @@ RUN bundle exec bootsnap precompile app/ lib/
 # Declare the build argument
 ARG TIPTAP_PRO_TOKEN
 
-# Set it as an environment variable
-ENV TIPTAP_PRO_TOKEN=${TIPTAP_PRO_TOKEN}
+RUN npm config set "@tiptap-pro:registry" https://registry.tiptap.dev/
+RUN npm config set "//registry.tiptap.dev/:_authToken" TIPTAP_PRO_TOKEN
 
 # Install Vite and build assets
-RUN TIPTAP_PRO_TOKEN=${TIPTAP_PRO_TOKEN} npm install && \
+RUN npm install && \
     npm run build
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
