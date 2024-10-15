@@ -62,3 +62,4 @@
 * FIX: font loading slow
 * TODO: callout
 * add: vite-plugin-rails, remove: vite-plugin-ruby, vite-plugin-full-reload, vite-plugin-stimulus-hmr
+* TODO: add: confirm before delete
