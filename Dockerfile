@@ -46,7 +46,7 @@ RUN bundle exec bootsnap precompile app/ lib/
 ARG TIPTAP_PRO_TOKEN
 
 RUN npm config set "@tiptap-pro:registry" https://registry.tiptap.dev/
-RUN npm config set "//registry.tiptap.dev/:_authToken" "yum/TFHJHrEXqqdGcD24tlUTzsM8sLCCoAzG1l9uXXZALdSRtWVZlFQ5/pLdSMmr"
+RUN npm config set "//registry.tiptap.dev/:_authToken" ${TIPTAP_PRO_TOKEN}
 
 # Install Vite and build assets
 RUN npm install && \
