@@ -33,7 +33,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/0c0665bc055c4260d8e991bd3c7d1b87.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/0c0665bc055c4260d8e991bd3c7d1b87.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -42,7 +42,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/5a5f541e5f7ae47b642553da78e125da.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/5a5f541e5f7ae47b642553da78e125da.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -51,7 +51,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/a1ce25c8cdc0a33b6afe65fa1162417c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/a1ce25c8cdc0a33b6afe65fa1162417c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -60,7 +60,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/865ffb013ddf7dd0b38e3520fd8a94a0.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/865ffb013ddf7dd0b38e3520fd8a94a0.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -69,7 +69,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/315703f5f4b308626b7dbb62bd468b7c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/315703f5f4b308626b7dbb62bd468b7c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -78,7 +78,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7006c10545efe9f65eb353bba87fb89f.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7006c10545efe9f65eb353bba87fb89f.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -87,7 +87,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/6c65b23790c92b72b7bb689d23f9d548.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/6c65b23790c92b72b7bb689d23f9d548.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -96,7 +96,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8a474a465685eed2301afdde2c7225f1.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8a474a465685eed2301afdde2c7225f1.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -105,7 +105,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/1b1d30376f8745ae72d84fb7f7bdc4ca.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/1b1d30376f8745ae72d84fb7f7bdc4ca.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -114,7 +114,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/d02e17e834e2506e172b1c4e4c3c7835.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/d02e17e834e2506e172b1c4e4c3c7835.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -123,7 +123,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ccbe9a7a628603a170dff681f2393272.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ccbe9a7a628603a170dff681f2393272.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -132,7 +132,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/f0a08ab27d73e51129248af60c896f7b.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/f0a08ab27d73e51129248af60c896f7b.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -141,7 +141,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/fcd510052f5872bd0c862d777251cc67.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/fcd510052f5872bd0c862d777251cc67.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -150,7 +150,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/219801548fe86d6695a310a339beb975.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/219801548fe86d6695a310a339beb975.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -159,7 +159,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7738b9b5f34d3dc7b3aab1bfac6eae94.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7738b9b5f34d3dc7b3aab1bfac6eae94.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -168,7 +168,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/22191196d2e2a480cf5eb4de84e3fbee.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/22191196d2e2a480cf5eb4de84e3fbee.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -177,7 +177,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/4bae83e3d1eda6ce6ebd5226afe4c37c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/4bae83e3d1eda6ce6ebd5226afe4c37c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -186,7 +186,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/3d0416a39727f335dc77bfc8bc28c149.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/3d0416a39727f335dc77bfc8bc28c149.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -195,7 +195,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/94f774d330e29a89751381fd2d43d28e.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/94f774d330e29a89751381fd2d43d28e.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -204,7 +204,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/517d2e097108b9be500d90b8048fa72a.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/517d2e097108b9be500d90b8048fa72a.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -213,7 +213,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/692069efda31ae5cd3d524e478990fd6.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/692069efda31ae5cd3d524e478990fd6.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -222,7 +222,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/460c9cdc6f7867ff96469ef444d169fc.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/460c9cdc6f7867ff96469ef444d169fc.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -231,7 +231,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/998e46c0d3372b0620ecfe91518a6be5.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/998e46c0d3372b0620ecfe91518a6be5.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -240,7 +240,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ae78d39158503e6cc0f1516981d12b32.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ae78d39158503e6cc0f1516981d12b32.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -249,7 +249,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/47127d9fc1a1e7513226a59c4caa43d8.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/47127d9fc1a1e7513226a59c4caa43d8.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -258,7 +258,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/1ae9210fb0f8e86ddc88aeb8fbf50484.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/1ae9210fb0f8e86ddc88aeb8fbf50484.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -267,7 +267,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ad58373ea9e4f5a47fd0ebfd127481b1.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ad58373ea9e4f5a47fd0ebfd127481b1.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -276,7 +276,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/b15293b6b425132deb17191fe74f92e2.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/b15293b6b425132deb17191fe74f92e2.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -285,7 +285,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/d170a6fd19fd617b01af6abe72e25d6e.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/d170a6fd19fd617b01af6abe72e25d6e.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -294,7 +294,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/988a07bb1cc9b52d164de9fd5686cfa4.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/988a07bb1cc9b52d164de9fd5686cfa4.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -303,7 +303,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7a0a52c0460d616d209e5c3bec2fdb06.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7a0a52c0460d616d209e5c3bec2fdb06.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -312,7 +312,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/4789d4eecafa93bf4b17ce49f0318a7e.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/4789d4eecafa93bf4b17ce49f0318a7e.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -321,7 +321,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/9a3947627faebadffcb555046698e8cf.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/9a3947627faebadffcb555046698e8cf.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -330,7 +330,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/971d06cf4a1471c05c4e8feeae553fcf.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/971d06cf4a1471c05c4e8feeae553fcf.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -339,7 +339,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/092de62526e128c4561828de6cf792d9.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/092de62526e128c4561828de6cf792d9.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -348,7 +348,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/db92b2f4e0e37f39ad4b00c6a174d5a1.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/db92b2f4e0e37f39ad4b00c6a174d5a1.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -357,7 +357,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/5dbf652ab75f8de0102aeca48ac5ff6f.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/5dbf652ab75f8de0102aeca48ac5ff6f.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -366,7 +366,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/e5f0498c34354d39c34d3130e303bbdb.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/e5f0498c34354d39c34d3130e303bbdb.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -375,7 +375,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7d3a4f03c19d3b4a52c550396d8db0c8.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7d3a4f03c19d3b4a52c550396d8db0c8.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -384,7 +384,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/e7cf6d42aa2f26aa0cf5910d68efdf68.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/e7cf6d42aa2f26aa0cf5910d68efdf68.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -393,7 +393,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ae43374b7e040afe979711d509f3f080.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ae43374b7e040afe979711d509f3f080.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -402,7 +402,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/466b47ef227536ef70573b2fce219cae.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/466b47ef227536ef70573b2fce219cae.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -411,7 +411,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/2c79696a0ada19dfa89ce15cac6c8497.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/2c79696a0ada19dfa89ce15cac6c8497.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -420,7 +420,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/1c39badfa31bb59d18a3cdba126809a6.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/1c39badfa31bb59d18a3cdba126809a6.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -429,7 +429,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7ceed556f2bb65e7413eb855ad1af877.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7ceed556f2bb65e7413eb855ad1af877.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -438,7 +438,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/2f4c4cd350e406ed661c320c4ca65d12.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/2f4c4cd350e406ed661c320c4ca65d12.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -447,7 +447,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/311dbfd5f5fb4a94a9a1a3e1c7137f3e.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/311dbfd5f5fb4a94a9a1a3e1c7137f3e.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -456,7 +456,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/b2c39a28da4cb1a58b9212f1f51fcc59.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/b2c39a28da4cb1a58b9212f1f51fcc59.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -465,7 +465,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/e3cd526c9263f90e7bc93231d1e3dfe9.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/e3cd526c9263f90e7bc93231d1e3dfe9.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -474,7 +474,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/a8167b9bddb5af427b832fc683a6534c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/a8167b9bddb5af427b832fc683a6534c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -483,7 +483,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/5bd65f89b6e177555aaa92bb85f7c9be.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/5bd65f89b6e177555aaa92bb85f7c9be.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -492,7 +492,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/be644b42d8ddbbc118cb746c9564bd31.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/be644b42d8ddbbc118cb746c9564bd31.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -501,7 +501,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/3bd8b045b3dbb44768034f88b381dc98.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/3bd8b045b3dbb44768034f88b381dc98.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -510,7 +510,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/c07ad424c18c3ea231b0d8c2bded387f.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/c07ad424c18c3ea231b0d8c2bded387f.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -519,7 +519,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/05fcd381dae5015c6562f2ce2b775feb.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/05fcd381dae5015c6562f2ce2b775feb.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -528,7 +528,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/3eb6c85374e7cc781f6b5f45f03e3193.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/3eb6c85374e7cc781f6b5f45f03e3193.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -537,7 +537,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/bafcae4c185d169c61336dc05ba9e453.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/bafcae4c185d169c61336dc05ba9e453.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -546,7 +546,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/86332b4cbd456b14a7698299ea16e8d3.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/86332b4cbd456b14a7698299ea16e8d3.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -555,7 +555,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8f3c5d3d2f7c0faf048148c6c53d2eaa.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8f3c5d3d2f7c0faf048148c6c53d2eaa.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -564,7 +564,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/bbf09812130a15621484d18b298ee7f0.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/bbf09812130a15621484d18b298ee7f0.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -573,7 +573,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/f0ba5c5bf98b48a0d94f46a088398678.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/f0ba5c5bf98b48a0d94f46a088398678.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -582,7 +582,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7f17af67f0d7b5dde67e487dbf83ae74.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7f17af67f0d7b5dde67e487dbf83ae74.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -591,7 +591,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8ab5e445db7aeb6a6c6923d848a19c91.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8ab5e445db7aeb6a6c6923d848a19c91.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -600,7 +600,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/556fe195bdb8a5d7317da83117ea81ed.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/556fe195bdb8a5d7317da83117ea81ed.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -609,7 +609,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/b55e86581b3a0180b46a0744586c9936.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/b55e86581b3a0180b46a0744586c9936.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -618,7 +618,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/733a1c15e8407fd587c678ce9ef0303c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/733a1c15e8407fd587c678ce9ef0303c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -627,7 +627,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8657fdff962ac64c747ce03bbec8dbab.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8657fdff962ac64c747ce03bbec8dbab.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -636,7 +636,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ccfb9224137251d74deb8ff93cc5939c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ccfb9224137251d74deb8ff93cc5939c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -645,7 +645,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/575c51386cbdfe956cf645546305cf5b.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/575c51386cbdfe956cf645546305cf5b.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -654,7 +654,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/26ca620ceb7254a4d77b80608bcfdfde.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/26ca620ceb7254a4d77b80608bcfdfde.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -663,7 +663,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/21ae29e85255d9dc664dbae46726cc73.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/21ae29e85255d9dc664dbae46726cc73.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -672,7 +672,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ea16111c2704fbcfa373cbbc654768b6.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ea16111c2704fbcfa373cbbc654768b6.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -681,7 +681,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/2676ff7dadb1e0d8fd79d1f4c66100d7.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/2676ff7dadb1e0d8fd79d1f4c66100d7.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -690,7 +690,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/848f492ed6c7a71f8228e285941beb21.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/848f492ed6c7a71f8228e285941beb21.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -699,7 +699,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/bb2373ea26fc58321078fe76a28cd148.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/bb2373ea26fc58321078fe76a28cd148.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -708,7 +708,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/74e4d8d365f40ccb21cae99a6008776d.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/74e4d8d365f40ccb21cae99a6008776d.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -717,7 +717,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/38e11583b366e45673306de3b55c7ee2.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/38e11583b366e45673306de3b55c7ee2.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -726,7 +726,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/409b9c475ece7d1ae40eaae26ae1cb6b.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/409b9c475ece7d1ae40eaae26ae1cb6b.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -735,7 +735,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7e9fe711a6ab85cdf4f9c6f383338a94.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7e9fe711a6ab85cdf4f9c6f383338a94.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -744,7 +744,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/07e053af55c71dc9ef4864e60295245c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/07e053af55c71dc9ef4864e60295245c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -753,7 +753,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/3681eafc21a08c84fbdff52472e64d4a.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/3681eafc21a08c84fbdff52472e64d4a.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -762,7 +762,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/4857020ed78b27d449bf74923ec68796.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/4857020ed78b27d449bf74923ec68796.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -771,7 +771,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/25877ae92704f840a4c0112d3e55fb94.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/25877ae92704f840a4c0112d3e55fb94.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -780,7 +780,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/46483280e79ddeed230cb9ccda7a65f0.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/46483280e79ddeed230cb9ccda7a65f0.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -789,7 +789,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/d3795ce24fae2162726f97a686c8e38c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/d3795ce24fae2162726f97a686c8e38c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -798,7 +798,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/49000de4d5aa97e6b2ae89d9d5419136.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/49000de4d5aa97e6b2ae89d9d5419136.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -807,7 +807,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/7a13b8ad20ab2550893ce3e18bf85e9d.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/7a13b8ad20ab2550893ce3e18bf85e9d.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -816,7 +816,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8019a0780e9e00eb1d15fcbde5707b9f.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8019a0780e9e00eb1d15fcbde5707b9f.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -825,7 +825,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/10f7bc0f6f53732828e93f1baff26cfa.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/10f7bc0f6f53732828e93f1baff26cfa.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -834,7 +834,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/4e163b95cd9b01e4473d9bcf0b002bd3.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/4e163b95cd9b01e4473d9bcf0b002bd3.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -843,7 +843,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/b7272db8fc585291d12c826e638f97ed.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/b7272db8fc585291d12c826e638f97ed.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -852,7 +852,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/2e47747e53aa885b54a257e8595e855a.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/2e47747e53aa885b54a257e8595e855a.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -861,7 +861,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/9ec4ed57e21229ba033e4dc812643b7a.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/9ec4ed57e21229ba033e4dc812643b7a.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -870,7 +870,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/a8272fa2330bd83d7477164e706f97e7.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/a8272fa2330bd83d7477164e706f97e7.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -879,7 +879,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/aedf207f00120b6c0e1609573ecb8132.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/aedf207f00120b6c0e1609573ecb8132.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -888,7 +888,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/287a887d10517cdf13d7b8dc919a1c0d.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/287a887d10517cdf13d7b8dc919a1c0d.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -897,7 +897,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8f7aa0df05ae8fc6c8a1a460294f9cff.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8f7aa0df05ae8fc6c8a1a460294f9cff.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -906,7 +906,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/27802f09ed3d272fe7b5e2ef9f6cf90c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/27802f09ed3d272fe7b5e2ef9f6cf90c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -915,7 +915,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ae389e46a5bf1535e7f9dbb710a53fba.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ae389e46a5bf1535e7f9dbb710a53fba.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -924,7 +924,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/9a3a1fd4a433a9fa7a975ecd2b44dd79.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/9a3a1fd4a433a9fa7a975ecd2b44dd79.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -933,7 +933,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/8798d155bc9f552fdff39f1528005697.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/8798d155bc9f552fdff39f1528005697.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -942,7 +942,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/ac88254f72f972efffef3f4249f8e675.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/ac88254f72f972efffef3f4249f8e675.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -951,7 +951,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/e2d2aef83bf3bea9b6941894029d622c.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/e2d2aef83bf3bea9b6941894029d622c.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;
@@ -960,7 +960,7 @@ preferredSubfamily: SemiBold
 
 @font-face {
     font-family: "Noto Sans SC SemiBold";
-    src: url("https://fly.storage.tigris.dev/fonts/NotoSansSC/31f641809ee6b86330c3111a985ed8a5.woff2") format("woff2");
+    src: url("../fonts/NotoSansSC/31f641809ee6b86330c3111a985ed8a5.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
     font-display: block;

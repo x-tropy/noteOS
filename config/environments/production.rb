@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = {
+    "Cache-Control" => "public, max-age=31567000"
+  }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -19,13 +23,6 @@ Rails.application.configure do
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
-
-  # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-  config.public_file_server.enabled = true
-  config.public_file_server.headers = {
-    "Cache-Control" => "public, max-age=31536000",
-    "Content-Encoding" => "br"
-  }
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass

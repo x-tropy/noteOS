@@ -125,16 +125,16 @@
     a {
         @apply cursor-pointer underline underline-offset-[5px];
 
-        &::before {
-            @apply inline-block w-[18px] h-[18px] relative top-[2px] mr-[2px];
+        &::after {
+            @apply inline-block w-[18px] h-[18px] relative bottom-[2px] ml-[2px];
         }
 
-        &.external::before {
+        &.external::after {
             content: '';
-            background: url('../images/link.svg');
+            background: url('../images/external-link.svg');
         }
 
-        &.internal::before {
+        &.internal::after {
             content: '';
             background: url('../images/file-text.svg');
         }
