@@ -3,7 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    "Cache-Control" => "public, max-age=31555000"
+    "Cache-Control" => "public, max-age=31536000"
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
