@@ -5,7 +5,7 @@ import Rails from "@rails/ujs";
 import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
 
 Rails.start();
-
+console.log('Refresh builder')
 document.addEventListener("DOMContentLoaded", () => {
   const editorElement = document.getElementById("tiptap-editor");
   if (editorElement) {
