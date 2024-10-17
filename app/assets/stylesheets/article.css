@@ -116,7 +116,7 @@
     }
 
     hr {
-        @apply border-light border-t my-16;
+        @apply border-light border-t my-14;
         /*@apply border-0 h-[1.5em] my-16;*/
 
         /*&:before {*/

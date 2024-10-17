@@ -1,8 +1,8 @@
 import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
-import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
 import Rails from "@rails/ujs";
+import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
 
 Rails.start();
 
