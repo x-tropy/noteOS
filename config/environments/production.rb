@@ -1,10 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.public_file_server.enabled = true
-  config.public_file_server.headers = {
-    "Cache-Control" => "public, max-age=31567000"
-  }
+  config.public_file_server.enabled = false
+  # config.public_file_server.headers = {
+  #   "Cache-Control" => "public, max-age=31567000"
+  # }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
