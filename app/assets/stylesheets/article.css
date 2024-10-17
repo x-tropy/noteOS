@@ -1,3 +1,6 @@
+.border-light {
+    @apply border-opacity-25 border-black;
+}
 #tiptap-editor .ProseMirror, .article {
     @apply font-serif focus:outline-none mx-auto my-0 px-3 md:w-[750px];
 
@@ -60,7 +63,7 @@
     }
 
     pre {
-        @apply text-sm rounded-md border border-gray-300 pl-2 pb-2 pt-9;
+        @apply text-sm rounded-md border border-light pl-2 pb-2 pt-9;
 
         code {
             @apply bg-transparent overflow-x-auto !p-0;
@@ -113,13 +116,14 @@
     }
 
     hr {
-        @apply border-0 h-[1.5em] my-16;
+        @apply border-light border-t my-16;
+        /*@apply border-0 h-[1.5em] my-16;*/
 
-        &:before {
-            @apply block text-center font-mono text-sm;
-            content: "* * *";
-            word-spacing: 16px;
-        }
+        /*&:before {*/
+        /*    @apply block text-center font-mono text-sm;*/
+        /*    content: "* * *";*/
+        /*    word-spacing: 16px;*/
+        /*}*/
     }
 
     a {
