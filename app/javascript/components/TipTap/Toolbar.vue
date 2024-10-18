@@ -14,7 +14,7 @@ const props = defineProps({
     <div class="button-group">
       <button
         @click.prevent="setLink(editor)"
-        :class="{ 'is-active': editor.isActive('link') }"
+        :class="{ 'font-bold': editor.isActive('link') }"
       >
         Set link
       </button> |
@@ -32,9 +32,3 @@ const props = defineProps({
     </div>
   </div>
 </template>
-
-<style scoped>
-.is-active {
-  @apply font-bold;
-}
-</style>
