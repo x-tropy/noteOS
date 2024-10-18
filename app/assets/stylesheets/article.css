@@ -117,13 +117,6 @@
 
     hr {
         @apply border-light border-t my-14;
-        /*@apply border-0 h-[1.5em] my-16;*/
-
-        /*&:before {*/
-        /*    @apply block text-center font-mono text-sm;*/
-        /*    content: "* * *";*/
-        /*    word-spacing: 16px;*/
-        /*}*/
     }
 
     a {
@@ -144,7 +137,8 @@
         }
     }
 
+    /* selected node */
     .ProseMirror-selectednode {
-        @apply shadow-lg shadow-neutral-400 transition-shadow;
+        @apply shadow-lg shadow-neutral-400 transition-all ring-1;
     }
 }

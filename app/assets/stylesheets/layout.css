@@ -1,0 +1,8 @@
+#tiptap-editor .ProseMirror, .article {
+    @apply min-h-screen;
+}
+
+.footer-logo {
+    @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
+    background-image: url(../images/extropy-noteos.svg);
+}

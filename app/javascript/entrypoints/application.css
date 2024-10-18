@@ -13,3 +13,6 @@
 
 /* thin scrollbar */
 @import "../../assets/stylesheets/scrollbar.css";
+
+/* layout */
+@import "../../assets/stylesheets/layout.css";
