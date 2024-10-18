@@ -57,6 +57,11 @@ RUN npm run build
 # Step 1: Use a base image (amazonlinux:2 or any other suitable base image)
 FROM amazonlinux:2
 
+ENV AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID
+ENV AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY
+ENV AWS_ENDPOINT_URL_S3=AWS_ENDPOINT_URL_S3
+ENV BUCKET_NAME=BUCKET_NAME
+
 # Step 2: Install required dependencies and AWS CLI
 RUN yum install -y unzip curl && \
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \

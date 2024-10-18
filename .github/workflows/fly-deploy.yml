@@ -13,6 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only --config "../fly.toml" -a "noteos" # --build-arg TIPTAP_PRO_TOKEN=${{ secrets.TIPTAP_PRO_TOKEN }}
+      - run: flyctl deploy --remote-only --config "../fly.toml" -a "noteos" --build-arg TIPTAP_PRO_TOKEN=${{ secrets.TIPTAP_PRO_TOKEN }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_ENDPOINT_URL_S3: ${{ secrets.AWS_ENDPOINT_URL_S3 }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
