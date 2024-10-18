@@ -64,8 +64,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-COPY /rails/public /public
-
 RUN aws s3 sync /public/vite s3://$BUCKET_NAME/vite --endpoint-url $AWS_ENDPOINT_URL_S3 --acl public-read
 
 # Final stage for app image
