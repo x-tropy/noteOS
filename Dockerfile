@@ -64,7 +64,8 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-RUN aws s3 sync ./public/vite/assets/ s3://$BUCKET_NAME/noteOS/vite/assets/ --endpoint-url $AWS_ENDPOINT_URL_S3
+RUN aws s3 rm s3://$BUCKET_NAME/noteOS/vite/assets/ --endpoint-url $AWS_ENDPOINT_URL_S3 --recursive && \
+    aws s3 cp ./public/vite/assets/ s3://$BUCKET_NAME/noteOS/vite/assets/ --endpoint-url $AWS_ENDPOINT_URL_S3 --include "*.js" --include "*.css"
 
 # Final stage for app image
 FROM base
