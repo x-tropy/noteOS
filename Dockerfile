@@ -54,6 +54,22 @@ RUN npm install
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY d
 RUN npm run build
 
+# Step 1: Use a base image (amazonlinux:2 or any other suitable base image)
+FROM amazonlinux:2
+
+# Step 2: Install required dependencies and AWS CLI
+RUN yum install -y unzip curl && \
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    ./aws/install && \
+    rm -rf awscliv2.zip aws
+
+# Step 3: Copy the public folder into the Docker container
+COPY --from=build /rails/public /public
+
+# Step 4: Upload the contents of the public folder to S3
+RUN aws s3 sync /public/vite s3://$BUCKET_NAME/vite --endpoint-url $AWS_ENDPOINT_URL_S3 --acl public-read
+
 # Final stage for app image
 FROM base
 
