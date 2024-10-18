@@ -65,7 +65,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-RUN aws s3 sync ./public/vite s3://$BUCKET_NAME/vite --endpoint-url https://fly.storage.tigris.dev --acl public-read
+RUN aws s3 sync ./public/vite s3://${BUCKET_NAME}/vite --endpoint-url https://fly.storage.tigris.dev --acl public-read
 
 # Final stage for app image
 FROM base
