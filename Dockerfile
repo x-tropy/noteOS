@@ -57,7 +57,7 @@ RUN npm install
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN npm run build
-RUN echo "********************${AWS_SECRET_ACCESS_KEY}"
+RUN echo "********************${BUCKET_NAME}"
 
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
