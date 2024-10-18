@@ -51,7 +51,7 @@ RUN npm config set "//registry.tiptap.dev/:_authToken" ${TIPTAP_PRO_TOKEN}
 # Install Vite and build assets
 RUN npm install
 
-# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY d
 RUN npm run build
 
 # Final stage for app image
