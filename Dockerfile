@@ -64,7 +64,9 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-RUN aws s3 sync ./public/ s3://$BUCKET_NAME/noteOS/ --endpoint-url $AWS_ENDPOINT_URL_S3 --acl public-read
+RUN aws s3 sync ./public/icon.png s3://$BUCKET_NAME/noteOS/images/ --endpoint-url $AWS_ENDPOINT_URL_S3 && \
+    aws s3 sync ./public/icon.svg s3://$BUCKET_NAME/noteOS/images/ --endpoint-url $AWS_ENDPOINT_URL_S3 && \
+    aws s3 sync ./public/vite/assets/ s3://$BUCKET_NAME/noteOS/vite/assets/ --endpoint-url $AWS_ENDPOINT_URL_S3
 
 # Final stage for app image
 FROM base
@@ -72,9 +74,6 @@ FROM base
 # Copy built artifacts: gems, application
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
-
-# Ensure the script has execute permissions
-RUN chmod +x /rails/start.sh
 
 # Run and own only the runtime files as a non-root user for security
 RUN groupadd --system --gid 1000 rails && \
@@ -87,4 +86,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["/rails/start.sh"]
+CMD ["./bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]
