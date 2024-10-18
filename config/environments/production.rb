@@ -2,9 +2,6 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.public_file_server.enabled = false
-  # config.public_file_server.headers = {
-  #   "Cache-Control" => "public, max-age=31567000"
-  # }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -31,7 +28,7 @@ Rails.application.configure do
   config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.asset_host = "fly.storage.tigris.dev/static-noteos/"
+  config.asset_host = "fly.storage.tigris.dev/vite/noteOS/"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache

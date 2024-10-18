@@ -13,7 +13,7 @@ WORKDIR /rails
 
 # Install base packages
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl unzip libjemalloc2 libvips sqlite3 nginx && \
+    apt-get install --no-install-recommends -y curl unzip libjemalloc2 libvips sqlite3 && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
@@ -24,6 +24,13 @@ ENV RAILS_ENV="production" \
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
+
+# Declare the build argument
+ARG TIPTAP_PRO_TOKEN
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+ARG AWS_ENDPOINT_URL_S3
+ARG BUCKET_NAME
 
 # Install packages needed to build gems and Node.js for Vite
 RUN apt-get update -qq && \
@@ -42,13 +49,7 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
-# Declare the build argument
-ARG TIPTAP_PRO_TOKEN
-ARG AWS_ACCESS_KEY_ID
-ARG AWS_SECRET_ACCESS_KEY
-ARG AWS_ENDPOINT_URL_S3
-ARG BUCKET_NAME
-
+# Congure TipTap token
 RUN npm config set "@tiptap-pro:registry" https://registry.tiptap.dev/
 RUN npm config set "//registry.tiptap.dev/:_authToken" ${TIPTAP_PRO_TOKEN}
 
@@ -56,16 +57,14 @@ RUN npm config set "//registry.tiptap.dev/:_authToken" ${TIPTAP_PRO_TOKEN}
 RUN npm install
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN npm run build
-RUN echo "********************${BUCKET_NAME}"
-
+RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
     ./aws/install && \
     rm -rf awscliv2.zip aws
 
-RUN aws s3 sync ./public/vite s3://active-noteos/vite --endpoint-url https://fly.storage.tigris.dev --acl public-read
+RUN aws s3 sync ./public/ s3://$BUCKET_NAME/noteOS/ --endpoint-url $AWS_ENDPOINT_URL_S3 --acl public-read
 
 # Final stage for app image
 FROM base
@@ -78,14 +77,14 @@ COPY --from=build /rails /rails
 RUN chmod +x /rails/start.sh
 
 # Run and own only the runtime files as a non-root user for security
-#RUN groupadd --system --gid 1000 rails && \
-#    useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
-#    chown -R rails:rails db log storage tmp
-#USER 1000:1000
+RUN groupadd --system --gid 1000 rails && \
+    useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
+    chown -R rails:rails db log storage tmp
+USER 1000:1000
 
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
-EXPOSE 5000
+EXPOSE 3000
 CMD ["/rails/start.sh"]
