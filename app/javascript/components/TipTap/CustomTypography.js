@@ -132,6 +132,10 @@ const CustomTypography = Typography.extend({
   },
 }).configure({
   emDash: false,
+  openDoubleQuote: false,
+  closeDoubleQuote: false,
+  openSingleQuote: false,
+  closeSingleQuote: false
 });
 
 export default CustomTypography;
