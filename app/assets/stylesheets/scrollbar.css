@@ -14,3 +14,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.55);
 }
+
+@media (max-width: 640px) { /* Adjust the width as needed */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

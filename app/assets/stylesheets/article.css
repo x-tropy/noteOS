@@ -13,7 +13,7 @@
     }
 
     h1 {
-        @apply text-4xl mt-10 mb-16;
+        @apply text-4xl mt-10 mb-12;
     }
 
     h2 {
@@ -59,7 +59,7 @@
     }
 
     .code-block-wrap {
-        @apply my-4;
+        @apply mb-4;
     }
 
     pre {
@@ -116,7 +116,7 @@
     }
 
     hr {
-        @apply border-light border-t my-14;
+        @apply border-light border-t my-12;
     }
 
     a {
