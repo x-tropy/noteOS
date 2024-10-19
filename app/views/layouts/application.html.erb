@@ -20,9 +20,16 @@
 </head>
 
 <body>
-<p class="text-green-600"><%= notice %></p>
-<p class="text-red-600"><%= alert %></p>
-<%= yield %>
-<p class="bg-black"><span class="footer-logo"></span></p>
+<main class="min-h-screen">
+  <p class="text-green-600"><%= notice %></p>
+  <p class="text-red-600"><%= alert %></p>
+  <%= yield %>
+</main>
+<footer>
+  <p class="bg-black"><span class="footer-logo"></span></p>
+  <p class="text-gray-300 py-3 font-mono text-center text-xs bg-black border-t border-t-gray-500">
+    <span class="text-lg align-middle">&copy;</span> 2024 Extropy Educational Technologies. All rights reserved.
+  </p>
+</footer>
 </body>
 </html>

@@ -66,7 +66,7 @@
         @apply text-sm rounded-md border border-light pl-2 pb-2 pt-9;
 
         code {
-            @apply bg-transparent overflow-x-auto !p-0;
+            @apply bg-transparent overflow-x-auto !p-0 thin-scrollbar;
         }
 
     }
@@ -120,7 +120,7 @@
     }
 
     a {
-        @apply cursor-pointer underline underline-offset-[5px];
+        @apply cursor-pointer underline underline-offset-[5px] break-words;
 
         &::after {
             @apply inline-block w-[18px] h-[18px] relative bottom-[2px] ml-[2px];

@@ -10,7 +10,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Editor, EditorContent } from "@tiptap/vue-3";
 import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
-import Typography from "@tiptap/extension-typography";
+import CustomTypography from "./TipTap/CustomTypography.js";
 import Highlight from "@tiptap/extension-highlight";
 import Toolbar from "./TipTap/Toolbar.vue";
 import CustomLink from "./TipTap/CustomLink.js";
@@ -38,7 +38,7 @@ onMounted(() => {
 <p></p>`,
     extensions: [
       CustomStarterKit,
-      Typography,
+      CustomTypography,
       Highlight,
       CustomCodeBlock,
       CustomLink,

@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-    @apply h-[6px] w-[6px];
+    @apply h-[13px] w-[13px];
 }
 
 ::-webkit-scrollbar-track {
@@ -7,12 +7,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply rounded;
+    @apply rounded-full;
     background: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.55);
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    @apply h-[5px] w-[5px];
 }
 
 @media (max-width: 640px) { /* Adjust the width as needed */

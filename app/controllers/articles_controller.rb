@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @articles = current_user.articles
+    @articles = current_user.articles.order(updated_at: :desc)
   end
 
   def show
