@@ -23,7 +23,6 @@ const euroSign = () =>
 // Generator function to create input rules
 const generateRuleFromNames = (names, symbol) => {
   // Join names with the alternation operator
-  console.log(names);
   const namesPattern = names.join("|:"); // e.g., "heaven|qm|qian"
 
   return textInputRule({

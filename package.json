@@ -43,6 +43,7 @@
     "crelt": "^1.0.6",
     "highlight.js": "^11.10.0",
     "lowlight": "^3.1.0",
+    "title-case": "^4.3.2",
     "vite-plugin-rails": "^0.5.0",
     "vue": "^3.5.11"
   },

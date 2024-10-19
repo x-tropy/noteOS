@@ -15,9 +15,9 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" data-controller="title-case" >
     <%= form.label :title, "Slug title" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title,data: { action: "blur->title-case#handleBlur", title_case_target: "title" }  %>
   </div>
 
   <div class="field">
