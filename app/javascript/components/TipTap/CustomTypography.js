@@ -10,7 +10,7 @@ const downwardArrow = () =>
 
 const upwardArrow = () =>
   textInputRule({
-    find: /\|<$/,
+    find: /<\|$/,
     replace: "↑",
   });
 
