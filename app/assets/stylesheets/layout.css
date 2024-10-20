@@ -1,7 +1,20 @@
 #tiptap-editor .ProseMirror, .article {
 }
 
-.footer-logo {
-    @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
-    background-image: url(../images/extropy-noteos.svg);
+body {
+    &.global-bg {
+        @apply bg-no-repeat bg-cover bg-fixed;
+        background-image: url(https://fly.io/phx/ui/images/app-shapes-e20dd6e0903d3a31595108e6e1052a1e.webp?vsn=d);
+    }
+}
+
+footer {
+    .co-branded-logo {
+        @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
+        background-image: url(../images/extropy-noteos.svg);
+    }
+
+    .copyright-notice {
+        @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-t-gray-500;
+    }
 }
