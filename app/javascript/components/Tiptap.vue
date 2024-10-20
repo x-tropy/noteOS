@@ -1,7 +1,7 @@
 <template>
   <div v-if="editor">
     <Toolbar :editor="editor" />
-    <editor-content :editor="editor" />
+    <editor-content :editor="editor" ref="editorContent" />
   </div>
 </template>
 
@@ -16,6 +16,7 @@ import Toolbar from "./TipTap/Toolbar.vue";
 import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
+import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
 
 const props = defineProps({
   initialContent: {
@@ -28,13 +29,16 @@ const props = defineProps({
 });
 
 const editor = ref(null);
+const editorContentRef = ref(null);
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
     content:
       props.initialContent ||
-      `<h1>Title</h1>
+      `<h1></h1>
+<p></p>
+<p></p>
 <p></p>`,
     extensions: [
       CustomStarterKit,
@@ -44,11 +48,18 @@ onMounted(() => {
       CustomLink,
       Image,
       CustomFileHandler,
+      CustomPlaceholder,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
     },
   });
+
+    // Replace 'your-selector-here' with the correct selector to target the child element
+    // const childElement = editorContentRef.value.querySelector(
+    //   "div[contenteditable]",
+    // );
+    // console.log({ childElement });
 });
 
 onBeforeUnmount(() => {

@@ -1,6 +1,7 @@
 .border-light {
     @apply border-opacity-25 border-black;
 }
+
 #tiptap-editor .ProseMirror, .article {
     @apply font-serif focus:outline-none mx-auto my-0 px-3 md:w-[750px];
 
@@ -10,6 +11,7 @@
 
     h1, h2, h3 {
         @apply font-sans;
+
         code {
             @apply break-words;
         }
@@ -75,10 +77,28 @@
     }
 
     .code-language-label {
+        @apply font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded;
+
         &::before {
             content: '';
-            background: url("../images/code-invert.svg");
+            background: url("../images/w-code.svg");
             @apply inline-block w-[18px] h-[18px] relative mr-[2px] top-[1px];
+        }
+    }
+
+    .copy-code-button {
+        @apply bg-black text-white flex absolute right-0 absolute top-2 right-2 rounded font-sans text-sm px-2 py-1;
+
+        &::before {
+            content: '';
+            background: url("../images/w-copy.svg");
+            @apply inline-block w-[18px] h-[18px] relative mr-1 top-[1px];
+        }
+
+        &.copy-success {
+            &::before {
+                background: url("../images/w-check.svg");
+            }
         }
     }
 
@@ -141,7 +161,17 @@
     }
 
     /* selected node */
+
     .ProseMirror-selectednode {
         @apply shadow-elevation-md active:shadow-elevation transition-all border-transparent rounded-sm;
+    }
+
+    /* placeholder */
+
+    h1, p {
+        &.is-empty::before {
+            content: attr(data-placeholder);
+            @apply text-stone-300 float-left pointer-events-none h-0;
+        }
     }
 }
