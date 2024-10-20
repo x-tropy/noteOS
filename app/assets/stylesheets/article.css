@@ -10,6 +10,9 @@
 
     h1, h2, h3 {
         @apply font-sans;
+        code {
+            @apply break-words;
+        }
     }
 
     h1 {
@@ -59,14 +62,14 @@
     }
 
     .code-block-wrap {
-        @apply mb-4;
+        @apply mb-4 rounded-md border border-light bg-white;
     }
 
     pre {
-        @apply text-sm rounded-md border border-light pl-2 pb-2 pt-9;
+        @apply text-sm  pl-2 pb-2 pt-9;
 
         code {
-            @apply bg-transparent overflow-x-auto !p-0 thin-scrollbar;
+            @apply overflow-x-auto !p-0 thin-scrollbar;
         }
 
     }
@@ -139,6 +142,6 @@
 
     /* selected node */
     .ProseMirror-selectednode {
-        @apply shadow-lg shadow-neutral-400 transition-all ring-1;
+        @apply shadow-elevation-md active:shadow-elevation transition-all border-transparent rounded-sm;
     }
 }
