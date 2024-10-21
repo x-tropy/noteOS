@@ -27,12 +27,10 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      # redirect_to @article, notice: "Article was successfully updated."
       flash.now[:notice] = "Article was successfully updated."
-      render :edit
-    else
-      render :edit
+      redirect_to edit_article_path(@article)
     end
+    # render :edit
   end
 
   def destroy
