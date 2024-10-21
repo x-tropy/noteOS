@@ -25,20 +25,23 @@ function restoreSelection(editor, selection) {
 
 // Feature: Silent Sync
 
-let lastSavedContent = localStorage.getItem('currentContent') || '';
-
 export function periodicTask(editor) {
   const intervalId = setInterval(() => {
-    syncContent(editor.value)
-  }, 5000)
+    syncContent(editor);
+  }, 5000);
 
-  return intervalId
+  return intervalId;
 }
 
 function syncContent(editor) {
-  const currentContent = editor.getHTML()
-  if (currentContent !== lastSavedContent) {
-    localStorage.setItem('currentContent', currentContent);
-    document.getElementById("silent-sync")?.click()
-  }
+  const liveContent = editor.value.getHTML().trim();
+
+  // Retrieve the latest lastSavedContent each time syncContent is called
+  const lastSavedContent = localStorage.getItem("lastSavedContent") || "";
+
+  // Compare liveContent with the most recently saved content
+  if (liveContent === lastSavedContent) return;
+
+  document.getElementById("silent-sync")?.click();
+  localStorage.setItem("lastSavedContent", liveContent);
 }
