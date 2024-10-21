@@ -1,12 +1,12 @@
 <template>
-  <div v-if="editor">
+  <template v-if="editor">
     <Toolbar :editor="editor" />
-    <editor-content :editor="editor" />
-  </div>
+    <editor-content :editor="editor"/>
+  </template>
 </template>
 
 <script setup>
-import { ref, useTemplateRef, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Editor, EditorContent } from "@tiptap/vue-3";
 import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
@@ -17,6 +17,7 @@ import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
+import {ensureThreeEmptyParagraphs, periodicTask} from "./TipTap/EditorTasks.js"
 
 const props = defineProps({
   initialContent: {
@@ -29,7 +30,7 @@ const props = defineProps({
 });
 
 const editor = ref(null);
-const editorWrapper = useTemplateRef("editor-wrapper");
+const isUpdating = ref(false)
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
@@ -50,41 +51,19 @@ onMounted(() => {
       CustomFileHandler,
       CustomPlaceholder,
     ],
-    onUpdate: ({ editor }) => {
+    onUpdate: ({editor}) => {
       props.onUpdateContent(editor.getHTML());
-      if (!isUpdating) {
-        ensureThreeEmptyParagraphs(editor);
+      if (!isUpdating.value) {
+        ensureThreeEmptyParagraphs(editor, isUpdating);
       }
     },
   });
 });
 
-let isUpdating = false;
-
-function ensureThreeEmptyParagraphs(editor) {
-  const content = editor.getHTML();
-
-  // Check if the content ends with exactly 3 empty <p> tags
-  if (!content.endsWith("<p></p><p></p><p></p>")) {
-    isUpdating = true; // Prevent triggering onUpdate again
-    const selection = saveSelection(editor)
-    const updatedContent = content.replace(/(<p><\/p>)+$/, ""); // Remove trailing empty <p> tags
-    editor.commands.setContent(`${updatedContent}<p></p><p></p><p></p>`, false); // Add 3 empty <p> tags at the end
-    restoreSelection(selection, editor)
-    isUpdating = false;
-  }
-}
-
-function saveSelection(editor) {
-  const selection = editor.state.selection;
-  return { from: selection.from, to: selection.to };
-}
-
-function restoreSelection(selection, editor) {
-  editor.commands.setTextSelection({ from: selection.from, to: selection.to });
-}
+const intervalId = periodicTask(editor)
 
 onBeforeUnmount(() => {
   editor.value.destroy();
+  clearInterval(intervalId)
 });
 </script>

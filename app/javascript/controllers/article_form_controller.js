@@ -3,9 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["form", "submitButton"];
 
-  connect() {
-    console.log("ArticleFormController connected");
-  }
+  connect() {}
 
   submitForm(event) {
     event.preventDefault(); // Prevent default form submission
@@ -25,15 +23,15 @@ export default class extends Controller {
       body: formData,
     })
       .then((response) => {
-        return response.json()
+        return response.json();
       })
       .then((data) => {
         if (data.success) {
           // Update the DOM or show a success message
-          console.log("Article updated successfully");
+          console.log(data.message);
         } else {
           // Handle errors (e.g., display form validation messages)
-          console.log("Failed to update article");
+          console.log(data.errors);
         }
       })
       .catch((error) => {
