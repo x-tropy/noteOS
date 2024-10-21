@@ -1,6 +1,6 @@
-<%= form_with(model: article, local: true) do |form| %>
+<%= form_with(model: article,  data: { controller: "article-form", action: "submit->article-form#submitForm", article_form_target: 'form' }, html: { id: "article-form" }) do |form| %>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Save article", data: { article_form_target: "submitButton" }%>
   </div>
 
   <% if article.errors.any? %>
@@ -21,7 +21,7 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :content, id: 'hidden-article-content' %>
+    <%= form.hidden_field :content, id: 'tiptap-hidden' %>
     <div id="tiptap-editor" data-content="<%= article.content %>"></div>
   </div>
 

@@ -27,10 +27,14 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash.now[:notice] = "Article was successfully updated."
-      redirect_to edit_article_path(@article)
+      respond_to do |format|
+        format.json { render json: { success: true, message: "Article updated successfully" } }
+      end
+    else
+      respond_to do |format|
+        format.json { render json: { success: false, errors: @article.errors.full_messages }, status: :unprocessable_entity }
+      end
     end
-    # render :edit
   end
 
   def destroy
