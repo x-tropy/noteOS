@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // callback: used to update
       onUpdateContent: (content) => {
-        document.getElementById("hidden-article-content").value = content;
+        document.getElementById("tiptap-hidden").value = content;
       },
     });
     app.mount("#tiptap-editor");
+    highlightCodeBlocks()
+    prependLanguageLabels()
   }
-  highlightCodeBlocks()
-  prependLanguageLabels()
 });
 
 // console.log(await S3.send(new ListBucketsCommand("")));
