@@ -15,6 +15,6 @@ footer {
     }
 
     .copyright-notice {
-        @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-t-gray-500;
+        @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-t-gray-500 tracking-wider;
     }
 }
