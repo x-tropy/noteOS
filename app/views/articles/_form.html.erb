@@ -1,6 +1,6 @@
-<%= form_with(model: article,  data: { controller: "article-form", action: "submit->article-form#submitForm", article_form_target: 'form' }, html: { id: "article-form" }) do |form| %>
+<%= form_with(model: article, data: { controller: "article-form", action: "submit->article-form#submitForm", article_form_target: 'form' }, html: { id: "article-form" }) do |form| %>
   <div class="actions">
-    <%= form.submit "Save article", data: { article_form_target: "submitButton" }, id: "silent-sync"%>
+    <%= form.submit "Save article", data: { article_form_target: "submitButton" }, id: "silent-sync" %>
   </div>
 
   <% if article.errors.any? %>
@@ -15,9 +15,9 @@
     </div>
   <% end %>
 
-  <div class="field" data-controller="title-case" >
+  <div class="field" data-controller="title-case">
     <%= form.label :title, "Slug title" %>
-    <%= form.text_field :title,data: { action: "blur->title-case#handleBlur", title_case_target: "title" }  %>
+    <%= form.text_field :title, data: { action: "blur->title-case#handleBlur", title_case_target: "title" } %>
   </div>
 
   <div class="field">
@@ -25,5 +25,5 @@
     <div id="tiptap-editor" data-content="<%= article.content %>"></div>
   </div>
 
-
 <% end %>
+<!-- TODO: allow changing slug ->
