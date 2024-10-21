@@ -1,6 +1,10 @@
 <script setup>
 import { Editor } from "@tiptap/vue-3";
-import { setLink, unsetLink, addImage } from "./ToolbarCommands.js";
+import {
+  setLink,
+  unsetLink,
+  addImage,
+} from "./ToolbarCommands.js";
 
 const props = defineProps({
   editor: {
@@ -17,18 +21,16 @@ const props = defineProps({
         :class="{ 'font-bold': editor.isActive('link') }"
       >
         Set link
-      </button> |
+      </button>
+      |
       <button
         @click.prevent="unsetLink(editor)"
         :disabled="!editor.isActive('link')"
       >
         Unset link
-      </button> |
-      <button
-        @click.prevent="addImage(editor)"
-      >
-        Add image
-      </button> |
+      </button>
+      |
+      <button @click.prevent="addImage(editor)">Add image</button>
     </div>
   </div>
 </template>

@@ -9,12 +9,14 @@ body {
 }
 
 footer {
-    .co-branded-logo {
-        @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
-        background-image: url(../images/extropy-noteos.svg);
+    p {
+        .co-branded-logo {
+            @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
+            background-image: url(../images/extropy-noteos.svg);
+        }
     }
 
     .copyright-notice {
-        @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-t-gray-500 tracking-wider;
+        @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-gray-500 tracking-wider;
     }
 }

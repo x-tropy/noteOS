@@ -12,11 +12,13 @@ export default class extends Controller {
     navigator.clipboard.writeText(this.codeText).then(() => {
       const originalText = this.buttonTarget.innerText;
       this.buttonTarget.innerText = 'Copied';
+      this.buttonTarget.disabled = true
       this.buttonTarget.classList.toggle("copy-success")
       setTimeout(() => {
         this.buttonTarget.innerText = originalText;
         this.buttonTarget.classList.toggle("copy-success")
-      }, 2000);
+        this.buttonTarget.disabled = false
+      }, 3000);
     }).catch(err => {
       console.error('Failed to copy text:', err);
     });

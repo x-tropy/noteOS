@@ -1,7 +1,7 @@
 <template>
   <template v-if="editor">
     <Toolbar :editor="editor" />
-    <editor-content :editor="editor"/>
+    <editor-content :editor="editor" />
   </template>
 </template>
 
@@ -17,7 +17,10 @@ import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
-import {ensureThreeEmptyParagraphs, periodicTask} from "./TipTap/EditorTasks.js"
+import {
+  ensureThreeEmptyParagraphs,
+  periodicTask,
+} from "./TipTap/EditorTasks.js";
 
 const props = defineProps({
   initialContent: {
@@ -30,7 +33,7 @@ const props = defineProps({
 });
 
 const editor = ref(null);
-const isUpdating = ref(false)
+const isUpdating = ref(false);
 
 onMounted(() => {
   // Initialize the editor when the component is mounted
@@ -51,7 +54,7 @@ onMounted(() => {
       CustomFileHandler,
       CustomPlaceholder,
     ],
-    onUpdate: ({editor}) => {
+    onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
       if (!isUpdating.value) {
         ensureThreeEmptyParagraphs(editor, isUpdating);
@@ -60,10 +63,10 @@ onMounted(() => {
   });
 });
 
-const intervalId = periodicTask(editor)
+const intervalId = periodicTask(editor);
 
 onBeforeUnmount(() => {
   editor.value.destroy();
-  clearInterval(intervalId)
+  clearInterval(intervalId);
 });
 </script>
