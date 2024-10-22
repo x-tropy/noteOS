@@ -2,9 +2,12 @@ import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import Rails from "@rails/ujs";
-import {highlightCodeBlocks, prependLanguageLabels} from "../components/TipTap/preprocess.js";
-import S3 from "../utils/s3.js"
-import {ListBucketsCommand} from "@aws-sdk/client-s3";
+import {
+  highlightCodeBlocks,
+  prependLanguageLabels,
+} from "../components/TipTap/preprocess.js";
+import S3 from "../utils/s3.js";
+import { ListBucketsCommand } from "@aws-sdk/client-s3";
 
 Rails.start();
 
@@ -21,9 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
     app.mount("#tiptap-editor");
-    highlightCodeBlocks()
-    prependLanguageLabels()
   }
+  // Preprocess: View Mode Only
+  highlightCodeBlocks();
+  prependLanguageLabels();
 });
 
 // console.log(await S3.send(new ListBucketsCommand("")));
