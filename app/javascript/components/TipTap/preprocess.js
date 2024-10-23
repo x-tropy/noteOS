@@ -38,13 +38,19 @@ export const prependLanguageLabels = () => {
         languageName,
       ),
       crelt(
-        "button",
+        "div",
         {
-          class: "copy-code-button",
-          "data-copy-code-target": "button",
-          "data-action": "click->copy-code#copyToClipboard",
+          class: "sticky top-0 h-12",
         },
-        "Copy",
+        crelt(
+          "button",
+          {
+            class: "copy-code-button",
+            "data-copy-code-target": "button",
+            "data-action": "click->copy-code#copyToClipboard",
+          },
+          "Copy",
+        ),
       ),
       preElement.cloneNode(true),
     );

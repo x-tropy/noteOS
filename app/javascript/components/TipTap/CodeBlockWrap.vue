@@ -3,7 +3,9 @@
     <span class="code-language-label">
       {{ props.node.attrs.language || "auto" }}
     </span>
+    <div class="sticky top-0 h-12">
     <button class="copy-code-button" data-copy-code-target="button" data-action="click->copy-code#copyToClipboard">Copy</button>
+    </div>
     <!--don't split pre tag and code tag-->
     <pre><code data-copy-code-target="code"><node-view-content/></code></pre>
   </node-view-wrapper>
