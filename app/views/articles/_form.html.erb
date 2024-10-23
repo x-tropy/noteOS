@@ -1,6 +1,6 @@
 <%= form_with(model: article, data: { controller: "article-form", action: "submit->article-form#submitForm", article_form_target: 'form' }, html: { id: "article-form" }) do |form| %>
-  <div class="actions">
-    <%= form.submit "Save article", data: { article_form_target: "submitButton" }, id: "silent-sync" %>
+  <div>
+    <%= form.submit "Save article", data: { article_form_target: "submitButton" }, id: "silent-sync"%>
   </div>
 
   <% if article.errors.any? %>

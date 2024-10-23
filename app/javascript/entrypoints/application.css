@@ -16,3 +16,21 @@
 
 /* layout */
 @import "../../assets/stylesheets/layout.css";
+
+/* editor */
+.control-group {
+    @apply sticky top-0 text-white bg-black z-10;
+    .button-group {
+        @apply flex justify-center gap-2 ;
+        button {
+            @apply py-1;
+            &::after {
+                @apply pl-1;
+                content: "|";
+            }
+            &:last-child::after {
+                content: "";
+            }
+        }
+    }
+}

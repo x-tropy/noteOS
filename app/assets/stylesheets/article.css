@@ -64,7 +64,7 @@
     }
 
     .code-block-wrap {
-        @apply my-4 rounded-md border border-light bg-white;
+        @apply my-4 rounded-md border border-light bg-white relative;
     }
 
     pre {
