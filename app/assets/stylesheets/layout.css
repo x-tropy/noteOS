@@ -8,6 +8,23 @@ body {
     }
 }
 
+header {
+}
+
+.breadcrumb {
+    @apply flex gap-1 h-12 items-center;
+
+    .logo {
+        @apply ml-3;
+    }
+    span.item {
+        &::before {
+            @apply relative top-[3px] right-0.5;
+            content: url("../images/chevron-right.svg");
+        }
+    }
+}
+
 footer {
     p {
         .co-branded-logo {
