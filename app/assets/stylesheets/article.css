@@ -146,6 +146,10 @@
         }
     }
 
+     em {
+         @apply tracking-normal;
+     }
+
     a {
         @apply underline underline-offset-[5px] break-words;
 
