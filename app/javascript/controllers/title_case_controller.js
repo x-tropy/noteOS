@@ -2,19 +2,17 @@ import { titleCase } from "title-case";
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["title"];
+  static targets = ["informal", "title", "hiddenContent"];
 
   connect() {}
 
-  handleBlur() {
-    const newTitle = titleCase(this.title);
-    const h1 = document.querySelector(".tiptap[contenteditable] h1");
-    if (h1.innerText.trim() === "") {
-      h1.innerText = newTitle;
-    }
-  }
-
-  get title() {
-    return this.titleTarget.value;
+  updateHidden() {
+    const formalTitle = titleCase(this.informalTarget.value.trim());
+    console.log(formalTitle)
+    this.titleTarget.value = formalTitle;
+    this.hiddenContentTarget.value = `<h1>${formalTitle}</h1>
+<p></p>
+<p></p>
+<p></p>`;
   }
 }

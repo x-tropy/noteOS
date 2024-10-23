@@ -1,5 +1,11 @@
 <h1>New Article</h1>
 
-<%= render 'form', article: @article %>
+<%= form_with(model: @article, data: {controller: "title-case"}) do |form| %>
+  <%= form.label :title, "Slug title" %>
+  <input data-title-case-target="informal" data-action="input->title-case#updateHidden" type="text" />
+  <%= form.hidden_field :content, data: {title_case_target: "hiddenContent"} %>
+  <%= form.hidden_field :title, data: { title_case_target: "title"} %>
+  <%= form.submit "Submit" %>
+<% end %>
 
 <%= link_to 'Back', articles_path %>

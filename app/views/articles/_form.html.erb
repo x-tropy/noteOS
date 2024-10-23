@@ -15,11 +15,6 @@
     </div>
   <% end %>
 
-  <div class="field" data-controller="title-case">
-    <%= form.label :title, "Slug title" %>
-    <%= form.text_field :title, data: { action: "blur->title-case#handleBlur", title_case_target: "title" } %>
-  </div>
-
   <div class="field">
     <%= form.hidden_field :content, id: 'tiptap-hidden' %>
     <div id="tiptap-editor" data-content="<%= article.content %>"></div>
