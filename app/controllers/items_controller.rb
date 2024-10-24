@@ -72,9 +72,8 @@ class ItemsController < ApplicationController
       render json: { error: 'Invalid URL format' }, status: :unprocessable_entity and return
     end
 
-
     begin
-    filename = File.basename(url)
+      filename = File.basename(url)
       file = URI.open(url) # Fetch the image from the provided URL
       contents = file.read # Read the contents of the image
 
@@ -99,6 +98,33 @@ class ItemsController < ApplicationController
       logger.error "Error occurred: #{e.message}"
       render json: { error: 'An error occurred while processing your request.' }, status: :internal_server_error
     end
+  end
+
+  def upload_clipboard_image
+    # Get the uploaded image from params
+    image_file = params[:image]
+
+    logger.info params
+
+    if image_file.present?
+      # Create a new Item to store the image
+      @item = Item.new(name: params[:name] || "Image from Clipboard")
+
+      # Attach the image file from clipboard
+      @item.contents.attach(image_file)
+
+      if @item.save
+        # Return the URL of the saved image
+        image_url = url_for(@item.contents)
+        render json: { status: 'success', image_url: image_url }, status: :ok
+      else
+        render json: { status: 'error', error: @item.errors.full_messages }, status: :unprocessable_entity
+      end
+    else
+      render json: { status: 'error', error: 'No image provided' }, status: :unprocessable_entity
+    end
+  rescue => e
+    render json: { status: 'error', error: e.message }, status: :internal_server_error
   end
 
   private
