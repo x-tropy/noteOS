@@ -40,7 +40,7 @@ export const prependLanguageLabels = () => {
       crelt(
         "div",
         {
-          class: "sticky top-0 h-12",
+          class: "sticky top-2",
         },
         crelt(
           "button",
