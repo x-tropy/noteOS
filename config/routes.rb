@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :items
+  post 'items/download_image', to: 'items#download_image'
+
   resources :articles
   devise_for :users
   root "home#index", as: :homepage

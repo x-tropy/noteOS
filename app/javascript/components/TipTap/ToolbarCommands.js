@@ -40,10 +40,31 @@ export function unsetLink(editor) {
   editor.chain().focus().unsetLink().run();
 }
 
-export function addImage(editor) {
+export function externalImage(editor) {
   const url = window.prompt("URL");
 
   if (url) {
     editor.chain().focus().setImage({ src: url }).run();
   }
+}
+
+export function scrapeImage(editor) {
+  const url = window.prompt("URL")
+  fetch("/items/download_image", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-Token": document.querySelector("[name='csrf-token']").content
+    },
+    body: JSON.stringify({ url }),
+  }).then((response) => {
+    if (response.ok) {
+      response.json().then((data) => {
+        console.log("Image saved successfully", data);
+        editor.chain().focus().setImage({ src: data.image_url }).run();
+      });
+    } else {
+      console.error("Failed to save image");
+    }
+  });
 }

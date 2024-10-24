@@ -1,6 +1,6 @@
 <script setup>
 import { Editor } from "@tiptap/vue-3";
-import { setLink, unsetLink, addImage } from "./ToolbarCommands.js";
+import { setLink, unsetLink, externalImage, scrapeImage } from "./ToolbarCommands.js";
 
 const props = defineProps({
   editor: {
@@ -25,8 +25,17 @@ const props = defineProps({
       >
         Unset link
       </button>
-
-      <button @click.prevent="addImage(editor)">Add image</button>
+    </div>
+    <div class="button-group" data-controller="image-scrape">
+      <button @click.prevent="externalImage(editor)">External image</button>
+      <button @click.prevent="scrapeImage(editor)">Scrape image</button>
     </div>
   </div>
 </template>
+
+
+<!--<div data-controller="image">-->
+<!--<input type="text" data-image-target="nameInput" placeholder="Item Name">-->
+<!--<input type="text" data-image-target="urlInput" placeholder="Paste Image URL">-->
+<!--<button data-action="click->image#download">Save Image</button>-->
+<!--</div>-->

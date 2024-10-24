@@ -19,7 +19,7 @@
 
 /* editor */
 .control-group {
-    @apply sticky top-0 text-white bg-black z-10;
+    @apply sticky top-0 text-white bg-black z-10 flex gap-3;
     .button-group {
         @apply flex justify-center gap-2 ;
         button {

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show edit update destroy ]
   include ActiveStorage::SetCurrent
@@ -58,14 +60,56 @@ class ItemsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_item
-      @item = Item.find(params[:id])
+  # download image from URL
+  def download_image
+
+    url = params[:url]
+    logger.info "Received URL: #{url}"
+
+    # Validate URL format
+    unless url =~ /\Ahttps?:\/\/.+\z/
+      logger.error "Invalid URL format: #{url}"
+      render json: { error: 'Invalid URL format' }, status: :unprocessable_entity and return
     end
 
-    # Only allow a list of trusted parameters through.
-    def item_params
-      params.require(:item).permit(:name, :contents)
+
+    begin
+    filename = File.basename(url)
+      file = URI.open(url) # Fetch the image from the provided URL
+      contents = file.read # Read the contents of the image
+
+      # Create a new Item
+      @item = Item.new(name: filename) # or set a meaningful name
+
+      # Attach the image to the item
+      @item.contents.attach(io: StringIO.new(contents), filename: filename, content_type: file.content_type)
+
+      if @item.save
+        logger.info "Item saved successfully: #{@item.id}"
+        image_url = url_for(@item.contents)
+        render json: { status: 'success', item: @item, image_url: image_url }, status: :ok
+      else
+        logger.error "Failed to save item: #{@item.errors.full_messages.join(', ')}"
+        render json: { error: 'Failed to save item' }, status: :unprocessable_entity
+      end
+    rescue OpenURI::HTTPError => e
+      logger.error "HTTP error occurred: #{e.message}"
+      render json: { error: 'Failed to fetch image from URL.' }, status: :unprocessable_entity
+    rescue StandardError => e
+      logger.error "Error occurred: #{e.message}"
+      render json: { error: 'An error occurred while processing your request.' }, status: :internal_server_error
     end
+  end
+
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def item_params
+    params.require(:item).permit(:name, :contents)
+  end
 end
