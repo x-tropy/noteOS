@@ -18,7 +18,6 @@ export default class extends Controller {
     // Show button if the scrollable content is larger than 2x the viewport height
     if (scrollableHeight > viewportHeight * 2) {
       if (window.scrollY > viewportHeight) {
-        console.log(this.element)
         this.element.classList.remove("hidden");
       } else {
         this.element.classList.add("hidden");

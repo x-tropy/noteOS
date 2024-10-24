@@ -26,8 +26,8 @@ header {
 }
 
 #back-to-top {
-    @apply fixed bottom-4 right-4 text-lg  w-10 h-10  bg-opacity-80 bg-white  rounded-full hover:bg-gray-200  shadow-elevation;
-    @apply sm:w-12 sm:h-12 sm:text-xl sm:rounded sm:bg-black sm:text-white sm:hover:bg-black;
+    @apply fixed bottom-2 right-2  text-lg  w-10 h-10 bg-black text-white rounded shadow-elevation;
+    @apply sm:w-12 sm:h-12 sm:bottom-4 sm:right-4 sm:text-xl sm:hover:bg-black;
 }
 
 footer {
