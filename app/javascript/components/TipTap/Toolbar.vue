@@ -1,6 +1,6 @@
 <script setup>
 import { Editor } from "@tiptap/vue-3";
-import { setLink, unsetLink, externalImage, scrapeImage } from "./ToolbarCommands.js";
+import { setLink, unsetLink, externalImage, scrapeImage, alignCenter, alignLeft } from "./ToolbarCommands.js";
 
 const props = defineProps({
   editor: {
@@ -29,6 +29,10 @@ const props = defineProps({
     <div class="button-group" data-controller="image-scrape">
       <button @click.prevent="externalImage(editor)">External image</button>
       <button @click.prevent="scrapeImage(editor)">Scrape image</button>
+    </div>
+    <div class="button-group">
+      <button @click.prevent="alignCenter(editor)">center</button>
+      <button @click.prevent="alignLeft(editor)">left</button>
     </div>
   </div>
 </template>

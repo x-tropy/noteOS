@@ -68,3 +68,11 @@ export function scrapeImage(editor) {
     }
   });
 }
+
+export function alignLeft(editor) {
+  editor.chain().focus().setTextAlign("left").run()
+}
+
+export function alignCenter(editor) {
+  editor.chain().focus().setTextAlign("center").run()
+}

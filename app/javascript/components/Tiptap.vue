@@ -15,6 +15,7 @@ import Highlight from "@tiptap/extension-highlight";
 import Toolbar from "./TipTap/Toolbar.vue";
 import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
+import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
 import {
@@ -48,6 +49,10 @@ onMounted(() => {
       Image,
       CustomFileHandler,
       CustomPlaceholder,
+      TextAlign.configure({
+        alignments: ['left', 'center'],
+        types: ['paragraph', 'image'],
+      })
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
