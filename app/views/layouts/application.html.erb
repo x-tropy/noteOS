@@ -37,9 +37,10 @@
   <%= yield %>
 </main>
 
-<button id="backToTop" data-controller="back-to-top"
+<button id="back-to-top" data-controller="back-to-top"
         data-action="click->back-to-top#scrollToTop"
-        class="fixed bottom-6 right-6 p-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 hidden shadow-elevation">
+    class="hidden"
+>
   ↑
 </button>
 <footer class="bg-black">

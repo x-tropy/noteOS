@@ -25,6 +25,11 @@ header {
     }
 }
 
+#back-to-top {
+    @apply fixed bottom-4 right-4 text-lg  w-10 h-10  bg-opacity-80 bg-white  rounded-full hover:bg-gray-200  shadow-elevation;
+    @apply sm:w-12 sm:h-12 sm:text-xl sm:rounded sm:bg-black sm:text-white sm:hover:bg-black;
+}
+
 footer {
     p {
         .co-branded-logo {
