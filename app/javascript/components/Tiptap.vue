@@ -38,12 +38,7 @@ const isUpdating = ref(false);
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
-    content:
-      props.initialContent ||
-      `<h1></h1>
-<p></p>
-<p></p>
-<p></p>`,
+    content: props.initialContent || "",
     extensions: [
       CustomStarterKit,
       CustomTypography,
