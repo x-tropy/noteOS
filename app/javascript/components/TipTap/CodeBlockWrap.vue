@@ -1,5 +1,5 @@
 <template>
-  <node-view-wrapper class="relative code-block-wrap"  data-controller="copy-code">
+  <node-view-wrapper class="code-block-wrap"  data-controller="copy-code">
     <span class="code-language-label">
       {{ props.node.attrs.language || "auto" }}
     </span>

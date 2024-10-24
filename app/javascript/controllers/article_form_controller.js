@@ -12,7 +12,7 @@ export default class extends Controller {
 
     // Disable the button to prevent multiple submissions
     this.submitButtonTarget.disabled = true;
-    this.submitButtonTarget.value = "Saving..."
+    this.submitButtonTarget.value = "Saving...";
 
     // Send the request using fetch
     fetch(this.formTarget.action, {
@@ -40,14 +40,13 @@ export default class extends Controller {
       })
       .finally(() => {
         // Re-enable the submit button
-
         setTimeout(() => {
-          this.submitButtonTarget.value = "Saved"
-        }, 1000)
+          this.submitButtonTarget.value = "Saved";
+        }, 1000);
         setTimeout(() => {
           this.submitButtonTarget.disabled = false;
-          this.submitButtonTarget.value = "Save article"
-        }, 2000)
+          this.submitButtonTarget.value = "Save article";
+        }, 2000);
       });
   }
 }

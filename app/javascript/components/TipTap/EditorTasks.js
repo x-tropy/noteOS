@@ -28,7 +28,7 @@ function restoreSelection(editor, selection) {
 export function periodicTask(editor) {
   const intervalId = setInterval(() => {
     syncContent(editor);
-  }, 5000);
+  }, 3000);
 
   return intervalId;
 }
