@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  validates :title, presence: { message: "can't be blank!" }
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 

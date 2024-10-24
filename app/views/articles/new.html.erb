@@ -1,5 +1,17 @@
 <h1>New Article</h1>
 
+<% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with(model: @article, data: {controller: "title-case"}) do |form| %>
   <%= form.label :title, "Slug title" %>
   <input data-title-case-target="informal" data-action="input->title-case#updateHidden" type="text" />
