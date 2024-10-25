@@ -36,6 +36,9 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :tigris
+  config.active_storage.headers = {
+    "Cache-Control" => "public, max-age=31536000"
+  }
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
