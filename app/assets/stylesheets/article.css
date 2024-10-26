@@ -168,6 +168,10 @@
         }
     }
 
+    .image {
+        @apply mx-auto my-4;
+    }
+
     /* selected node */
 
     .ProseMirror-selectednode {
