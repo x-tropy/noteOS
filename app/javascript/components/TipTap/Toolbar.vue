@@ -1,14 +1,3 @@
-<script setup>
-import { Editor } from "@tiptap/vue-3";
-import { setLink, unsetLink, externalImage, scrapeImage, alignCenter, alignLeft } from "./ToolbarCommands.js";
-
-const props = defineProps({
-  editor: {
-    type: Editor,
-  },
-});
-</script>
-
 <template>
   <div class="control-group">
     <div class="button-group">
@@ -29,6 +18,7 @@ const props = defineProps({
     <div class="button-group" data-controller="image-scrape">
       <button @click.prevent="externalImage(editor)">External image</button>
       <button @click.prevent="scrapeImage(editor)">Scrape image</button>
+      <input type="file" multiple name="Upload" @change.prevent="uploadFile" />
     </div>
     <div class="button-group">
       <button @click.prevent="alignCenter(editor)">center</button>
@@ -37,9 +27,57 @@ const props = defineProps({
   </div>
 </template>
 
+<script setup>
+import { Editor } from "@tiptap/vue-3";
+import { ref } from "vue";
+import {
+  setLink,
+  unsetLink,
+  externalImage,
+  scrapeImage,
+  alignCenter,
+  alignLeft,
+} from "./ToolbarCommands.js";
 
-<!--<div data-controller="image">-->
-<!--<input type="text" data-image-target="nameInput" placeholder="Item Name">-->
-<!--<input type="text" data-image-target="urlInput" placeholder="Paste Image URL">-->
-<!--<button data-action="click->image#download">Save Image</button>-->
-<!--</div>-->
+const props = defineProps({
+  editor: {
+    type: Editor,
+    required: true,
+  },
+});
+
+const selection = ref({ from: 0, to: 0 });
+
+async function uploadFile(event) {
+  selection.value = {
+    from: props.editor.state.selection.from,
+    to: props.editor.state.selection.to,
+  };
+  for (const file of Array.from(event.target.files)) {
+    const formData = new FormData();
+    formData.append("item[contents]", file);
+    formData.append("item[name]", "Image Upload");
+
+    const response = await fetch("/items", {
+      method: "POST",
+      headers: {
+        "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
+        Accept: "application/json",
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      // Insert the image into the Tiptap editor
+      props.editor.chain().focus().setImage({ src: data.url }).run();
+      props.editor.commands.setTextSelection({
+        from: selection.value.from + 1,
+        to: selection.value.to + 1,
+      });
+    } else {
+      console.error("Image upload failed");
+    }
+  }
+}
+</script>
