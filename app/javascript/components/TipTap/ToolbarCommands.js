@@ -49,19 +49,25 @@ export function externalImage(editor) {
 }
 
 export function scrapeImage(editor) {
-  const url = window.prompt("URL")
+  const url = window.prompt("URL");
   fetch("/items/download_image", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-CSRF-Token": document.querySelector("[name='csrf-token']").content
+      "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
     },
     body: JSON.stringify({ url }),
   }).then((response) => {
     if (response.ok) {
       response.json().then((data) => {
         console.log("Image saved successfully", data);
-        editor.chain().focus().setImage({ src: data.image_url }).run();
+        editor
+          .chain()
+          .focus()
+          .setImage({
+            src: data.image_url
+          })
+          .run();
       });
     } else {
       console.error("Failed to save image");
@@ -70,9 +76,9 @@ export function scrapeImage(editor) {
 }
 
 export function alignLeft(editor) {
-  editor.chain().focus().setTextAlign("left").run()
+  editor.chain().focus().setTextAlign("left").run();
 }
 
 export function alignCenter(editor) {
-  editor.chain().focus().setTextAlign("center").run()
+  editor.chain().focus().setTextAlign("center").run();
 }
