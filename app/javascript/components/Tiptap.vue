@@ -18,6 +18,7 @@ import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
+import CustomNode from "./TipTap/CustomNode.js";
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
@@ -39,19 +40,25 @@ const isUpdating = ref(false);
 onMounted(() => {
   // Initialize the editor when the component is mounted
   editor.value = new Editor({
-    content: props.initialContent || "",
+    content: props.initialContent || ``,
     extensions: [
       CustomStarterKit,
       CustomTypography,
       Highlight,
       CustomCodeBlock,
       CustomLink,
-      Image,
       CustomFileHandler,
       CustomPlaceholder,
+      CustomNode,
+      Image.configure({
+        inline: false,
+        HTMLAttributes: {
+          class: 'image',
+        },
+      }),
       TextAlign.configure({
         alignments: ['left', 'center'],
-        types: ['paragraph', 'image'],
+        types: ['paragraph', 'heading'],
       })
     ],
     onUpdate: ({ editor }) => {
