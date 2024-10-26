@@ -18,7 +18,6 @@ import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
-import CustomNode from "./TipTap/CustomNode.js";
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
@@ -49,7 +48,6 @@ onMounted(() => {
       CustomLink,
       CustomFileHandler,
       CustomPlaceholder,
-      CustomNode,
       Image.configure({
         inline: false,
         HTMLAttributes: {

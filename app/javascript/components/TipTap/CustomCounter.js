@@ -17,15 +17,24 @@ export default Node.create({
   },
 
   parseHTML() {
-    return [{ tag: "counter" }];
+    return [{ tag: 'counter' }];
   },
 
   renderHTML({ HTMLAttributes }) {
     return [
       "counter",
-      { count: HTMLAttributes.count, class: "counter-wrapper" },
+      {
+        count: HTMLAttributes.count,
+        class: "counter-wrapper",
+      },
       ["label", "Vue Component"],
-      ["p", ["button", `This button has been clicked ${HTMLAttributes.count} times`]],
+      [
+        "p",
+        [
+          "button",
+          `This button has been clicked ${HTMLAttributes.count} times`,
+        ],
+      ],
     ];
   },
 

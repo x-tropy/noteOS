@@ -6,8 +6,6 @@ import {
   highlightCodeBlocks,
   prependLanguageLabels,
 } from "../components/TipTap/preprocess.js";
-import S3 from "../utils/s3.js";
-import { ListBucketsCommand } from "@aws-sdk/client-s3";
 
 Rails.start();
 
@@ -29,5 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightCodeBlocks();
   prependLanguageLabels();
 });
-
-// console.log(await S3.send(new ListBucketsCommand("")));
