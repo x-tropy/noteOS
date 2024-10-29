@@ -16,7 +16,7 @@
       <% elsif item.contents.content_type.start_with? 'video/' %>
         <video controls>
           <source src=<%= item.contents.url %> type=<%= item.contents.content_type %>>
-          </video>
+        </video>
       <% else %>
         <%= link_to item.contents.filename, item.contents %>
       <% end %>

@@ -50,16 +50,16 @@
 - add syntax highlighting for markdown
 - responsive design: /articles/index, /articles/show
 - add image support (use tigris)
-- TODO: add /handle in url
+- FIX: font loading slow
 - TODO: add image & attachment support in editor
+- TODO: placeholder
+- TODO: add /handle in url
+- add: vite-plugin-rails, remove: vite-plugin-ruby, vite-plugin-full-reload, vite-plugin-stimulus-hmr
+- TODO: add: confirm before delete
 - TODO: table
 - TODO: details
 - TODO: task item
 - TODO: emoji
 - TODO: youtube
 - TODO: bubble & float menu
-- TODO: placeholder
-- FIX: font loading slow
 - TODO: callout
-- add: vite-plugin-rails, remove: vite-plugin-ruby, vite-plugin-full-reload, vite-plugin-stimulus-hmr
-- TODO: add: confirm before delete
