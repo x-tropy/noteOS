@@ -16,6 +16,9 @@ export default Node.create({
       caption: {
         default: "",
       },
+      class: {
+        default: ""
+      }
     };
   },
 

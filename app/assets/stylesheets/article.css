@@ -190,6 +190,30 @@
                 @apply opacity-65 absolute top-0 -translate-x-1/2 pointer-events-none;
             }
         }
+
+        &.img-20 {
+            img {
+                @apply w-[20%];
+            }
+        }
+
+        &.img-50 {
+            img {
+                @apply w-[50%];
+            }
+        }
+
+        &.img-100 {
+            img {
+                @apply w-full;
+            }
+        }
+
+        &.img-original {
+            img {
+                @apply w-auto;
+            }
+        }
     }
 
     /* selected node */
