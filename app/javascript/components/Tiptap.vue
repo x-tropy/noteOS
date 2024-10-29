@@ -18,6 +18,7 @@ import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
+import CustomImage from "./TipTap/CustomImage.js"
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
@@ -54,6 +55,7 @@ onMounted(() => {
           class: 'image',
         },
       }),
+      CustomImage,
       TextAlign.configure({
         alignments: ['left', 'center'],
         types: ['paragraph', 'heading'],

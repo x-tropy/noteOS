@@ -40,16 +40,13 @@ export function unsetLink(editor) {
   editor.chain().focus().unsetLink().run();
 }
 
-export function externalImage(editor) {
-  const url = window.prompt("URL");
-
+export function externalImage(editor, url) {
   if (url) {
-    editor.chain().focus().setImage({ src: url }).run();
+    editor.chain().focus().setImageWithCaption({ src: url, caption: "example caption" }).run();
   }
 }
 
-export function scrapeImage(editor) {
-  const url = window.prompt("URL");
+export function scrapeImage(editor, url, useNative) {
   fetch("/items/download_image", {
     method: "POST",
     headers: {
@@ -64,8 +61,8 @@ export function scrapeImage(editor) {
         editor
           .chain()
           .focus()
-          .setImage({
-            src: data.image_url
+          .setImageWithCaption({
+            src: useNative ? data.image_url : url
           })
           .run();
       });

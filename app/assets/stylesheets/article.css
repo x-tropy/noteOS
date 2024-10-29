@@ -140,15 +140,16 @@
 
     hr {
         @apply h-[24px] my-12 border-none;
+
         &::after {
             @apply h-[24px] align-middle font-mono block text-center tracking-wider text-2xl;
             content: '· · ·';
         }
     }
 
-     em {
-         @apply tracking-normal;
-     }
+    em {
+        @apply tracking-normal;
+    }
 
     a {
         @apply underline underline-offset-[5px] break-words;
@@ -168,8 +169,27 @@
         }
     }
 
+    s {
+        text-decoration-color: rgba(0, 0, 0, 0.7);
+    }
+
     .image {
         @apply mx-auto my-4;
+    }
+
+    figure {
+        img {
+            @apply mx-auto mt-4 mb-2;
+        }
+
+        figcaption {
+            @apply text-center tracking-wide text-gray-500 focus:outline-none mb-4 h-6 relative;
+
+            &.empty::after {
+                content: "Enter caption here...";
+                @apply opacity-65 absolute top-0 -translate-x-1/2 pointer-events-none;
+            }
+        }
     }
 
     /* selected node */
