@@ -26,11 +26,10 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
 
-
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: "Item was successfully created." }
-        format.json { render json: {message: "Item created", item: @item, url: url_for(@item.contents)}, status: :created }
+        format.json { render json: { message: "Item created", item: @item, url: url_for(@item.contents) }, status: :created }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -99,33 +98,6 @@ class ItemsController < ApplicationController
       logger.error "Error occurred: #{e.message}"
       render json: { error: 'An error occurred while processing your request.' }, status: :internal_server_error
     end
-  end
-
-  def upload_clipboard_image
-    # Get the uploaded image from params
-    image_file = params[:image]
-
-    logger.info params
-
-    if image_file.present?
-      # Create a new Item to store the image
-      @item = Item.new(name: params[:name] || "Image from Clipboard")
-
-      # Attach the image file from clipboard
-      @item.contents.attach(image_file)
-
-      if @item.save
-        # Return the URL of the saved image
-        image_url = url_for(@item.contents)
-        render json: { status: 'success', image_url: image_url }, status: :ok
-      else
-        render json: { status: 'error', error: @item.errors.full_messages }, status: :unprocessable_entity
-      end
-    else
-      render json: { status: 'error', error: 'No image provided' }, status: :unprocessable_entity
-    end
-  rescue => e
-    render json: { status: 'error', error: e.message }, status: :internal_server_error
   end
 
   private
