@@ -2,6 +2,7 @@ import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
 import Rails from "@rails/ujs";
+import PrimeVue from "primevue/config";
 import {
   highlightCodeBlocks,
   prependLanguageLabels,
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("tiptap-hidden").value = content;
       },
     });
+    app.use(PrimeVue, { unstyled: true });
     app.mount("#tiptap-editor");
   }
   // Preprocess: View Mode Only
