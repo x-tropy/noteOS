@@ -167,6 +167,11 @@
             content: '';
             background: url('../images/file-text.svg');
         }
+
+        &.attachment::after {
+            content: '';
+            background: url('../images/cloud-download.svg');
+        }
     }
 
     s {

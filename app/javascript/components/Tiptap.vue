@@ -18,11 +18,12 @@ import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
-import CustomImage from "./TipTap/CustomImage.js"
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
 } from "./TipTap/EditorTasks.js";
+import CustomImage from "./TipTap/CustomImage.js";
+import CustomAttachment from "./TipTap/CustomAttachment.js";
 
 const props = defineProps({
   initialContent: {
@@ -52,14 +53,15 @@ onMounted(() => {
       Image.configure({
         inline: false,
         HTMLAttributes: {
-          class: 'image',
+          class: "image",
         },
       }),
       CustomImage,
+      CustomAttachment,
       TextAlign.configure({
-        alignments: ['left', 'center'],
-        types: ['paragraph', 'heading'],
-      })
+        alignments: ["left", "center"],
+        types: ["paragraph", "heading"],
+      }),
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

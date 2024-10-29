@@ -6,7 +6,7 @@ export default FileHandler.configure({
     "image/jpeg",
     "image/gif",
     "image/webp",
-    "image/svg+xml",
+    "image/svg+xml"
   ],
   onDrop: (editor, files, pos) => {
     files.forEach((file) => {
@@ -43,7 +43,7 @@ const uploadImage = async (editor, file) => {
   if (response.ok) {
     const data = await response.json();
     // Insert the image into the Tiptap editor
-    editor.chain().focus().setImage({ src: data.url }).run();
+    editor.chain().focus().setImageWithCaption({ src: data.url }).run();
     editor.commands.setTextSelection({
       from: selection.value.from + 1,
       to: selection.value.to + 1,
