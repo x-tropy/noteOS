@@ -8,53 +8,47 @@ export default FileHandler.configure({
     "image/webp",
     "image/svg+xml",
   ],
-  onDrop: (currentEditor, files, pos) => {
+  onDrop: (editor, files, pos) => {
     files.forEach((file) => {
       const fileReader = new FileReader();
 
       fileReader.readAsDataURL(file);
-      fileReader.onload = uploadImage(currentEditor, file);
+      fileReader.onload = uploadImage(editor, file);
     });
   },
-  onPaste: (currentEditor, files) => {
+  onPaste: (editor, files) => {
     files.forEach((file) => {
       const fileReader = new FileReader();
 
       fileReader.readAsDataURL(file);
-      fileReader.onload = uploadImage(currentEditor, file);
+      fileReader.onload = uploadImage(editor, file);
     });
   },
 });
 
-const uploadImage = (currentEditor, file) => {
+const uploadImage = async (editor, file) => {
   const formData = new FormData();
-  formData.append("image", file); // Append the file blob from clipboard
-  formData.append("name", "Clipboard Image"); // Optionally append a name or any other data
+  formData.append("item[contents]", file);
+  formData.append("item[name]", "Image from clipboard");
 
-  // Send the image to the server
-  fetch("/items/upload_clipboard_image", {
+  const response = await fetch("/items", {
     method: "POST",
     headers: {
       "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
+      Accept: "application/json",
     },
     body: formData,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === "success") {
-        currentEditor
-          .chain()
-          .insertContentAt(currentEditor.state.selection.anchor, {
-            type: "image",
-            attrs: {
-              src: data.image_url, // Use the image URL returned by the backend
-            },
-          })
-          .focus()
-          .run();
-      } else {
-        console.error("Failed to save image", data.error);
-      }
-    })
-    .catch((error) => console.error("Error:", error));
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    // Insert the image into the Tiptap editor
+    editor.chain().focus().setImage({ src: data.url }).run();
+    editor.commands.setTextSelection({
+      from: selection.value.from + 1,
+      to: selection.value.to + 1,
+    });
+  } else {
+    console.error("Image upload failed");
+  }
 };
