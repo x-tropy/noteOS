@@ -1,8 +1,9 @@
-<h1 class="font-medium text-2xl">Articles</h1>
-<%= link_to "Home", homepage_path %> |
 <% if user_signed_in? %>
-  <%= link_to 'New Article', new_article_path %>
   <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gird-cols-5 xl:grid-cols-6 sm:gap-2">
+    <div class="border-b border-gray-300 sm:border rounded sm:border-gray-400 hover:bg-gray-200">
+      <%= link_to 'New Article', new_article_path, class: "text-base px-3 py-2 block h-full" %>
+      <!--    <p><%#= truncate(strip_tags(article.content.to_s), length: 100) %></p>-->
+    </div>
     <% @articles.each do |article| %>
       <div class="border-b border-gray-300 sm:border rounded sm:border-gray-400 hover:bg-gray-200">
         <%= link_to article.title, edit_article_path(article), class: "text-base px-3 py-2 block h-full" %>
