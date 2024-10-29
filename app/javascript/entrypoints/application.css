@@ -17,19 +17,21 @@
 /* layout */
 @import "../../assets/stylesheets/layout.css";
 
+/* UI components */
+@import "../../assets/stylesheets/components.css";
+
 /* editor */
 .control-group {
-    @apply sticky top-0 text-white bg-black z-10 flex gap-3;
+    @apply sticky top-0 text-white bg-gray-600 z-10 flex gap-2 pl-1 overflow-x-auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     .button-group {
-        @apply flex justify-center gap-2 ;
+        @apply flex justify-center flex-shrink-0 border-r pr-2 border-r-gray-400;
         button {
-            @apply py-1;
-            &::after {
-                @apply pl-1;
-                content: "|";
-            }
-            &:last-child::after {
-                content: "";
+            @apply p-1;
+            svg {
+                @apply rounded border-transparent border;
             }
         }
     }
