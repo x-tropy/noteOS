@@ -167,11 +167,6 @@
             content: '';
             background: url('../images/file-text.svg');
         }
-
-        &.attachment::after {
-            content: '';
-            background: url('../images/cloud-download.svg');
-        }
     }
 
     s {
@@ -233,6 +228,34 @@
         &.is-empty::before {
             content: attr(data-placeholder);
             @apply text-stone-300 float-left pointer-events-none h-0;
+        }
+    }
+
+    /* attachment */
+    attachment {
+        @apply block rounded-md border border-light py-2 my-2;
+        .download-link {
+            @apply no-underline pl-3 block relative;
+            &::after {
+                content: '';
+                @apply absolute right-5 top-[10px] w-6 h-6;
+                background: url('../images/file-download.svg');
+            }
+        }
+        .download-link-label {
+            @apply text-gray-400 text-sm block;
+        }
+        audio {
+            @apply w-full bg-white px-2;
+        }
+        .audio-label {
+            @apply pl-3;
+        }
+        video {
+            @apply px-2;
+        }
+        .video-label {
+            @apply pl-3 pb-2 block;
         }
     }
 }

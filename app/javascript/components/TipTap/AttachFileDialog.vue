@@ -76,7 +76,8 @@ async function uploadFile() {
           .setAttachment({
             src: data.url,
             title: file.name.split(".")[0],
-            type: file.name.split(".")[1],
+            type: file.type,
+            size: formatSize(file.size)
           })
           .run();
       }
