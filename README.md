@@ -57,9 +57,9 @@
 - add: vite-plugin-rails, remove: vite-plugin-ruby, vite-plugin-full-reload, vite-plugin-stimulus-hmr
 - TODO: add: confirm before delete article
 - TODO: emoji
+- TODO: task item
 - TODO: table
 - TODO: details
-- TODO: task item
 - TODO: youtube
 - TODO: bubble & float menu
 - TODO: callout
