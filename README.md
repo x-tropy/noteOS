@@ -55,11 +55,11 @@
 - TODO: placeholder
 - TODO: add /handle in url
 - add: vite-plugin-rails, remove: vite-plugin-ruby, vite-plugin-full-reload, vite-plugin-stimulus-hmr
-- TODO: add: confirm before delete
+- TODO: add: confirm before delete article
+- TODO: emoji
 - TODO: table
 - TODO: details
 - TODO: task item
-- TODO: emoji
 - TODO: youtube
 - TODO: bubble & float menu
 - TODO: callout

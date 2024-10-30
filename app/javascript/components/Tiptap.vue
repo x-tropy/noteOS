@@ -24,6 +24,7 @@ import {
 } from "./TipTap/EditorTasks.js";
 import CustomImage from "./TipTap/CustomImage.js";
 import CustomAttachment from "./TipTap/CustomAttachment.js";
+import CustomEmoji from "./TipTap/CustomEmoji.js";
 
 const props = defineProps({
   initialContent: {
@@ -62,6 +63,7 @@ onMounted(() => {
         alignments: ["left", "center"],
         types: ["paragraph", "heading"],
       }),
+      CustomEmoji,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

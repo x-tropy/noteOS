@@ -232,30 +232,47 @@
     }
 
     /* attachment */
+
     attachment {
         @apply block rounded-md border border-light py-2 my-2;
+
         .download-link {
             @apply no-underline pl-3 block relative;
+
             &::after {
                 content: '';
-                @apply absolute right-5 top-[10px] w-6 h-6;
-                background: url('../images/file-download.svg');
+                @apply absolute right-5 top-2 w-7 h-7 bg-no-repeat;
+                background-image: url('../images/file-download.svg');
+                background-size: 28px 28px;
+
             }
         }
+
         .download-link-label {
             @apply text-gray-400 text-sm block;
         }
+
         audio {
             @apply w-full bg-white px-2;
         }
+
         .audio-label {
             @apply pl-3;
         }
+
         video {
             @apply px-2;
         }
+
         .video-label {
             @apply pl-3 pb-2 block;
+        }
+    }
+
+    span[data-type="emoji"] {
+
+        img {
+            @apply inline h-4 mb-1;
         }
     }
 }

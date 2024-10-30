@@ -27,7 +27,7 @@ header {
 
 #back-to-top {
     @apply fixed bottom-2 right-2 font-semibold text-lg  w-10 h-10 bg-black text-white rounded shadow-elevation;
-    @apply sm:w-12 sm:h-12 sm:bottom-4 sm:right-4 sm:text-xl sm:hover:bg-black;
+    @apply sm:w-12 sm:h-12 sm:bottom-[12px] sm:right-[12px] sm:text-xl sm:hover:bg-black;
 }
 
 footer {
