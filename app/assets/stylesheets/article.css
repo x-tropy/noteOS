@@ -269,10 +269,27 @@
         }
     }
 
-    span[data-type="emoji"] {
-
+    .inline-image {
         img {
             @apply inline h-4 mb-1;
+        }
+    }
+
+    .task-list {
+        @apply list-none m-0 pl-0;
+        li {
+            @apply flex;
+            label {
+                @apply mr-2;
+                input {
+                    @apply mt-2;
+                }
+            }
+            div {
+                p {
+                    @apply pl-[1px];
+                }
+            }
         }
     }
 }

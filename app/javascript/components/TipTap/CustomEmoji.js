@@ -16,4 +16,7 @@ export default Emoji.configure({
   emojis: [...gitHubEmojis, ...inlineLogos],
   enableEmoticons: true,
   suggestion,
+  HTMLAttributes: {
+    class: "inline-image",
+  },
 });
