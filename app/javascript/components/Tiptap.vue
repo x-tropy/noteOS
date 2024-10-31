@@ -27,6 +27,7 @@ import CustomAttachment from "./TipTap/CustomAttachment.js";
 import CustomEmoji from "./TipTap/CustomEmoji.js";
 import CustomTaskList from "./TipTap/CustomTaskList.js";
 import CustomTable from "./TipTap/CustomTable.js";
+import CustomDetails from "./TipTap/CustomDetails.js";
 
 const props = defineProps({
   initialContent: {
@@ -68,6 +69,7 @@ onMounted(() => {
       CustomEmoji,
       ...CustomTaskList,
       ...CustomTable,
+      ...CustomDetails,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

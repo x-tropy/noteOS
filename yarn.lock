@@ -1576,6 +1576,21 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
+"@tiptap-pro/extension-details-content@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.tiptap.dev/@tiptap-pro%2fextension-details-content/-/extension-details-content-2.13.0.tgz#c6d55e47f4ced35818365c93e42eb458a3af098c"
+  integrity sha512-W1NbhtlHH9DhQr8yN72fHdaXsf/j2OL98c+VBmM30S05v6JSPQ3Yvab2Qbhtas9rV/tk62mK97s8jCxn3ezKnQ==
+
+"@tiptap-pro/extension-details-summary@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.tiptap.dev/@tiptap-pro%2fextension-details-summary/-/extension-details-summary-2.13.0.tgz#51322ec243a9969fc2c2bb5e48a8cac8f5173007"
+  integrity sha512-BhDnyAK2hReChyj5IeAZerVpW4wS2trOnGLAFXHgNpLOJe86/PptmSHcOniwjXqXr9nBTzsgUBAUqICYu1cGaQ==
+
+"@tiptap-pro/extension-details@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.tiptap.dev/@tiptap-pro%2fextension-details/-/extension-details-2.13.0.tgz#99a28893d5e1c75882afec6c157bfb85829971cf"
+  integrity sha512-oMSvbaAFI1cfxTk7T6q+wJGwwYCiyMVGhTMUcJ76EgbiVsfHvkvpIus+kYMZiqyKD/wawB0JBgOQtVYvoikxtA==
+
 "@tiptap-pro/extension-emoji@2.9.1":
   version "2.9.1"
   resolved "https://registry.tiptap.dev/@tiptap-pro%2fextension-emoji/-/extension-emoji-2.9.1.tgz#911a305c4c0a6f10fc00e0a4f3da422cf9668694"

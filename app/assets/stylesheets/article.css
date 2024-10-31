@@ -336,4 +336,65 @@
         cursor: ew-resize;
         cursor: col-resize;
     }
+
+    .details {
+        @apply flex my-4;
+
+        & > button {
+            @apply relative w-8;
+
+            &::before {
+                @apply w-6 h-6 inline-block absolute top-1 left-0;
+                content: "";
+                background: url("../images/square-rounded-plus-filled.svg");
+            }
+        }
+
+        .details-summary {
+            @apply list-none text-lg h-8 font-sans pl-[1px] font-semibold flex items-center;
+        }
+
+        .details-content {
+            p {
+                @apply my-0;
+            }
+
+            .details {
+                @apply mb-0;
+            }
+        }
+    }
+
+    .details-open {
+        & > button {
+            &::before {
+                background: url("../images/square-rounded-minus-filled.svg");
+            }
+        }
+    }
+}
+
+/* for display only */
+.article {
+    .details-summary {
+        @apply cursor-pointer ml-8 relative;
+
+    }
+
+    .details-content {
+        @apply ml-8;
+    }
+
+    .details .details-summary::before {
+        content: "";
+        @apply absolute -left-8 top-1 h-6 w-6;
+    }
+
+    .details[open] .details-summary::before {
+        background: url("../images/square-rounded-minus-filled.svg");
+    }
+
+    .details:not([open]) .details-summary::before {
+        background: url("../images/square-rounded-plus-filled.svg");
+    }
 }

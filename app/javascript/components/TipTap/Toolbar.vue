@@ -12,16 +12,12 @@ import {
   IconAlignCenter,
   IconLink,
   IconUnlink,
-  IconColumnInsertLeft,
   IconColumnInsertRight,
-  IconColumnRemove,
   IconRowInsertBottom,
-  IconRowInsertTop,
-  IconRowRemove,
   IconTablePlus,
-  IconTableMinus,
+  IconSquareRoundedPlus,
+  IconSquareRoundedMinus2
 } from "@tabler/icons-vue";
-import Menu from "primevue/menu";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
 import SearchItemsDialog from "~/components/TipTap/SearchItemsDialog.vue";
@@ -108,6 +104,14 @@ const props = defineProps({
           <IconRowInsertBottom />
         </button>
         <TableButtonsPopover :editor="editor" />
+      </div>
+      <div class="button-group">
+        <button @click="editor.chain().focus().setDetails().run()">
+          <IconSquareRoundedPlus />
+        </button>
+        <button @click="editor.chain().focus().unsetDetails().run()" :disabled="!editor.isActive('details')">
+          <IconSquareRoundedMinus2 />
+        </button>
       </div>
     </div>
   </div>
