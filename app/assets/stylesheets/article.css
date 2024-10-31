@@ -277,19 +277,63 @@
 
     .task-list {
         @apply list-none m-0 pl-0;
+
         li {
             @apply flex;
+
             label {
                 @apply mr-2;
+
                 input {
-                    @apply mt-2;
+                    @apply mt-2 ml-0.5;
                 }
             }
+
             div {
                 p {
                     @apply pl-[1px];
                 }
             }
         }
+    }
+
+    table {
+        @apply border border-light  py-4 w-full overflow-hidden table-fixed border-collapse;
+
+        td, th {
+            @apply border border-light min-w-4 min-h-6 relative align-top box-border;
+
+            p {
+                @apply my-1 mx-2 text-base;
+            }
+        }
+
+        tr:hover, col:hover {
+            @apply bg-gray-200;
+        }
+
+        th {
+            p {
+                @apply font-semibold text-left;
+            }
+        }
+
+        .selectedCell:after {
+            content: "";
+            @apply bg-blue-300 absolute inset-0 pointer-events-none opacity-30;
+        }
+
+        .column-resize-handle {
+            @apply absolute bg-black pointer-events-none top-0 right-[-1px] bottom-[-2px] w-[3px] z-10;
+        }
+    }
+
+    .tableWrapper {
+        @apply overflow-x-auto thin-scrollbar;
+    }
+
+    &.resize-cursor {
+        cursor: ew-resize;
+        cursor: col-resize;
     }
 }

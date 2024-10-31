@@ -25,8 +25,8 @@ import {
 import CustomImage from "./TipTap/CustomImage.js";
 import CustomAttachment from "./TipTap/CustomAttachment.js";
 import CustomEmoji from "./TipTap/CustomEmoji.js";
-import TaskItem from "@tiptap/extension-task-item";
-import TaskList from "@tiptap/extension-task-list";
+import CustomTaskList from "./TipTap/CustomTaskList.js";
+import CustomTable from "./TipTap/CustomTable.js";
 
 const props = defineProps({
   initialContent: {
@@ -66,15 +66,8 @@ onMounted(() => {
         types: ["paragraph", "heading"],
       }),
       CustomEmoji,
-      TaskList.configure({
-        HTMLAttributes: {
-          class: "task-list",
-        },
-        itemTypeName: "taskItem",
-      }),
-      TaskItem.configure({
-        nested: true,
-      }),
+      ...CustomTaskList,
+      ...CustomTable,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

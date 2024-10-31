@@ -1721,6 +1721,26 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-strike/-/extension-strike-2.9.1.tgz#8c8553e81696e6c30a6801a1cae6afaa4c37f002"
   integrity sha512-V5aEXdML+YojlPhastcu7w4biDPwmzy/fWq0T2qjfu5Te/THcqDmGYVBKESBm5x6nBy5OLkanw2O+KHu2quDdg==
 
+"@tiptap/extension-table-cell@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-table-cell/-/extension-table-cell-2.9.1.tgz#f2c630b29021da030bc0253a7aa878fe82995f01"
+  integrity sha512-/wrcniLdhMhs5M2NDetFcfq510N5to7YKK+52KOXNotBI8K/GjMmGmtwWEKPITD0/RgYrXzpMcta/O+/0OCOPQ==
+
+"@tiptap/extension-table-header@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-table-header/-/extension-table-header-2.9.1.tgz#4eba6c4d437053ece0a070dc075257486f20b6f5"
+  integrity sha512-KtI01636Du1IB/I3pe9ZJWKkOc6INqAaIw+RFirRCnd8Xnik7tJfAwdhXzoPRcer6ViZmlzSrM2dkwaZCF7gcw==
+
+"@tiptap/extension-table-row@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-table-row/-/extension-table-row-2.9.1.tgz#c19611937035309d0f70153265451c029953261f"
+  integrity sha512-Wq7QlI/S5iX4UCAdX+ok/szegVMbvrM3H8o6jwO+G4p8JJt6iv7ZmEnJ19xIINhmiKsrdanqH9FFK4tQ3yvQ0A==
+
+"@tiptap/extension-table@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-table/-/extension-table-2.9.1.tgz#e0905e5cfb39ca99d0c9098e0efd7cd1b246e82d"
+  integrity sha512-OmWZFZOSZwSSEvoVUkDsRFyCXTYei/pV396Xjv9pfFzXQkVbfq/CjTp61zvb/9mmEz3rcfvfG7G39eRlZTvBNg==
+
 "@tiptap/extension-task-item@^2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-task-item/-/extension-task-item-2.9.1.tgz#f440b4d8412f79791afc8c11ea9a180a5c314b1e"
@@ -1855,6 +1875,11 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-3.0.3.tgz#acaab0f919ce69cce629c2d4ed2eb4adc1b6c20c"
   integrity sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==
 
+"@types/web-bluetooth@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz#f066abfcd1cbe66267cdbbf0de010d8a41b41597"
+  integrity sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==
+
 "@vitejs/plugin-vue@^5.1.4":
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.1.4.tgz#72b8b705cfce36b00b59af196195146e356500c4"
@@ -1939,6 +1964,28 @@
   version "3.5.12"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.5.12.tgz#f9e45b7f63f2c3f40d84237b1194b7f67de192e3"
   integrity sha512-L2RPSAwUFbgZH20etwrXyVyCBu9OxRSi8T/38QsvnkJyvq2LufW2lDCOzm7t/U9C1mkhJGWYfCuFBCmIuNivrg==
+
+"@vueuse/core@^11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-11.2.0.tgz#3fc6c0963051bb154dc4c08061889405e3fc745d"
+  integrity sha512-JIUwRcOqOWzcdu1dGlfW04kaJhW3EXnnjJJfLTtddJanymTL7lF1C0+dVVZ/siLfc73mWn+cGP1PE1PKPruRSA==
+  dependencies:
+    "@types/web-bluetooth" "^0.0.20"
+    "@vueuse/metadata" "11.2.0"
+    "@vueuse/shared" "11.2.0"
+    vue-demi ">=0.14.10"
+
+"@vueuse/metadata@11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-11.2.0.tgz#fd02cbbc7d08cb4592fceea0486559b89ae38643"
+  integrity sha512-L0ZmtRmNx+ZW95DmrgD6vn484gSpVeRbgpWevFKXwqqQxW9hnSi2Ppuh2BzMjnbv4aJRiIw8tQatXT9uOB23dQ==
+
+"@vueuse/shared@11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-11.2.0.tgz#7fb2f3cade6b6c00ef97e613f187ee9bdcfb9a3a"
+  integrity sha512-VxFjie0EanOudYSgMErxXfq6fo8vhr5ICI+BuE3I9FnX7ePllEsVrRQ7O6Q1TLgApeLuPKcHQxAXpP+KnlrJsg==
+  dependencies:
+    vue-demi ">=0.14.10"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -3560,6 +3607,11 @@ vite@^5.4.10:
     rollup "^4.20.0"
   optionalDependencies:
     fsevents "~2.3.3"
+
+vue-demi@>=0.14.10:
+  version "0.14.10"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
+  integrity sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==
 
 vue@^3.5.12:
   version "3.5.12"

@@ -12,11 +12,20 @@ import {
   IconAlignCenter,
   IconLink,
   IconUnlink,
+  IconColumnInsertLeft,
+  IconColumnInsertRight,
+  IconColumnRemove,
+  IconRowInsertBottom,
+  IconRowInsertTop,
+  IconRowRemove,
+  IconTablePlus,
+  IconTableMinus,
 } from "@tabler/icons-vue";
 import Menu from "primevue/menu";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
 import SearchItemsDialog from "~/components/TipTap/SearchItemsDialog.vue";
+import TableButtonsPopover from "~/components/TipTap/TableButtonsPopover.vue";
 
 const items = ref([
   {
@@ -42,36 +51,64 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="control-group">
-    <div class="button-group">
-      <button @click.prevent="setLink(editor)">
-        <IconLink :class="{ 'bg-black': editor.isActive('link') }" />
-      </button>
-      <button
-        @click.prevent="unsetLink(editor)"
-        :disabled="!editor.isActive('link')"
-        :class="{ 'text-gray-400': !editor.isActive('link') }"
-      >
-        <IconUnlink />
-      </button>
-    </div>
-    <div class="button-group">
-      <button @click.prevent="alignLeft(editor)">
-        <IconAlignLeft2
+  <div class="toolbar">
+    <div class="control-group">
+      <div class="button-group">
+        <button @click.prevent="setLink(editor)">
+          <IconLink :class="{ 'bg-black': editor.isActive('link') }" />
+        </button>
+        <button
+          @click.prevent="unsetLink(editor)"
+          :disabled="!editor.isActive('link')"
+        >
+          <IconUnlink />
+        </button>
+      </div>
+      <div class="button-group">
+        <button
+          @click.prevent="alignLeft(editor)"
           :class="{ 'bg-black': editor.isActive({ textAlign: 'left' }) }"
-        />
-      </button>
-      <button @click.prevent="alignCenter(editor)">
-        <IconAlignCenter
+        >
+          <IconAlignLeft2 />
+        </button>
+        <button
+          @click.prevent="alignCenter(editor)"
           :class="{ 'bg-black': editor.isActive({ textAlign: 'center' }) }"
-        />
-      </button>
-    </div>
-    <div class="button-group">
-      <AddImagePopover :editor="editor" />
-      <AttachFileDialog :editor="editor" />
-      <SearchItemsDialog :editor="editor" />
+        >
+          <IconAlignCenter />
+        </button>
+      </div>
+      <div class="button-group">
+        <AddImagePopover :editor="editor" />
+        <AttachFileDialog :editor="editor" />
+        <SearchItemsDialog :editor="editor" />
+      </div>
+      <div class="button-group">
+        <button
+          @click="
+            editor
+              .chain()
+              .focus()
+              .insertTable({ rows: 3, cols: 3, withHeaderRow: true })
+              .run()
+          "
+        >
+          <IconTablePlus />
+        </button>
+        <button
+          @click="editor.chain().focus().addColumnAfter().run()"
+          :disabled="!editor.isActive('table')"
+        >
+          <IconColumnInsertRight />
+        </button>
+        <button
+          @click="editor.chain().focus().addRowAfter().run()"
+          :disabled="!editor.isActive('table')"
+        >
+          <IconRowInsertBottom />
+        </button>
+        <TableButtonsPopover :editor="editor" />
+      </div>
     </div>
   </div>
-  <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />
 </template>
