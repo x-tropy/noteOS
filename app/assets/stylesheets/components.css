@@ -37,3 +37,16 @@
         @apply text-gray-400;
     }
 }
+
+.emoji-dropdown {
+    @apply flex flex-col shadow-elevation-md rounded bg-white gap-1 p-1;
+    button {
+        @apply p-1 flex gap-1 w-full text-left text-gray-500 font-mono text-sm;
+        &:hover, &:hover.is-selected, &.is-selected {
+            @apply bg-gray-300 text-black;
+        }
+        img {
+            @apply h-5 w-5;
+        }
+    }
+}

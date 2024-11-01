@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown-menu">
+  <div class="emoji-dropdown">
     <button
       :class="{ 'is-selected': index === selectedIndex }"
       v-for="(item, index) in items"
@@ -86,19 +86,3 @@ function selectItem(index) {
   }
 }
 </script>
-
-<style scoped>
-/* Dropdown menu */
-.dropdown-menu {
-  @apply flex flex-col shadow-elevation-md rounded bg-white gap-1 p-1;
-  button {
-    @apply p-1 flex gap-1 w-full text-left font-mono text-sm;
-    &:hover, &:hover.is-selected, &.is-selected {
-      @apply bg-gray-200;
-    }
-    img {
-      @apply h-5 w-5;
-    }
-  }
-}
-</style>
