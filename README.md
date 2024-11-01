@@ -63,3 +63,4 @@
 - TODO: youtube
 - TODO: bubble & float menu
 - TODO: callout
+- add tooltip for toolbar items

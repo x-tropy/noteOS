@@ -29,6 +29,7 @@ import CustomTaskList from "./TipTap/CustomTaskList.js";
 import CustomTable from "./TipTap/CustomTable.js";
 import CustomDetails from "./TipTap/CustomDetails.js";
 import YouTube from "@tiptap/extension-youtube";
+import CustomCallout from "./TipTap/CustomCallout.js";
 
 const props = defineProps({
   initialContent: {
@@ -76,6 +77,7 @@ onMounted(() => {
           class: "youtube"
         }
       }),
+      CustomCallout,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

@@ -17,7 +17,7 @@ import {
   IconTablePlus,
   IconSquareRoundedPlus,
   IconSquareRoundedMinus2,
-  IconBrandYoutube,
+  IconBrandBilibili,
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -91,6 +91,9 @@ const addYoutube = () => {
       </div>
       <div class="button-group">
         <AddImagePopover :editor="editor" />
+        <button @click="addYoutube">
+          <IconBrandBilibili />
+        </button>
         <AttachFileDialog :editor="editor" />
         <SearchItemsDialog :editor="editor" />
       </div>
@@ -130,9 +133,7 @@ const addYoutube = () => {
         >
           <IconSquareRoundedMinus2 />
         </button>
-        <button @click="addYoutube">
-          <IconBrandYoutube />
-        </button>
+
       </div>
     </div>
   </div>

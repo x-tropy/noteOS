@@ -52,6 +52,22 @@
         @apply mt-0;
     }
 
+
+    /* placeholder */
+
+    h1, p {
+        &.is-empty::before {
+            content: attr(data-placeholder);
+            @apply text-stone-300 pointer-events-none h-0 float-left;
+        }
+    }
+
+    .is-empty .details-summary::before {
+        content: "Summary";
+        @apply absolute text-stone-300 pointer-events-none;
+    }
+
+
     blockquote {
         p {
             @apply text-2xl leading-loose text-center text-gray-500 m-14 relative;
@@ -170,7 +186,7 @@
     }
 
     s {
-        text-decoration-color: rgba(0, 0, 0, 0.7);
+        text-decoration-color: rgba(0, 0, 0, 0.6);
     }
 
     .image {
@@ -220,15 +236,6 @@
 
     .ProseMirror-selectednode {
         @apply shadow-elevation-lg active:shadow-elevation transition-all border-transparent rounded-sm;
-    }
-
-    /* placeholder */
-
-    h1, p, .details-summary, .details-content {
-        &.is-empty::before {
-            content: attr(data-placeholder);
-            @apply text-stone-300 pointer-events-none h-0 float-left;
-        }
     }
 
     /* attachment */

@@ -1,7 +1,7 @@
 <template>
   <node-view-wrapper draggable="true">
     <ContextMenu ref="menu" :model="items" class="bg-white p-2 shadow-elevation" />
-    <figure @contextmenu="onImageRightClick" :class="imgClass">
+    <figure @contextmenu="onImageRightClick" :class="imgClass" draggable="true">
       <img :src="props.node.attrs.src" />
       <figcaption
         :class="{ empty: caption.trim() === '' }"
@@ -70,4 +70,5 @@ watch(
     caption.value = newCaption;
   },
 );
+
 </script>

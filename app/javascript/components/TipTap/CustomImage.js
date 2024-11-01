@@ -6,7 +6,7 @@ export default Node.create({
   name: "imageWithCaption",
   group: "block",
   draggable: true,
-  atom: true,
+  content: "block*",
 
   addAttributes() {
     return {
