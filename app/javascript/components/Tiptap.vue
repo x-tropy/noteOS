@@ -84,6 +84,9 @@ onMounted(() => {
       }
     },
   });
+  // Object.keys(editor.value.schema.nodes).forEach(nodeName => {
+  //   console.log(nodeName); // prints each node name
+  // });
 });
 
 const intervalId = periodicTask(editor);

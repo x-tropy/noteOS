@@ -224,10 +224,10 @@
 
     /* placeholder */
 
-    h1, p {
+    h1, p, .details-summary, .details-content {
         &.is-empty::before {
             content: attr(data-placeholder);
-            @apply text-stone-300 float-left pointer-events-none h-0;
+            @apply text-stone-300 pointer-events-none h-0 float-left;
         }
     }
 
@@ -344,14 +344,14 @@
             @apply relative w-8;
 
             &::before {
-                @apply w-6 h-6 inline-block absolute top-[3px] left-0;
+                @apply w-6 h-6 inline-block absolute top-0 left-0;
                 content: "";
                 background: url("../images/square-rounded-plus-filled.svg");
             }
         }
 
         .details-summary {
-            @apply list-none text-lg h-8 font-sans pl-[1px] font-semibold flex items-center;
+            @apply list-none text-lg h-8 font-sans pl-[1px] font-semibold;
         }
 
         .details-content {
@@ -391,7 +391,7 @@
 
     .details .details-summary::before {
         content: "";
-        @apply absolute -left-8 top-[3px] h-6 w-6;
+        @apply absolute -left-8 top-0 h-6 w-6;
     }
 
     .details[open] .details-summary::before {

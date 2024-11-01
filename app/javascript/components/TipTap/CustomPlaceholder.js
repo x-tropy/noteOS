@@ -1,11 +1,18 @@
 import { Placeholder } from "@tiptap/extension-placeholder";
 
 const CustomPlaceholder = Placeholder.configure({
+  includeChildren: true,
   placeholder: ({ node }) => {
-    if (node.type.name === "heading") {
-      return "New Title";
-    } else if (node.type.name === "paragraph") {
-      return 'type / for more commands'
+    const name = node.type.name;
+    switch (name) {
+      case "heading":
+        return "New Title";
+      case "paragraph":
+        return "type / for more commands";
+      case "detailsSummary":
+        return "Summary";
+      default:
+        return null;
     }
   },
 });
