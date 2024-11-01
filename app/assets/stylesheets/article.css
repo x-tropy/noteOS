@@ -219,7 +219,7 @@
     /* selected node */
 
     .ProseMirror-selectednode {
-        @apply shadow-elevation-md active:shadow-elevation transition-all border-transparent rounded-sm;
+        @apply shadow-elevation-lg active:shadow-elevation transition-all border-transparent rounded-sm;
     }
 
     /* placeholder */
@@ -344,7 +344,7 @@
             @apply relative w-8;
 
             &::before {
-                @apply w-6 h-6 inline-block absolute top-1 left-0;
+                @apply w-6 h-6 inline-block absolute top-[3px] left-0;
                 content: "";
                 background: url("../images/square-rounded-plus-filled.svg");
             }
@@ -372,6 +372,10 @@
             }
         }
     }
+
+    .youtube {
+        @apply my-2;
+    }
 }
 
 /* for display only */
@@ -387,7 +391,7 @@
 
     .details .details-summary::before {
         content: "";
-        @apply absolute -left-8 top-1 h-6 w-6;
+        @apply absolute -left-8 top-[3px] h-6 w-6;
     }
 
     .details[open] .details-summary::before {

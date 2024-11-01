@@ -28,6 +28,7 @@ import CustomEmoji from "./TipTap/CustomEmoji.js";
 import CustomTaskList from "./TipTap/CustomTaskList.js";
 import CustomTable from "./TipTap/CustomTable.js";
 import CustomDetails from "./TipTap/CustomDetails.js";
+import YouTube from "@tiptap/extension-youtube";
 
 const props = defineProps({
   initialContent: {
@@ -70,6 +71,11 @@ onMounted(() => {
       ...CustomTaskList,
       ...CustomTable,
       ...CustomDetails,
+      YouTube.configure({
+        HTMLAttributes: {
+          class: "youtube"
+        }
+      }),
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

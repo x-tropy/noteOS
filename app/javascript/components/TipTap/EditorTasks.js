@@ -28,6 +28,7 @@ function restoreSelection(editor, selection) {
 export function periodicTask(editor) {
   const intervalId = setInterval(() => {
     syncContent(editor);
+    resizeYoutubeFrame()
   }, 3000);
 
   return intervalId;
@@ -44,4 +45,23 @@ function syncContent(editor) {
 
   document.getElementById("silent-sync")?.click();
   localStorage.setItem("lastSavedContent", liveContent);
+}
+
+function resizeYoutubeFrame() {
+  const innerWidth = containerWidth()
+  const youtubeFrames = document.querySelectorAll(".youtube")
+  Array.from(youtubeFrames).forEach(frame => {
+    frame.width = innerWidth
+    frame.height = innerWidth / 2
+  })
+}
+
+export function containerWidth() {
+  const container = document.querySelector(".article") || document.querySelector("#tiptap-editor .ProseMirror")
+  const computedStyle = window.getComputedStyle(container);
+  const innerWidth =
+      container.offsetWidth -
+      parseFloat(computedStyle.paddingLeft) -
+      parseFloat(computedStyle.paddingRight);
+  return innerWidth
 }

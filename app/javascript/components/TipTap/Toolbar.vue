@@ -16,12 +16,14 @@ import {
   IconRowInsertBottom,
   IconTablePlus,
   IconSquareRoundedPlus,
-  IconSquareRoundedMinus2
+  IconSquareRoundedMinus2,
+  IconBrandYoutube,
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
 import SearchItemsDialog from "~/components/TipTap/SearchItemsDialog.vue";
 import TableButtonsPopover from "~/components/TipTap/TableButtonsPopover.vue";
+import { containerWidth } from "~/components/TipTap/EditorTasks.js";
 
 const items = ref([
   {
@@ -44,6 +46,19 @@ const props = defineProps({
     required: true,
   },
 });
+
+const addYoutube = () => {
+  const url = prompt("Enter YouTube URL");
+  props.editor
+    .chain()
+    .focus()
+    .setYoutubeVideo({
+      src: url,
+      width: containerWidth(),
+      height: containerWidth() / 2,
+    })
+    .run();
+};
 </script>
 
 <template>
@@ -109,8 +124,14 @@ const props = defineProps({
         <button @click="editor.chain().focus().setDetails().run()">
           <IconSquareRoundedPlus />
         </button>
-        <button @click="editor.chain().focus().unsetDetails().run()" :disabled="!editor.isActive('details')">
+        <button
+          @click="editor.chain().focus().unsetDetails().run()"
+          :disabled="!editor.isActive('details')"
+        >
           <IconSquareRoundedMinus2 />
+        </button>
+        <button @click="addYoutube">
+          <IconBrandYoutube />
         </button>
       </div>
     </div>
