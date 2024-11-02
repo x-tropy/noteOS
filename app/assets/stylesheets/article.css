@@ -59,13 +59,13 @@
     h1, p {
         &.is-empty::before {
             content: attr(data-placeholder);
-            @apply text-stone-300 pointer-events-none h-0 float-left;
+            @apply text-stone-400 pointer-events-none h-0 float-left;
         }
     }
 
     .is-empty .details-summary::before {
         content: "Summary";
-        @apply absolute text-stone-300 pointer-events-none;
+        @apply absolute text-stone-400 pointer-events-none;
     }
 
 
@@ -283,7 +283,7 @@
         }
     }
 
-    .task-list {
+    .task-list, .todo-list {
         @apply list-none m-0 pl-0;
 
         li {
@@ -313,6 +313,9 @@
 
             p {
                 @apply my-1 mx-2 text-base;
+                code {
+                    @apply text-[0.9em];
+                }
             }
         }
 
@@ -348,6 +351,12 @@
     .details {
         @apply flex my-4;
 
+        &.details-open {
+            @apply border-b border-gray-400;
+        }
+
+
+
         & > button {
             @apply relative w-8 flex-shrink-0;
 
@@ -368,7 +377,7 @@
             }
 
             .details {
-                @apply mb-0;
+                @apply mb-0 border-0;
             }
         }
     }

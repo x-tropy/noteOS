@@ -30,6 +30,8 @@ import CustomTable from "./TipTap/CustomTable.js";
 import CustomDetails from "./TipTap/CustomDetails.js";
 import YouTube from "@tiptap/extension-youtube";
 import CustomCallout from "./TipTap/CustomCallout.js";
+import CustomTodoList from "./TipTap/CustomTodoList.js";
+import CustomTodoItem from "./TipTap/CustomTodoItem.js";
 
 const props = defineProps({
   initialContent: {
@@ -74,10 +76,19 @@ onMounted(() => {
       ...CustomDetails,
       YouTube.configure({
         HTMLAttributes: {
-          class: "youtube"
-        }
+          class: "youtube",
+        },
       }),
       CustomCallout,
+      CustomTodoList.configure({
+        HTMLAttributes: {
+          class: "todo-list",
+        },
+        itemTypeName: "todoItem",
+      }),
+      CustomTodoItem.configure({
+        nested: true
+      }),
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

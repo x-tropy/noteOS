@@ -19,7 +19,8 @@ import {
   IconSquareRoundedMinus2,
   IconBrandBilibili,
   IconArrowBackUp,
-  IconArrowForwardUp
+  IconArrowForwardUp,
+  IconBracketsContain
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -51,6 +52,7 @@ const props = defineProps({
 
 const addYoutube = () => {
   const url = prompt("Enter YouTube URL");
+  if (!url) return
   props.editor
     .chain()
     .focus()

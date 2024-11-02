@@ -64,3 +64,4 @@
 - TODO: bubble & float menu
 - TODO: callout
 - add tooltip for toolbar items
+- add Bilibili video (iframe) embed
