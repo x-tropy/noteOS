@@ -279,7 +279,7 @@
 
     .inline-image {
         img {
-            @apply inline h-4 mb-1;
+            @apply inline h-[18px] mb-1;
         }
     }
 
