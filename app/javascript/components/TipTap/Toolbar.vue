@@ -18,6 +18,8 @@ import {
   IconSquareRoundedPlus,
   IconSquareRoundedMinus2,
   IconBrandBilibili,
+  IconArrowBackUp,
+  IconArrowForwardUp
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -63,7 +65,23 @@ const addYoutube = () => {
 
 <template>
   <div class="toolbar">
+
     <div class="control-group">
+      <div class="button-group">
+        <button
+            @click="editor.chain().focus().undo().run()"
+            :disabled="!editor.can().undo()"
+        >
+          <IconArrowBackUp />
+        </button>
+        <button
+            @click="editor.chain().focus().redo().run()"
+            :disabled="!editor.can().redo()"
+        >
+          <IconArrowForwardUp />
+        </button>
+      </div>
+
       <div class="button-group">
         <button @click.prevent="setLink(editor)">
           <IconLink :class="{ 'bg-black': editor.isActive('link') }" />
@@ -97,6 +115,7 @@ const addYoutube = () => {
         <AttachFileDialog :editor="editor" />
         <SearchItemsDialog :editor="editor" />
       </div>
+      <!-- Table Menu -->
       <div class="button-group">
         <button
           @click="
@@ -133,7 +152,6 @@ const addYoutube = () => {
         >
           <IconSquareRoundedMinus2 />
         </button>
-
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ import {
   IconRowInsertTop,
   IconRowRemove,
   IconTableMinus,
+  IconFold,
 } from "@tabler/icons-vue";
 
 const props = defineProps({
@@ -68,6 +69,12 @@ onMounted(async () => {
         ref="popover"
         :style="popoverPosition"
       >
+        <button
+          @click="editor.chain().focus().mergeCells().run()"
+          :disabled="!editor.isActive('table')"
+        >
+          <IconFold />
+        </button>
         <button
           @click="editor.chain().focus().addColumnBefore().run()"
           :disabled="!editor.isActive('table')"
