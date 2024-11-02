@@ -38,14 +38,15 @@
         @apply font-serif font-normal text-xl tracking-tight leading-8 my-4;
         word-spacing: 1px;
 
-        code {
-            @apply text-base tracking-tight text-fuchsia-600 font-medium rounded-md px-[2px];
-            word-spacing: -4px;
-        }
 
         strong {
             @apply font-semibold;
         }
+    }
+
+    code {
+        @apply text-base tracking-tight text-fuchsia-600 font-medium rounded-md px-[2px];
+        word-spacing: -4px;
     }
 
     h2 + p, h3 + p {
@@ -122,7 +123,7 @@
         @apply list-outside;
     }
 
-    & > ul, & > ol {
+    & > ul, & > ol, .details-content > ul, .details-content > ol {
         @apply ml-6;
     }
 
@@ -348,17 +349,17 @@
         @apply flex my-4;
 
         & > button {
-            @apply relative w-8;
+            @apply relative w-8 flex-shrink-0;
 
             &::before {
-                @apply w-6 h-6 inline-block absolute top-0 left-0;
+                @apply w-6 h-6 inline-block absolute top-[2px] left-0;
                 content: "";
                 background: url("../images/square-rounded-plus-filled.svg");
             }
         }
 
         .details-summary {
-            @apply list-none text-lg h-8 font-sans pl-[1px] font-semibold;
+            @apply list-none text-xl h-8  pl-[1px] ;
         }
 
         .details-content {
@@ -398,7 +399,7 @@
 
     .details .details-summary::before {
         content: "";
-        @apply absolute -left-8 top-0 h-6 w-6;
+        @apply absolute -left-8 top-[2px] h-6 w-6;
     }
 
     .details[open] .details-summary::before {
