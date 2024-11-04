@@ -6,6 +6,7 @@ import {
   unsetLink,
   alignCenter,
   alignLeft,
+  handleSubmit,
 } from "./ToolbarCommands.js";
 import {
   IconAlignLeft2,
@@ -20,7 +21,11 @@ import {
   IconBrandBilibili,
   IconArrowBackUp,
   IconArrowForwardUp,
-  IconBracketsContain
+  IconBracketsContain,
+  IconDeviceFloppy,
+  IconPower,
+  IconCircleCheckFilled,
+  IconRefresh,
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -28,21 +33,6 @@ import SearchItemsDialog from "~/components/TipTap/SearchItemsDialog.vue";
 import TableButtonsPopover from "~/components/TipTap/TableButtonsPopover.vue";
 import { containerWidth } from "~/components/TipTap/EditorTasks.js";
 
-const items = ref([
-  {
-    label: "Options",
-    items: [
-      {
-        label: "Refresh",
-      },
-      {
-        label: "Export",
-      },
-    ],
-  },
-]);
-const menu = ref();
-const toggle = (e) => menu.value.toggle(e);
 const props = defineProps({
   editor: {
     type: Editor,
@@ -50,9 +40,15 @@ const props = defineProps({
   },
 });
 
+const quitEditor = () => {
+  const currentUrl = window.location.href;
+  const newUrl = currentUrl.replace("/edit", "");
+  window.location.href = newUrl;
+};
+
 const addYoutube = () => {
   const url = prompt("Enter YouTube URL");
-  if (!url) return
+  if (!url) return;
   props.editor
     .chain()
     .focus()
@@ -63,22 +59,41 @@ const addYoutube = () => {
     })
     .run();
 };
+
+const saveStatus = ref("Save");
+const saveButton = ref()
+const submitArticle = async () => {
+  saveButton.value.disabled = true
+  const formElement = document.getElementById("article-form");
+  saveStatus.value = "Saving";
+  const { success, message } = await handleSubmit(formElement);
+  if (success) {
+    setTimeout(()=>{
+      saveStatus.value = "Saved";
+      saveButton.value.disabled = false
+    }, 1000)
+    setTimeout(() => {
+      saveStatus.value = "Save";
+    }, 2000);
+  } else {
+    console.log({ message });
+  }
+};
 </script>
 
 <template>
   <div class="toolbar">
-
     <div class="control-group">
       <div class="button-group">
         <button
-            @click="editor.chain().focus().undo().run()"
-            :disabled="!editor.can().undo()"
+          @click="editor.chain().focus().undo().run()"
+          :disabled="!editor.can().undo()"
         >
           <IconArrowBackUp />
         </button>
         <button
-            @click="editor.chain().focus().redo().run()"
-            :disabled="!editor.can().redo()"
+          @click="editor.chain().focus().redo().run()"
+          :disabled="!editor.can().redo()"
         >
           <IconArrowForwardUp />
         </button>
@@ -155,6 +170,18 @@ const addYoutube = () => {
           <IconSquareRoundedMinus2 />
         </button>
       </div>
+    </div>
+    <div class="fixed-buttons">
+      <button @click.prevent="submitArticle" ref="saveButton">
+        <IconDeviceFloppy v-if="saveStatus === 'Save'" />
+        <IconRefresh v-else-if="saveStatus === 'Saving'" class="spin" />
+        <IconCircleCheckFilled v-else />
+        <span>{{ saveStatus }}</span>
+      </button>
+      <button @click.prevent="quitEditor">
+        <IconPower />
+        <span>Quit</span>
+      </button>
     </div>
   </div>
 </template>

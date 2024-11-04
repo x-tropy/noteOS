@@ -42,7 +42,11 @@ export function unsetLink(editor) {
 
 export function externalImage(editor, url) {
   if (url) {
-    editor.chain().focus().setImageWithCaption({ src: url, caption: "example caption" }).run();
+    editor
+      .chain()
+      .focus()
+      .setImageWithCaption({ src: url, caption: "example caption" })
+      .run();
   }
 }
 
@@ -62,7 +66,7 @@ export function scrapeImage(editor, url, useNative) {
           .chain()
           .focus()
           .setImageWithCaption({
-            src: useNative ? data.image_url : url
+            src: useNative ? data.image_url : url,
           })
           .run();
       });
@@ -78,4 +82,23 @@ export function alignLeft(editor) {
 
 export function alignCenter(editor) {
   editor.chain().focus().setTextAlign("center").run();
+}
+
+export async function handleSubmit(formElement) {
+  if (!formElement) return {success: false, message: "lack form element"};
+  const formData = new FormData(formElement);
+  try {
+    const response = await fetch(formElement.action, {
+      method: "POST",
+      headers: {
+        "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
+        Accept: "application/json",
+      },
+      body: formData,
+    });
+    const data = response.json();
+    return data;
+  } catch (e) {
+    return { success: false, message: 'failed to post' };
+  }
 }
