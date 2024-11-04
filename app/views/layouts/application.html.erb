@@ -33,21 +33,29 @@
   <!--    <span class="item">Rails Tutorial</span>-->
   <!--  </div>-->
   <div class="actions">
-    <% if user_signed_in? && controller_name == 'articles' && @article.author_id == current_user.id %>
-      <%= link_to edit_article_path(@article), class: "action export-button" do %>
+    <% if user_signed_in? && controller_name == 'articles' %>
+
+      <%= link_to '', class: "action export-button" do %>
         <span>Export</span>
       <% end %>
-      <%= link_to edit_article_path(@article), class: "action share-button" do %>
+
+      <%= link_to '', class: "action share-button" do %>
         <span>Share</span>
       <% end %>
+
       <% if cookies[:mode] == 'edit' %>
-        <%= link_to 'Read', set_mode_articles_path(mode: 'display', article_id: @article.id),
-                    method: :post, class: "action read-button" %>
+        <%= link_to set_mode_articles_path(mode: 'display', article_slug: @article&.slug),
+                    method: :post, class: "action read-button" do %>
+          <span>Read</span>
+        <% end %>
       <% else %>
-        <%= link_to 'Edit', set_mode_articles_path(mode: 'edit', article_id: @article.id),
-                    method: :post, class: "action edit-button" %>
+        <%= link_to set_mode_articles_path(mode: 'edit', article_slug: @article&.slug),
+                    method: :post, class: "action edit-button" do %>
+          <span>Edit</span>
+        <% end %>
       <% end %>
-      <%= link_to edit_article_path(@article), class: "action search-button" do %>
+
+      <%= link_to '', class: "action search-button" do %>
         <span>Search</span>
       <% end %>
     <% end %>
@@ -60,18 +68,19 @@
   <%= yield %>
 </main>
 
+<footer>
+  <p><span class="co-branded-logo"></span></p>
+  <p class="copyright-notice">
+    &copy; 2024 Extropy Educational Technologies. All rights reserved.
+  </p>
+</footer>
+
 <button id="back-to-top" data-controller="back-to-top"
         data-action="click->back-to-top#scrollToTop"
         class="hidden"
 >
   ↑
 </button>
-<footer class="bg-black">
-  <p><span class="co-branded-logo"></span></p>
-  <p class="copyright-notice">
-    &copy; 2024 Extropy Educational Technologies. All rights reserved.
-  </p>
-</footer>
 
 </body>
 </html>
