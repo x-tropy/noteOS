@@ -9,18 +9,72 @@ body {
 }
 
 header {
-}
-
-.breadcrumb {
-    @apply flex gap-1 h-12 items-center;
+    @apply bg-white z-50 flex items-center gap-1 h-10 shadow-elevation-sm;
 
     .logo {
-        @apply ml-3;
+        @apply ml-3 py-2;
     }
-    span.item {
-        &::before {
-            @apply relative top-[3px] right-0.5;
-            content: url("../images/chevron-right.svg");
+
+    .breadcrumb {
+        @apply flex gap-1 items-center;
+
+        .item {
+            @apply pl-2;
+
+            &::before {
+                @apply relative top-0 right-[6px] text-stone-400;
+                content: '/';
+            }
+        }
+    }
+
+    .actions {
+        @apply ml-auto flex mr-1 sm:mr-0;
+
+        .action {
+            @apply pr-1 sm:pr-3 relative text-sm font-semibold pl-9 text-gray-800 rounded flex-shrink-0 h-10 leading-6 py-2;
+
+            &::before {
+                content: '';
+                @apply inline-block h-[24px] w-[24px] bg-no-repeat absolute top-2 left-2;
+            }
+
+            &:hover {
+                @apply bg-stone-200;
+            }
+            span {
+                @apply hidden sm:inline;
+            }
+        }
+
+        .edit-button {
+            &::before {
+                background: url("../../assets/images/edit.svg");
+            }
+        }
+
+        .search-button {
+            &::before {
+                background: url("../../assets/images/search.svg");
+            }
+        }
+
+        .export-button {
+            &::before {
+                background: url("../../assets/images/file-export.svg");
+            }
+        }
+
+        .share-button {
+            &::before {
+                background: url("../../assets/images/share.svg");
+            }
+        }
+
+        .read-button {
+            &::before {
+                background: url("../../assets/images/book.svg");
+            }
         }
     }
 }
