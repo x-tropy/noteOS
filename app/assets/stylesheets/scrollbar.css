@@ -7,7 +7,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply rounded-full;
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -17,6 +16,10 @@
 
 .thin-scrollbar::-webkit-scrollbar {
     @apply h-[5px] w-[5px];
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 640px) { /* Adjust the width as needed */

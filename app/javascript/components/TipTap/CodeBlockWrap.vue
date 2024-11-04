@@ -3,8 +3,8 @@
     <span class="code-language-label">
       {{ props.node.attrs.language || "plaintext" }}
     </span>
-    <div class="sticky top-8">
-    <button class="copy-code-button" data-copy-code-target="button" data-action="click->copy-code#copyToClipboard">Copy</button>
+    <div class="actions">
+    <button class="copy-code-button !top-10" data-copy-code-target="button" data-action="click->copy-code#copyToClipboard">Copy</button>
     </div>
     <pre><code data-copy-code-target="code"><node-view-content/></code></pre>
   </node-view-wrapper>
