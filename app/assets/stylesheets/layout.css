@@ -2,14 +2,10 @@
 }
 
 body {
-    &.global-bg {
-        @apply bg-no-repeat bg-cover bg-fixed;
-        background-image: url(https://fly.io/phx/ui/images/app-shapes-e20dd6e0903d3a31595108e6e1052a1e.webp?vsn=d);
-    }
 }
 
 header {
-    @apply bg-white z-50 flex items-center gap-1 h-10 shadow-elevation-sm;
+    @apply bg-white z-50 flex items-center gap-1 h-10 shadow-elevation-xs;
 
     .logo {
         @apply ml-3 py-2;
@@ -29,10 +25,10 @@ header {
     }
 
     .actions {
-        @apply ml-auto flex mr-1 sm:mr-0;
+        @apply ml-auto flex mr-0;
 
         .action {
-            @apply pr-1 sm:pr-3 relative text-sm font-semibold pl-9 text-gray-800 rounded flex-shrink-0 h-10 leading-6 py-2;
+            @apply pr-1 sm:pr-2 relative text-sm font-semibold pl-9 text-gray-800 rounded flex-shrink-0 h-10 leading-6 py-2;
 
             &::before {
                 content: '';
@@ -79,12 +75,16 @@ header {
     }
 }
 
+main {
+}
+
 #back-to-top {
     @apply fixed bottom-2 right-2 font-semibold text-lg  w-10 h-10 bg-black text-white rounded shadow-elevation;
     @apply sm:w-12 sm:h-12 sm:bottom-[12px] sm:right-[12px] sm:text-xl sm:hover:bg-black;
 }
 
 footer {
+    @apply bg-black;
     p {
         .co-branded-logo {
             @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;

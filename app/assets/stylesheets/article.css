@@ -88,23 +88,23 @@
         @apply text-sm  pl-2 pb-2 pt-9;
 
         code {
-            @apply overflow-x-auto !p-0 thin-scrollbar;
+            @apply text-sm overflow-x-auto !p-0 thin-scrollbar;
         }
 
     }
 
     .code-language-label {
-        @apply font-mono text-sm flex absolute top-2 left-2 px-1 bg-black text-white rounded;
+        @apply font-mono text-xs flex absolute top-2 left-2 px-1 bg-black text-white rounded;
 
         &::before {
             content: '';
             background: url("../images/w-code.svg");
-            @apply inline-block w-[18px] h-[18px] relative mr-[2px] top-[1px];
+            @apply inline-block w-[18px] h-[18px] relative mr-[2px];
         }
     }
 
     .copy-code-button {
-        @apply bg-black text-white flex absolute top-2 right-2 rounded font-sans text-sm px-2 py-1;
+        @apply shadow-elevation-sm flex absolute top-2 right-2 rounded font-sans text-sm px-2 py-1;
 
         &::before {
             content: '';
