@@ -1,6 +1,6 @@
 import { VueRenderer } from "@tiptap/vue-3";
 import tippy from "tippy.js";
-import EmojiList from "./EmojiList.vue";
+import EmojiDropdown from "./EmojiDropdown.vue";
 
 export default {
   items: ({ editor, query }) => {
@@ -21,7 +21,7 @@ export default {
 
     return {
       onStart: (props) => {
-        component = new VueRenderer(EmojiList, {
+        component = new VueRenderer(EmojiDropdown, {
           props,
           editor: props.editor,
         });
