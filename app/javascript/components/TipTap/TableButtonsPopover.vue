@@ -9,7 +9,8 @@ import {
   IconRowInsertTop,
   IconRowRemove,
   IconTableMinus,
-  IconFold,
+  IconViewportNarrow,
+  IconViewportWide
 } from "@tabler/icons-vue";
 
 const props = defineProps({
@@ -73,7 +74,13 @@ onMounted(async () => {
           @click="editor.chain().focus().mergeCells().run()"
           :disabled="!editor.isActive('table')"
         >
-          <IconFold />
+          <IconViewportNarrow />
+        </button>
+        <button
+            @click="editor.chain().focus().splitCell().run()"
+            :disabled="!editor.isActive('table')"
+        >
+          <IconViewportWide />
         </button>
         <button
           @click="editor.chain().focus().addColumnBefore().run()"
