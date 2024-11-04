@@ -45,7 +45,7 @@
 
       <% if cookies[:mode] == 'edit' %>
         <%= link_to set_mode_articles_path(mode: 'display', article_slug: @article&.slug),
-                    method: :post, class: "action read-button" do %>
+                    method: :post, class: "action read-button", id: "quit-editor" do %>
           <span>Read</span>
         <% end %>
       <% else %>

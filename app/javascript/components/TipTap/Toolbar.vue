@@ -42,9 +42,8 @@ const props = defineProps({
 });
 
 const quitEditor = () => {
-  const currentUrl = window.location.href;
-  const newUrl = currentUrl.replace("/edit", "");
-  window.location.href = newUrl;
+  const headerMenu = document.getElementById("quit-editor")
+  headerMenu?.click()
 };
 
 const addYoutube = () => {
