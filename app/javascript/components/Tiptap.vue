@@ -1,6 +1,8 @@
 <template>
   <template v-if="editor">
     <Toolbar :editor="editor" />
+    <bubble-menu :editor="editor" />
+    <floating-menu :editor="editor" />
     <editor-content :editor="editor" />
   </template>
 </template>
@@ -8,16 +10,18 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { Editor, EditorContent } from "@tiptap/vue-3";
+import Toolbar from "./TipTap/Toolbar.vue";
+import FloatingMenu from "./TipTap/FloatingMenu.vue";
+import BubbleMenu from "./TipTap/BubbleMenu.vue";
 import CustomCodeBlock from "./TipTap/CustomCodeBlock.js";
 import CustomStarterKit from "./TipTap/CustomStarterKit.js";
 import CustomTypography from "./TipTap/CustomTypography.js";
 import Highlight from "@tiptap/extension-highlight";
-import Toolbar from "./TipTap/Toolbar.vue";
 import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
-import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
+// import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
@@ -57,7 +61,6 @@ onMounted(() => {
       CustomCodeBlock,
       CustomLink,
       CustomFileHandler,
-      CustomPlaceholder,
       Image.configure({
         inline: false,
         HTMLAttributes: {
@@ -87,7 +90,7 @@ onMounted(() => {
         itemTypeName: "todoItem",
       }),
       CustomTodoItem.configure({
-        nested: true
+        nested: true,
       }),
     ],
     onUpdate: ({ editor }) => {
@@ -97,9 +100,9 @@ onMounted(() => {
       }
     },
   });
-  // Object.keys(editor.value.schema.nodes).forEach(nodeName => {
-  //   console.log(nodeName); // prints each node name
-  // });
+  Object.keys(editor.value.schema.nodes).forEach(nodeName => {
+    console.log(nodeName); // prints each node name
+  });
 });
 
 const intervalId = periodicTask(editor);

@@ -6,8 +6,8 @@ const CustomPlaceholder = Placeholder.configure({
     switch (name) {
       case "heading":
         return "New Title";
-      case "paragraph":
-        return "type / for more commands";
+      // case "paragraph":
+      //   return "type / for more commands";
       default:
         return null;
     }

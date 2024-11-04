@@ -3,7 +3,7 @@
 }
 
 .toolbar {
-    @apply sticky top-0 z-10 relative;
+    @apply sticky top-0 z-[10000] relative;
 
     .control-group {
         @apply text-white bg-gray-600 flex gap-1 w-full overflow-x-auto pl-1 pr-20 sm:pr-36;
@@ -75,6 +75,16 @@
 
         img {
             @apply h-5 w-5;
+        }
+    }
+}
+
+.floating-menu, .bubble-menu {
+    @apply shadow-elevation-md bg-white rounded-sm text-gray-500 flex;
+    button {
+        @apply p-1;
+        &.is-active {
+            @apply text-black bg-gray-300;
         }
     }
 }
