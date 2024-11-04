@@ -21,13 +21,36 @@
 
 <body>
 
-<header class="border-b border-gray-300 bg-white z-50">
-  <div class="breadcrumb">
-    <a class="logo" href="/articles">
-      <img width="26" src="https://fly.storage.tigris.dev/vite/noteOS/images/icon.svg"/>
-    </a>
-    <span class="item">Developer</span>
-    <span class="item">Rails Tutorial</span>
+<header class="<%= 'sticky top-0' unless request.path.ends_with?('/edit') %>">
+  <a class="logo" href="/articles">
+    <picture>
+      <source srcset="https://fly.storage.tigris.dev/vite/noteOS/images/icon.svg" media="(max-width: 640px)"/>
+      <img class="h-7 sm:h-5" src="https://fly.storage.tigris.dev/vite/images/noteOS.svg" alt="noteOS logo"/>
+    </picture>
+  </a>
+  <!--  <div class="breadcrumb">-->
+  <!--    <span class="item">Developer</span>-->
+  <!--    <span class="item">Rails Tutorial</span>-->
+  <!--  </div>-->
+  <div class="actions">
+    <% if user_signed_in? && controller_name == 'articles' && @article.author_id == current_user.id %>
+      <%= link_to edit_article_path(@article), class: "action export-button" do %>
+        <span>Export</span>
+      <% end %>
+      <%= link_to edit_article_path(@article), class: "action share-button" do %>
+        <span>Share</span>
+      <% end %>
+      <% if cookies[:mode] == 'edit' %>
+        <%= link_to 'Read', set_mode_articles_path(mode: 'display', article_id: @article.id),
+                    method: :post, class: "action read-button" %>
+      <% else %>
+        <%= link_to 'Edit', set_mode_articles_path(mode: 'edit', article_id: @article.id),
+                    method: :post, class: "action edit-button" %>
+      <% end %>
+      <%= link_to edit_article_path(@article), class: "action search-button" do %>
+        <span>Search</span>
+      <% end %>
+    <% end %>
   </div>
 </header>
 
@@ -39,7 +62,7 @@
 
 <button id="back-to-top" data-controller="back-to-top"
         data-action="click->back-to-top#scrollToTop"
-    class="hidden"
+        class="hidden"
 >
   ↑
 </button>

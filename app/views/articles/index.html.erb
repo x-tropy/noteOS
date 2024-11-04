@@ -6,8 +6,11 @@
     </div>
     <% @articles.each do |article| %>
       <div class="border-b border-gray-300 sm:border rounded sm:border-gray-400 hover:bg-gray-200">
-        <%= link_to article.title, edit_article_path(article), class: "text-base px-3 py-2 block h-full" %>
-        <!--    <p><%#= truncate(strip_tags(article.content.to_s), length: 100) %></p>-->
+        <% if cookies[:mode] == "edit" %>
+          <%= link_to article.title, edit_article_path(article), class: "text-base px-3 py-2 block h-full" %>
+        <% else %>
+          <%= link_to article.title, article_path(article), class: "text-base px-3 py-2 block h-full" %>
+        <% end %>
       </div>
     <% end %>
   </div>
