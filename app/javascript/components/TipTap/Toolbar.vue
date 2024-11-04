@@ -26,6 +26,7 @@ import {
   IconPower,
   IconCircleCheckFilled,
   IconRefresh,
+  IconCloudExclamation
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -76,7 +77,13 @@ const submitArticle = async () => {
       saveStatus.value = "Save";
     }, 2000);
   } else {
-    console.log({ message });
+    setTimeout(()=>{
+      saveStatus.value = "Failed";
+      saveButton.value.disabled = false
+    }, 1000)
+    setTimeout(() => {
+      saveStatus.value = "Save";
+    }, 5000);
   }
 };
 </script>
@@ -172,9 +179,10 @@ const submitArticle = async () => {
       </div>
     </div>
     <div class="fixed-buttons">
-      <button @click.prevent="submitArticle" ref="saveButton">
+      <button @click.prevent="submitArticle" ref="saveButton" id="silent-sync">
         <IconDeviceFloppy v-if="saveStatus === 'Save'" />
         <IconRefresh v-else-if="saveStatus === 'Saving'" class="spin" />
+        <IconCloudExclamation v-else-if="saveStatus === 'Failed'" />
         <IconCircleCheckFilled v-else />
         <span>{{ saveStatus }}</span>
       </button>

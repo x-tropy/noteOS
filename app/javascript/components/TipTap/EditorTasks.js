@@ -4,7 +4,7 @@ export function ensureThreeEmptyParagraphs(editor, isUpdating) {
   const content = editor.getHTML();
 
   // when there are footnotes, terminate
-  if (content.includes(`class="footnote-ref"`)) return
+  if (content.includes(`class="footnote-ref"`)) return;
 
   // Check if the content ends with exactly 3 empty <p> tags
   if (!content.endsWith("<p></p><p></p><p></p>")) {
@@ -31,40 +31,51 @@ function restoreSelection(editor, selection) {
 export function periodicTask(editor) {
   const intervalId = setInterval(() => {
     syncContent(editor);
-    resizeYoutubeFrame()
+    resizeYoutubeFrame();
   }, 3000);
 
   return intervalId;
 }
 
 function syncContent(editor) {
+  const lastSavedArticlePathname =
+    localStorage.getItem("lastSavedArticlePathname") || "";
+  const currentPathname = window.location.pathname;
   const liveContent = editor.value.getHTML().trim();
+  if (currentPathname !== lastSavedArticlePathname) {
+    localStorage.setItem("lastSavedArticlePathname", currentPathname);
+    localStorage.setItem("lastSavedArticleContent", liveContent);
+    return;
+  }
 
-  // Retrieve the latest lastSavedContent each time syncContent is called
-  const lastSavedContent = localStorage.getItem("lastSavedContent") || "";
+  // Retrieve the latest lastSavedArticleContent each time syncContent is called
+  const lastSavedArticleContent =
+    localStorage.getItem("lastSavedArticleContent") || "";
 
   // Compare liveContent with the most recently saved content
-  if (liveContent === lastSavedContent) return;
+  if (liveContent === lastSavedArticleContent) return;
 
   document.getElementById("silent-sync")?.click();
-  localStorage.setItem("lastSavedContent", liveContent);
+  localStorage.setItem("lastSavedArticleContent", liveContent);
 }
 
 function resizeYoutubeFrame() {
-  const innerWidth = containerWidth()
-  const youtubeFrames = document.querySelectorAll(".youtube")
-  Array.from(youtubeFrames).forEach(frame => {
-    frame.width = innerWidth
-    frame.height = innerWidth / 2
-  })
+  const innerWidth = containerWidth();
+  const youtubeFrames = document.querySelectorAll(".youtube");
+  Array.from(youtubeFrames).forEach((frame) => {
+    frame.width = innerWidth;
+    frame.height = innerWidth / 2;
+  });
 }
 
 export function containerWidth() {
-  const container = document.querySelector(".article") || document.querySelector("#tiptap-editor .ProseMirror")
+  const container =
+    document.querySelector(".article") ||
+    document.querySelector("#tiptap-editor .ProseMirror");
   const computedStyle = window.getComputedStyle(container);
   const innerWidth =
-      container.offsetWidth -
-      parseFloat(computedStyle.paddingLeft) -
-      parseFloat(computedStyle.paddingRight);
-  return innerWidth
+    container.offsetWidth -
+    parseFloat(computedStyle.paddingLeft) -
+    parseFloat(computedStyle.paddingRight);
+  return innerWidth;
 }
