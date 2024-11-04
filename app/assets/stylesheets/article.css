@@ -18,7 +18,7 @@
     }
 
     h1 {
-        @apply text-4xl mt-10 mb-[52px];
+        @apply text-4xl mb-14 mt-16;
     }
 
     h2 {
@@ -236,7 +236,7 @@
     /* selected node */
 
     .ProseMirror-selectednode {
-        @apply shadow-elevation-lg active:shadow-elevation transition-all border-transparent rounded-sm;
+        @apply shadow-elevation-md active:shadow-elevation transition-all border-transparent rounded-sm;
     }
 
     /* attachment */
