@@ -20,6 +20,25 @@ const euroSign = () =>
     replace: " €",
   });
 
+const customEmDash = () =>
+  textInputRule({
+    find: /(?<!`)--/,
+    replace: "—",
+    handler: (state, match, start, end) => {
+      const { $from } = state.selection;
+
+      // Check if the parent node is a code block
+      const parent = $from.node($from.depth);
+      if (parent.type.name === "code") {
+        // If it's a code node, do nothing
+        return null;
+      }
+
+      const tr = state.tr.replaceWith(start, end, schema.text("—"));
+      return tr;
+    },
+  });
+
 // Generator function to create input rules
 const generateRuleFromNames = (names, symbol) => {
   // Join names with the alternation operator
@@ -112,19 +131,19 @@ const hexagrams = [
 
 // Generate all input rules
 const trigramRules = trigrams.map(({ names, symbol }) =>
-    generateRuleFromNames(names, symbol),
+  generateRuleFromNames(names, symbol),
 );
 
-const hexagramRules = hexagrams.map(({names, symbol}) =>
-    generateRuleFromNames(names, symbol)
-)
+const hexagramRules = hexagrams.map(({ names, symbol }) =>
+  generateRuleFromNames(names, symbol),
+);
 
 const CustomTypography = Typography.extend({
   addInputRules() {
     const rules = this.parent?.(); // Get the original rules
 
     // Add the custom rule
-    rules.push(downwardArrow(), upwardArrow(), euroSign());
+    rules.push(downwardArrow(), upwardArrow(), euroSign(), customEmDash());
     rules.push(...trigramRules);
     rules.push(...hexagramRules);
 
@@ -132,10 +151,10 @@ const CustomTypography = Typography.extend({
   },
 }).configure({
   emDash: false,
-  openDoubleQuote: false,
-  closeDoubleQuote: false,
-  openSingleQuote: false,
-  closeSingleQuote: false
+  // openDoubleQuote: false,
+  // closeDoubleQuote: false,
+  // openSingleQuote: false,
+  // closeSingleQuote: false,
 });
 
 export default CustomTypography;

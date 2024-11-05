@@ -21,7 +21,6 @@ import CustomLink from "./TipTap/CustomLink.js";
 import Image from "@tiptap/extension-image";
 import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
-// import CustomPlaceholder from "./TipTap/CustomPlaceholder.js";
 import {
   ensureThreeEmptyParagraphs,
   periodicTask,
