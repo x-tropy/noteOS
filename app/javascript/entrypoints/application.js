@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // TOC
-  const tocElement = document.getElementById("toc")
+  const tocElement = document.getElementById("table-of-contents")
   if (tocElement) {
     const toc = createApp(TableOfContents, {
 
     })
-    toc.mount('#toc')
+    toc.mount('#table-of-contents')
   }
 
   // Preprocess: View Mode Only

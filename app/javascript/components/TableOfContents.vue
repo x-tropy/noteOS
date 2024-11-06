@@ -1,30 +1,35 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
+import { IconList } from "@tabler/icons-vue";
 
 const tocItems = ref([]);
 let intervalId;
 let observer;
 let visibleHeadingIds = ref([]);
 let activeHeadingId = ref("");
-let headingCount = ref(0)
-let sortedHeadingIds = computed(() => {
+let headingCount = ref(0);
+let sortedVisibleHeadingIds = computed(() => {
   return tocItems.value
     .map((item) => item.id)
     .filter((id) => visibleHeadingIds.value.includes(id));
 });
+let floating = ref(false);
 
 function generateTOC() {
   const headings = document.querySelectorAll(
     "#tiptap-editor .ProseMirror > h2,h3, .article > h2,h3",
   );
-  headingCount.value = headings.length
-  if (headings.length < 3) return
+  headingCount.value = headings.length;
+  if (headings.length < 3) return;
 
-  tocItems.value = Array.from(headings).map((heading) => ({
+  const updatedTocItems = Array.from(headings).map((heading) => ({
     level: heading.tagName.toLowerCase(),
     id: heading.id,
     text: heading.innerText,
   }));
+  if (JSON.stringify(updatedTocItems) === JSON.stringify(tocItems.value))
+    return;
+  tocItems.value = updatedTocItems;
 
   observer.disconnect();
   headings.forEach((h) => observer.observe(h));
@@ -40,8 +45,40 @@ const observerCallback = (entries) => {
       );
     }
   });
-  if (sortedHeadingIds.value.length > 0)
-    activeHeadingId.value = sortedHeadingIds.value[0];
+  if (sortedVisibleHeadingIds.value.length > 0)
+    activeHeadingId.value = sortedVisibleHeadingIds.value[0];
+};
+
+const displayToc = (e) => {
+  document.querySelector(".toc-container").style.display = "block";
+  e.stopPropagation()
+};
+
+const checkTocWidth = () => {
+  const tocContainer = document.querySelector(".toc-container");
+  if (!tocContainer) return;
+  if (tocContainer.offsetWidth < 80) {
+    tocContainer.classList.add("floating");
+    tocContainer.style.display = "none";
+    floating.value = true;
+  }
+  if (document.documentElement.clientWidth > 60 * 2 + 750) {
+    tocContainer.classList.remove("floating");
+    tocContainer.style.display = "block";
+    floating.value = false;
+  }
+};
+
+const collapseToc = (e) => {
+  // not expanded
+  const tocContainer = document.querySelector(".toc-container")
+  if (!tocContainer) return
+  if (tocContainer.style.display == "none") return
+
+  if (!tocContainer.contains(e.target)) {
+    tocContainer.style.display = "none";
+    e.stopPropagation()
+  }
 };
 
 const options = {
@@ -53,23 +90,39 @@ observer = new IntersectionObserver(observerCallback, options);
 
 onMounted(() => {
   intervalId = setInterval(generateTOC, 500);
+  checkTocWidth();
+  window.addEventListener("resize", checkTocWidth);
+  window.addEventListener("click", collapseToc);
 });
 
 onBeforeUnmount(() => {
   clearInterval(intervalId);
   observer.disconnect();
+  window.removeEventListener("resize", checkTocWidth);
 });
 </script>
 
-<template >
-  <div v-if="headingCount >= 3" class="title">Table of Contents</div>
-  <ul  v-if="headingCount >= 3">
-    <li
-      v-for="item in tocItems"
-      :key="item.id"
-      :class="[{ active: activeHeadingId == item.id }, item.level]"
-    >
-      <a :href="`#${item.id}`">{{ item.text }}</a>
-    </li>
-  </ul>
+<template>
+  <div class="toc-container">
+    <div id="toc">
+      <div v-if="headingCount >= 3" class="title">
+        <span>Table of Contents</span>
+      </div>
+      <ul v-if="headingCount >= 3">
+        <li
+          v-for="item in tocItems"
+          :key="item.id"
+          :class="[{ active: activeHeadingId == item.id }, item.level]"
+        >
+          <a :href="`#${item.id}`">{{ item.text }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="expandToc">
+    <div class="container" @click="displayToc">
+      <IconList />
+      <span>TOC</span>
+    </div>
+  </div>
 </template>

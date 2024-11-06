@@ -95,19 +95,39 @@
     @apply mb-7 sm:mb-0;
 }
 
+#expandToc {
+    @apply absolute h-full right-0 top-24 ;
+    .container {
+        @apply sticky top-10 shadow-elevation-md p-1 text-white bg-gray-600 cursor-pointer;
+
+        span {
+            @apply text-sm font-semibold font-mono inline-block;
+            writing-mode: vertical-rl;
+        }
+
+        svg {
+            @apply w-5 h-5 mb-2;
+        }
+    }
+}
+
 .toc-container {
-    @apply absolute right-0 top-28 h-[calc(100%-40px)] z-10 w-[calc((100%-750px)/2)] ;
+    @apply absolute right-0 top-24 h-[calc(100%-100px)] z-10 w-[calc((100%-750px)/2)] bg-white;
+
+    &.floating {
+        @apply shadow-elevation-md w-40 pl-3;
+    }
 
     #toc {
-        @apply sticky tracking-wide  ;
+        @apply sticky tracking-wide top-10;
         font-size: 13px;
 
         .title {
-            @apply text-xs font-semibold pb-3 border-b border-light bg-white;
+            @apply text-xs font-semibold py-2 border-b border-light flex items-center justify-between;
         }
 
         ul {
-            @apply flex flex-col text-gray-500 pt-2 font-medium h-[calc(100vh-100px)] overflow-y-scroll thin-scrollbar;
+            @apply flex flex-col text-gray-500 pt-2 font-medium h-[calc(100vh-70px)] overflow-y-scroll thin-scrollbar;
 
             li {
                 &.active {
@@ -119,7 +139,7 @@
                 }
 
                 a {
-                    @apply py-1 leading-tight block;
+                    @apply py-1 leading-tight block break-words;
 
                     &:hover {
                         @apply text-black;
@@ -135,6 +155,6 @@
 }
 
 #back-to-top {
-    @apply fixed bottom-2 right-2 font-semibold text-lg  w-10 h-10 bg-black text-white rounded shadow-elevation z-20;
+    @apply fixed bottom-2 right-2 font-semibold text-lg  w-10 h-10 bg-gray-600 text-white rounded shadow-elevation z-20;
     @apply sm:w-12 sm:h-12 sm:bottom-[12px] sm:right-[12px] sm:text-xl sm:hover:bg-black;
 }
