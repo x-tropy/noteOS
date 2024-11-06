@@ -23,20 +23,7 @@ const euroSign = () =>
 const customEmDash = () =>
   textInputRule({
     find: /(?<!`)--/,
-    replace: "—",
-    handler: (state, match, start, end) => {
-      const { $from } = state.selection;
-
-      // Check if the parent node is a code block
-      const parent = $from.node($from.depth);
-      if (parent.type.name === "code") {
-        // If it's a code node, do nothing
-        return null;
-      }
-
-      const tr = state.tr.replaceWith(start, end, schema.text("—"));
-      return tr;
-    },
+    replace: "—"
   });
 
 // Generator function to create input rules
