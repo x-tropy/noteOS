@@ -37,6 +37,7 @@ export function periodicTask(editor) {
   return intervalId;
 }
 
+
 function syncContent(editor) {
   const lastSavedArticlePathname =
     localStorage.getItem("lastSavedArticlePathname") || "";

@@ -8,7 +8,6 @@ export default class extends Controller {
 
   updateHidden() {
     const formalTitle = titleCase(this.informalTarget.value.trim());
-    console.log(formalTitle)
     this.titleTarget.value = formalTitle;
     this.hiddenContentTarget.value = `<h1>${formalTitle}</h1>
 <p></p>

@@ -22,11 +22,11 @@
     }
 
     h2 {
-        @apply text-2xl mb-5 mt-12;
+        @apply text-2xl mb-5 mt-12 scroll-mt-14;
     }
 
     h3 {
-        @apply text-xl leading-9 mt-5;
+        @apply text-xl leading-9 mt-5 scroll-mt-10;
     }
 
     h1 code, h2 code, h3 code {
@@ -356,7 +356,7 @@
         @apply flex my-4;
 
         &.details-open {
-            @apply border-b border-gray-400;
+            @apply border-b border-light;
         }
 
 

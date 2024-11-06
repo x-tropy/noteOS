@@ -92,13 +92,13 @@ const submitArticle = async () => {
     <div class="control-group">
       <div class="button-group">
         <button
-          @click="editor.chain().focus().undo().run()"
+          @click.prevent="editor.chain().focus().undo().run()"
           :disabled="!editor.can().undo()"
         >
           <IconArrowBackUp />
         </button>
         <button
-          @click="editor.chain().focus().redo().run()"
+          @click.prevent="editor.chain().focus().redo().run()"
           :disabled="!editor.can().redo()"
         >
           <IconArrowForwardUp />
@@ -132,7 +132,7 @@ const submitArticle = async () => {
       </div>
       <div class="button-group">
         <AddImagePopover :editor="editor" />
-        <button @click="addYoutube">
+        <button @click.prevent="addYoutube">
           <IconBrandBilibili />
         </button>
         <AttachFileDialog :editor="editor" />
@@ -141,7 +141,7 @@ const submitArticle = async () => {
       <!-- Table Menu -->
       <div class="button-group">
         <button
-          @click="
+          @click.prevent="
             editor
               .chain()
               .focus()
@@ -152,13 +152,13 @@ const submitArticle = async () => {
           <IconTablePlus />
         </button>
         <button
-          @click="editor.chain().focus().addColumnAfter().run()"
+          @click.prevent="editor.chain().focus().addColumnAfter().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconColumnInsertRight />
         </button>
         <button
-          @click="editor.chain().focus().addRowAfter().run()"
+          @click.prevent="editor.chain().focus().addRowAfter().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconRowInsertBottom />
@@ -166,11 +166,11 @@ const submitArticle = async () => {
         <TableButtonsPopover :editor="editor" />
       </div>
       <div class="button-group">
-        <button @click="editor.chain().focus().setDetails().run()">
+        <button @click.prevent="editor.chain().focus().setDetails().run()">
           <IconSquareRoundedPlus />
         </button>
         <button
-          @click="editor.chain().focus().unsetDetails().run()"
+          @click.prevent="editor.chain().focus().unsetDetails().run()"
           :disabled="!editor.isActive('details')"
         >
           <IconSquareRoundedMinus2 />
