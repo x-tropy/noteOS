@@ -5,13 +5,13 @@ import crelt from "crelt";
 hljs.registerLanguage("vue", hljsVue);
 
 export const highlightCodeBlocks = () => {
-  document.querySelectorAll("pre code").forEach((block) => {
+  document.querySelectorAll(".article pre code").forEach((block) => {
     hljs.highlightElement(block);
   });
 };
 
 export const prependLanguageLabels = () => {
-  const preElements = document.querySelectorAll("pre");
+  const preElements = document.querySelectorAll(".article pre");
 
   preElements.forEach((preElement) => {
     const codeElement = preElement.querySelector("code");

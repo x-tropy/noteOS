@@ -1,6 +1,7 @@
 import "../controllers";
 import { createApp } from "vue";
 import Tiptap from "../components/Tiptap.vue";
+import TableOfContents from "../components/TableOfContents.vue";
 import Rails from "@rails/ujs";
 import PrimeVue from "primevue/config";
 import {
@@ -25,6 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
     app.use(PrimeVue, { unstyled: true });
     app.mount("#tiptap-editor");
   }
+
+  // TOC
+  const tocElement = document.getElementById("toc")
+  if (tocElement) {
+    const toc = createApp(TableOfContents, {
+
+    })
+    toc.mount('#toc')
+  }
+
   // Preprocess: View Mode Only
   highlightCodeBlocks();
   prependLanguageLabels();

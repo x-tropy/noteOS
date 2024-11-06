@@ -23,7 +23,7 @@ import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import {
   ensureThreeEmptyParagraphs,
-  periodicTask,
+  periodicTask
 } from "./TipTap/EditorTasks.js";
 import CustomImage from "./TipTap/CustomImage.js";
 import CustomAttachment from "./TipTap/CustomAttachment.js";
@@ -35,6 +35,7 @@ import YouTube from "@tiptap/extension-youtube";
 import CustomCallout from "./TipTap/CustomCallout.js";
 import CustomTodoList from "./TipTap/CustomTodoList.js";
 import CustomTodoItem from "./TipTap/CustomTodoItem.js";
+import { getHierarchicalIndexes, TableOfContents } from '@tiptap-pro/extension-table-of-contents'
 
 const props = defineProps({
   initialContent: {
@@ -91,6 +92,12 @@ onMounted(() => {
       CustomTodoItem.configure({
         nested: true,
       }),
+      TableOfContents.configure({
+        getIndex: getHierarchicalIndexes,
+        onUpdate: content => {
+          // console.log(content)
+        },
+      }),
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
@@ -99,9 +106,9 @@ onMounted(() => {
       }
     },
   });
-  Object.keys(editor.value.schema.nodes).forEach(nodeName => {
-    console.log(nodeName); // prints each node name
-  });
+  // Object.keys(editor.value.schema.nodes).forEach(nodeName => {
+  //   console.log(nodeName); // prints each node name
+  // });
 });
 
 const intervalId = periodicTask(editor);

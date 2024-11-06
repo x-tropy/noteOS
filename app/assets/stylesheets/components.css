@@ -6,7 +6,7 @@
     @apply sticky top-0 z-[10000] relative;
 
     .control-group {
-        @apply text-white bg-gray-600 flex gap-1 w-full overflow-x-auto pl-1 pr-20 sm:pr-36;
+        @apply text-white bg-gray-600 flex sm:gap-1 w-full overflow-x-auto pl-1 pr-20 sm:pr-36;
 
         &::-webkit-scrollbar {
             display: none;
@@ -29,7 +29,7 @@
     }
 
     button {
-        @apply p-1;
+        @apply p-2 sm:p-1;
     }
 
     button[disabled] {
@@ -37,10 +37,10 @@
     }
 
     .fixed-buttons {
-        @apply absolute right-0 pr-1 top-0 bg-gray-600 text-white flex text-sm;
+        @apply absolute right-0 top-0 bg-gray-600 text-white flex text-sm;
 
         button {
-            @apply border-gray-400 border-l z-30 flex gap-1 pr-1 items-center;
+            @apply border-gray-400 border-l z-30 flex gap-1 px-2 items-center;
 
             span {
                 @apply tracking-wide hidden sm:inline-block;
@@ -81,14 +81,60 @@
 
 .floating-menu, .bubble-menu {
     @apply shadow-elevation-md bg-white rounded-sm text-gray-500 flex;
+
     button {
         @apply p-1;
+
         &.is-active {
             @apply text-black bg-gray-300;
         }
     }
 }
 
-.btn {
+.bubble-menu {
+    @apply mb-7 sm:mb-0;
+}
 
+.toc-container {
+    @apply absolute right-0 top-28 h-[calc(100%-40px)] z-10 w-[calc((100%-750px)/2)] ;
+
+    #toc {
+        @apply sticky tracking-wide  ;
+        font-size: 13px;
+
+        .title {
+            @apply text-xs font-semibold pb-3 border-b border-light bg-white;
+        }
+
+        ul {
+            @apply flex flex-col text-gray-500 pt-2 font-medium h-[calc(100vh-100px)] overflow-y-scroll thin-scrollbar;
+
+            li {
+                &.active {
+                    @apply text-blue-400;
+
+                    a:hover {
+                        @apply text-blue-400;
+                    }
+                }
+
+                a {
+                    @apply py-1 leading-tight block;
+
+                    &:hover {
+                        @apply text-black;
+                    }
+                }
+            }
+
+            .h3 {
+                @apply ml-4;
+            }
+        }
+    }
+}
+
+#back-to-top {
+    @apply fixed bottom-2 right-2 font-semibold text-lg  w-10 h-10 bg-black text-white rounded shadow-elevation z-20;
+    @apply sm:w-12 sm:h-12 sm:bottom-[12px] sm:right-[12px] sm:text-xl sm:hover:bg-black;
 }
