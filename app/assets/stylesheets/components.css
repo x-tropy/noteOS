@@ -98,7 +98,7 @@
 #expandToc {
     @apply absolute h-full right-0 top-24 ;
     .container {
-        @apply sticky top-10 shadow-elevation-md p-1 text-white bg-gray-600 cursor-pointer;
+        @apply sticky top-10 shadow-elevation-lg rounded-bl rounded-tl p-1 text-gray-500 bg-white cursor-pointer;
 
         span {
             @apply text-sm font-semibold font-mono inline-block;
@@ -115,7 +115,7 @@
     @apply absolute right-0 top-24 h-[calc(100%-100px)] z-10 w-[calc((100%-750px)/2)] bg-white;
 
     &.floating {
-        @apply shadow-elevation-md w-40 pl-3;
+        @apply shadow-elevation-lg w-40 pl-3;
     }
 
     #toc {
