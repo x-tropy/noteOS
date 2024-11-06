@@ -188,6 +188,10 @@
             content: '';
             background: url('../images/file-text.svg');
         }
+
+        &.footnote-ref {
+            @apply underline-offset-1 font-sans font-bold px-1 text-xs min-w-3 inline-block;
+        }
     }
 
     s {
@@ -396,6 +400,16 @@
 
     .youtube {
         @apply my-2;
+    }
+
+    ol.footnotes {
+        @apply ml-0 pt-10;
+        li {
+            @apply ml-5;
+        }
+        &:has(li) {
+            @apply border-t border-light;
+        }
     }
 }
 

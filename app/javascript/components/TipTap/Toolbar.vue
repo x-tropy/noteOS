@@ -26,7 +26,9 @@ import {
   IconPower,
   IconCircleCheckFilled,
   IconRefresh,
-  IconCloudExclamation
+  IconCloudExclamation,
+  IconList,
+  IconListNumbers
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -131,6 +133,16 @@ const submitArticle = async () => {
         </button>
       </div>
       <div class="button-group">
+        <button @click.prevent="editor.chain().focus().toggleOrderedList().run()"
+                :class="{'bg-black': editor.isActive('orderedList')}">
+          <IconListNumbers />
+        </button>
+        <button @click.prevent="editor.chain().focus().toggleBulletList().run()"
+                :class="{'bg-black': editor.isActive('bulletList')}">
+          <IconList />
+        </button>
+      </div>
+      <div class="button-group">
         <AddImagePopover :editor="editor" />
         <button @click.prevent="addYoutube">
           <IconBrandBilibili />
@@ -174,6 +186,9 @@ const submitArticle = async () => {
           :disabled="!editor.isActive('details')"
         >
           <IconSquareRoundedMinus2 />
+        </button>
+        <button @click.prevent="editor.chain().focus().addFootnote().run()">
+          <IconBracketsContain />
         </button>
       </div>
     </div>

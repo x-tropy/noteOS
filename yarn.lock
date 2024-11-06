@@ -2394,6 +2394,13 @@ tippy.js@^6.3.7:
   dependencies:
     "@popperjs/core" "^2.9.0"
 
+tiptap-footnotes@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tiptap-footnotes/-/tiptap-footnotes-2.0.1.tgz#a8f01a6d7e32d7ce67442e81d0f5a12388d1ec74"
+  integrity sha512-REhxWvi123azHUjeIMPBeqOTPBlDGTLDxaBvj4oA85iqzJ70ruBXVF8wIPZxadGKm6gKo1rZLkKd6NEJFPARXw==
+  dependencies:
+    uuid "^9.0.1"
+
 title-case@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/title-case/-/title-case-4.3.2.tgz#498d22ca7083dcfb9add4f4b8d98c000d05fceb3"
@@ -2459,6 +2466,11 @@ uuid@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-10.0.0.tgz#5a95aa454e6e002725c79055fd42aaba30ca6294"
   integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
+
+uuid@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
+  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
 vite-plugin-environment@^1.1.3:
   version "1.1.3"

@@ -36,6 +36,8 @@ import CustomCallout from "./TipTap/CustomCallout.js";
 import CustomTodoList from "./TipTap/CustomTodoList.js";
 import CustomTodoItem from "./TipTap/CustomTodoItem.js";
 import { getHierarchicalIndexes, TableOfContents } from '@tiptap-pro/extension-table-of-contents'
+import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
+import Document from "@tiptap/extension-document";
 
 const props = defineProps({
   initialContent: {
@@ -56,6 +58,9 @@ onMounted(() => {
     content: props.initialContent || ``,
     extensions: [
       CustomStarterKit,
+      Document.extend({
+        content: "block+ footnotes?",
+      }),
       CustomTypography,
       Highlight,
       CustomCodeBlock,
@@ -98,11 +103,14 @@ onMounted(() => {
           // console.log(content)
         },
       }),
+      Footnotes,
+      Footnote,
+      FootnoteReference,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
       if (!isUpdating.value) {
-        ensureThreeEmptyParagraphs(editor, isUpdating);
+        // ensureThreeEmptyParagraphs(editor, isUpdating);
       }
     },
   });

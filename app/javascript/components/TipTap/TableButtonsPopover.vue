@@ -71,43 +71,43 @@ onMounted(async () => {
         :style="popoverPosition"
       >
         <button
-          @click="editor.chain().focus().mergeCells().run()"
+          @click.prevent="editor.chain().focus().mergeCells().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconViewportNarrow />
         </button>
         <button
-            @click="editor.chain().focus().splitCell().run()"
+            @click.prevent="editor.chain().focus().splitCell().run()"
             :disabled="!editor.isActive('table')"
         >
           <IconViewportWide />
         </button>
         <button
-          @click="editor.chain().focus().addColumnBefore().run()"
+          @click.prevent="editor.chain().focus().addColumnBefore().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconColumnInsertLeft />
         </button>
         <button
-          @click="editor.chain().focus().addRowBefore().run()"
+          @click.prevent="editor.chain().focus().addRowBefore().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconRowInsertTop />
         </button>
         <button
-          @click="editor.chain().focus().deleteColumn().run()"
+          @click.prevent="editor.chain().focus().deleteColumn().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconColumnRemove />
         </button>
         <button
-          @click="editor.chain().focus().deleteRow().run()"
+          @click.prevent="editor.chain().focus().deleteRow().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconRowRemove />
         </button>
         <button
-          @click="editor.chain().focus().deleteTable().run()"
+          @click.prevent="editor.chain().focus().deleteTable().run()"
           :disabled="!editor.isActive('table')"
         >
           <IconTableMinus />

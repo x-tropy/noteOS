@@ -69,6 +69,7 @@
     "postcss": "^8.4.47",
     "primevue": "^4.1.1",
     "tippy.js": "^6.3.7",
+    "tiptap-footnotes": "^2.0.1",
     "title-case": "^4.3.2",
     "vite-plugin-rails": "^0.5.0",
     "vue": "^3.5.12"
