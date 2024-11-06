@@ -28,7 +28,7 @@ import {
   IconRefresh,
   IconCloudExclamation,
   IconList,
-  IconListNumbers
+  IconListNumbers,
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";

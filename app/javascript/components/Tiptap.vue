@@ -38,6 +38,7 @@ import CustomTodoItem from "./TipTap/CustomTodoItem.js";
 import { getHierarchicalIndexes, TableOfContents } from '@tiptap-pro/extension-table-of-contents'
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 import Document from "@tiptap/extension-document";
+import { Figma } from 'tiptap-extension-figma';
 
 const props = defineProps({
   initialContent: {
@@ -106,6 +107,7 @@ onMounted(() => {
       Footnotes,
       Footnote,
       FootnoteReference,
+      Figma
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());

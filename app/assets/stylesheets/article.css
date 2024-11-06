@@ -411,6 +411,9 @@
             @apply border-t border-light;
         }
     }
+    iframe[src*="figma.com"] {
+        @apply w-full my-4 border border-light;
+    }
 }
 
 /* for display only */

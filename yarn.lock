@@ -511,7 +511,7 @@
   dependencies:
     uuid "^10.0.0"
 
-"@tiptap/core@^2.9.1":
+"@tiptap/core@^2.5.9", "@tiptap/core@^2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@tiptap/core/-/core-2.9.1.tgz#ceed211a9ecfe25a94e0e0863936169990e75aee"
   integrity sha512-tifnLL/ARzQ6/FGEJjVwj9UT3v+pENdWHdk9x6F3X0mB1y0SeCjV21wpFLYESzwNdBPAj8NMp8Behv7dBnhIfw==
@@ -697,7 +697,7 @@
   resolved "https://registry.yarnpkg.com/@tiptap/extension-youtube/-/extension-youtube-2.9.1.tgz#39e954efe10581936020b62c1180e410a2216802"
   integrity sha512-wGclckWIXCzzGMb2yN2LsfCEiJu2pMZaR6eRhHCiZWuewZeXNvlYIo73xNnR7JvwyLynwEA/VEb0jw4HMhOnrQ==
 
-"@tiptap/pm@^2.9.1":
+"@tiptap/pm@^2.5.9", "@tiptap/pm@^2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@tiptap/pm/-/pm-2.9.1.tgz#4d2304eb2ec611d2128e9ebcb9f28f1a5c74cd32"
   integrity sha512-mvV86fr7kEuDYEApQ2uMPCKL2uagUE0BsXiyyz3KOkY1zifyVm1fzdkscb24Qy1GmLzWAIIihA+3UHNRgYdOlQ==
@@ -2393,6 +2393,14 @@ tippy.js@^6.3.7:
   integrity sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==
   dependencies:
     "@popperjs/core" "^2.9.0"
+
+tiptap-extension-figma@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/tiptap-extension-figma/-/tiptap-extension-figma-1.0.4.tgz#dbdef2a525607475b12a91dde372e0b3aa81b1be"
+  integrity sha512-ragPnk6JWNcoo/5MuScL1Q3vwDWlgRuNkT67ejwE3uRDDtBs1sr2oUJjf2KtDA6C20+BhW5xHdcRyTUkJRHsaA==
+  dependencies:
+    "@tiptap/core" "^2.5.9"
+    "@tiptap/pm" "^2.5.9"
 
 tiptap-footnotes@^2.0.1:
   version "2.0.1"
