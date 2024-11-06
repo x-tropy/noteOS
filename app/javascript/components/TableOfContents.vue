@@ -62,7 +62,7 @@ const checkTocWidth = () => {
     tocContainer.style.display = "none";
     floating.value = true;
   }
-  if (document.documentElement.clientWidth > 60 * 2 + 750) {
+  if (document.documentElement.clientWidth > 80 * 2 + 750) {
     tocContainer.classList.remove("floating");
     tocContainer.style.display = "block";
     floating.value = false;
@@ -70,6 +70,7 @@ const checkTocWidth = () => {
 };
 
 const collapseToc = (e) => {
+  if (!floating.value) return;
   // not expanded
   const tocContainer = document.querySelector(".toc-container")
   if (!tocContainer) return
