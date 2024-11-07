@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
-import { IconList } from "@tabler/icons-vue";
+import { IconList, IconLayoutSidebarRightCollapseFilled } from "@tabler/icons-vue";
 
 const tocItems = ref([]);
 let intervalId;
@@ -76,7 +76,7 @@ const collapseToc = (e) => {
   if (!tocContainer) return
   if (tocContainer.style.display == "none") return
 
-  if (!tocContainer.contains(e.target)) {
+  if (!tocContainer.contains(e.target) || e.target.closest(".title") == tocContainer.querySelector(".title")) {
     tocContainer.style.display = "none";
     e.stopPropagation()
   }
@@ -108,6 +108,7 @@ onBeforeUnmount(() => {
     <div id="toc">
       <div v-if="headingCount >= 3" class="title">
         <span>Table of Contents</span>
+        <IconLayoutSidebarRightCollapseFilled v-if="floating" @click="collapseToc" id="collapse-icon" />
       </div>
       <ul v-if="headingCount >= 3">
         <li
@@ -120,7 +121,7 @@ onBeforeUnmount(() => {
       </ul>
     </div>
   </div>
-  <div v-if="headingCount >= 3" id="expandToc">
+  <div v-if="headingCount >= 3 " id="expandToc">
     <div class="container" @click="displayToc">
       <IconList />
       <span>TOC</span>

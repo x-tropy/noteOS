@@ -119,11 +119,14 @@
     }
 
     #toc {
-        @apply sticky tracking-wide top-10;
         font-size: 13px;
+        @apply sticky tracking-wide top-10 sm:text-xs ;
 
         .title {
-            @apply text-xs font-semibold py-2 border-b border-light flex items-center justify-between;
+            @apply font-semibold py-2 border-b border-light flex items-center justify-between;
+            svg {
+                @apply text-gray-500 w-5 h-5 mr-1;
+            }
         }
 
         ul {
