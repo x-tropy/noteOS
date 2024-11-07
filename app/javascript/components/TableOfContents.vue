@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
       </ul>
     </div>
   </div>
-  <div id="expandToc">
+  <div v-if="headingCount >= 3" id="expandToc">
     <div class="container" @click="displayToc">
       <IconList />
       <span>TOC</span>
