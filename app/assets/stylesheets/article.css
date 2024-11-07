@@ -382,6 +382,9 @@
         .details-content {
             p {
                 @apply my-0;
+                a {
+                    @apply break-all;
+                }
             }
 
             .details {
