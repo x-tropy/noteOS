@@ -111,8 +111,12 @@
     }
 }
 
+#table-of-contents {
+
+}
+
 .toc-container {
-    @apply absolute right-0 top-24 h-[calc(100%-100px)] z-10 w-[calc((100%-750px)/2)] bg-white;
+    @apply absolute right-0 top-24 h-[calc(100%-16px)] z-10 w-[calc((100%-750px)/2)] bg-white rounded-bl-lg rounded-tl-lg;
 
     &.floating {
         @apply shadow-elevation-lg w-48 pl-3;
