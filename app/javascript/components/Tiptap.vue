@@ -76,7 +76,7 @@ onMounted(() => {
       CustomImage,
       CustomAttachment,
       TextAlign.configure({
-        alignments: ["left", "center"],
+        alignments: ["left", "center", "right"],
         types: ["paragraph", "heading"],
       }),
       CustomEmoji,

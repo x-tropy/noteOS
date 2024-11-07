@@ -6,11 +6,13 @@ import {
   unsetLink,
   alignCenter,
   alignLeft,
+  alignRight,
   handleSubmit,
 } from "./ToolbarCommands.js";
 import {
   IconAlignLeft2,
   IconAlignCenter,
+  IconAlignRight2,
   IconLink,
   IconUnlink,
   IconColumnInsertRight,
@@ -44,8 +46,8 @@ const props = defineProps({
 });
 
 const quitEditor = () => {
-  const headerMenu = document.getElementById("quit-editor")
-  headerMenu?.click()
+  const headerMenu = document.getElementById("quit-editor");
+  headerMenu?.click();
 };
 
 const addYoutube = () => {
@@ -63,25 +65,25 @@ const addYoutube = () => {
 };
 
 const saveStatus = ref("Save");
-const saveButton = ref()
+const saveButton = ref();
 const submitArticle = async () => {
-  saveButton.value.disabled = true
+  saveButton.value.disabled = true;
   const formElement = document.getElementById("article-form");
   saveStatus.value = "Saving";
   const { success, message } = await handleSubmit(formElement);
   if (success) {
-    setTimeout(()=>{
+    setTimeout(() => {
       saveStatus.value = "Saved";
-      saveButton.value.disabled = false
-    }, 1000)
+      saveButton.value.disabled = false;
+    }, 1000);
     setTimeout(() => {
       saveStatus.value = "Save";
     }, 2000);
   } else {
-    setTimeout(()=>{
+    setTimeout(() => {
       saveStatus.value = "Failed";
-      saveButton.value.disabled = false
-    }, 1000)
+      saveButton.value.disabled = false;
+    }, 1000);
     setTimeout(() => {
       saveStatus.value = "Save";
     }, 5000);
@@ -125,20 +127,30 @@ const submitArticle = async () => {
         >
           <IconAlignLeft2 />
         </button>
+          <button
+            @click.prevent="alignCenter(editor)"
+            :class="{ 'bg-black': editor.isActive({ textAlign: 'center' }) }"
+          >
+            <IconAlignCenter />
+          </button>
         <button
-          @click.prevent="alignCenter(editor)"
-          :class="{ 'bg-black': editor.isActive({ textAlign: 'center' }) }"
+          @click.prevent="alignRight(editor)"
+          :class="{ 'bg-black': editor.isActive({ textAlign: 'right' }) }"
         >
-          <IconAlignCenter />
+          <IconAlignRight2 />
         </button>
       </div>
       <div class="button-group">
-        <button @click.prevent="editor.chain().focus().toggleOrderedList().run()"
-                :class="{'bg-black': editor.isActive('orderedList')}">
+        <button
+          @click.prevent="editor.chain().focus().toggleOrderedList().run()"
+          :class="{ 'bg-black': editor.isActive('orderedList') }"
+        >
           <IconListNumbers />
         </button>
-        <button @click.prevent="editor.chain().focus().toggleBulletList().run()"
-                :class="{'bg-black': editor.isActive('bulletList')}">
+        <button
+          @click.prevent="editor.chain().focus().toggleBulletList().run()"
+          :class="{ 'bg-black': editor.isActive('bulletList') }"
+        >
           <IconList />
         </button>
       </div>

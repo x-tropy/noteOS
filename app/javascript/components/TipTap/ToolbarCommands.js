@@ -84,6 +84,10 @@ export function alignCenter(editor) {
   editor.chain().focus().setTextAlign("center").run();
 }
 
+export function alignRight(editor) {
+  editor.chain().focus().setTextAlign("right").run();
+}
+
 export async function handleSubmit(formElement) {
   if (!formElement) return {success: false, message: "lack form element"};
   const formData = new FormData(formElement);
