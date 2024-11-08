@@ -419,6 +419,13 @@
     }
 }
 
+/* for editor only */
+#tiptap-editor .ProseMirror {
+    a {
+        @apply cursor-text;
+    }
+}
+
 /* for display only */
 .article {
     .details-summary {

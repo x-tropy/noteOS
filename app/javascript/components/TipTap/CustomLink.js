@@ -8,21 +8,22 @@ export default Link.configure({
   linkOnPaste: true,
 }).extend({
   exitable: true,
-  addProseMirrorPlugins() {
-    return [
-      new Plugin({
-        props: {
-          handleDOMEvents: {
-            mousedown: (view, event) => {
-              if (event.target.tagName === "A" && event.ctrlKey) {
-                window.open(event.target.href, "_blank");
-                return true;
-              }
-              return false;
-            },
-          },
-        },
-      }),
-    ];
-  },
+  // TODO: take note
+  // addProseMirrorPlugins() {
+  //   return [
+  //     new Plugin({
+  //       props: {
+  //         handleDOMEvents: {
+  //           mousedown: (view, event) => {
+  //             if (event.target.tagName === "A" && event.ctrlKey) {
+  //               window.open(event.target.href, "_blank");
+  //               return true;
+  //             }
+  //             return false;
+  //           },
+  //         },
+  //       },
+  //     }),
+  //   ];
+  // },
 });

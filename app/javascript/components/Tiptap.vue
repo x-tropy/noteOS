@@ -123,6 +123,39 @@ onMounted(() => {
 
 const intervalId = periodicTask(editor);
 
+window.addEventListener("mousedown", (e) => {
+  const anchorEle = e.target.closest(".ProseMirror a")
+  if (anchorEle) {
+    // disabled dynamically added style
+    anchorEle.style = ""
+
+    if (e.ctrlKey) {
+      if (anchorEle.classList.contains("internal")) {
+        window.open(anchorEle.href+"/edit", "_blank");
+      } else {
+        window.open(anchorEle.href, "_blank");
+      }
+    }
+  }
+})
+
+window.addEventListener("mousemove", (e) => {
+  const anchorEle = e.target.closest(".ProseMirror a")
+  if (!anchorEle) return
+
+  if (!e.ctrlKey) anchorEle.style.cursor = ""
+  if (anchorEle && e.ctrlKey) {
+    anchorEle.style.cursor = "pointer"
+  }
+})
+
+window.addEventListener("mouseout", (e) => {
+  const anchorEle = e.target.closest(".ProseMirror a")
+  if (anchorEle) {
+    anchorEle.style.cursor = ""
+  }
+})
+
 onBeforeUnmount(() => {
   editor.value.destroy();
   clearInterval(intervalId);
