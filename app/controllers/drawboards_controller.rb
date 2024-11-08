@@ -28,6 +28,8 @@ class DrawboardsController < ApplicationController
   end
 
   def update
+    logger.debug "Received params: #{params.inspect}"
+
     if @drawboard.update(drawboard_params)
       render json: { status: 'success', message: 'Drawboard updated successfully' }
     else

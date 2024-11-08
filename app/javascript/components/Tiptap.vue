@@ -159,5 +159,6 @@ window.addEventListener("mouseout", (e) => {
 onBeforeUnmount(() => {
   editor.value.destroy();
   clearInterval(intervalId);
+  // TODO: remove event listener
 });
 </script>
