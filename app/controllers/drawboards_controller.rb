@@ -38,7 +38,7 @@ class DrawboardsController < ApplicationController
   private
 
   def set_drawboard
-    @drawboard = Drawboard.friendlyfea.find(params[:id])
+    @drawboard = Drawboard.friendly.find(params[:id])
   end
 
   def drawboard_params
