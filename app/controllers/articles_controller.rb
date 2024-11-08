@@ -33,6 +33,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
+    logger.debug "--------------\n Aritlce: #{@article.author_id}"
     if @article.save
       redirect_to articles_path, notice: "Article was successfully created."
     else

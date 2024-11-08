@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   post 'items/download_image', to: 'items#download_image'
   post 'items/upload_clipboard_image', to: 'items#upload_clipboard_image'
 
+  resources :drawboards
+
   resources :articles do
     collection do
       post :set_mode # Route to set the display/edit mode

@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :articles, foreign_key: :author_id
+  has_many :drawboards, foreign_key: :author_id
   has_many :comments
 end

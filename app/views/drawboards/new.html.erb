@@ -1,0 +1,10 @@
+<h1>Drawboards#new</h1>
+<%= form_with model: @drawboard, local: true do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.submit "Create new board" %>
+  </div>
+<% end %>
