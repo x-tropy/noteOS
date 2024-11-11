@@ -19,3 +19,6 @@
 
 /* UI components */
 @import "../../assets/stylesheets/components.css";
+
+/* Syntax Highlighting */
+@import "../../assets/stylesheets/hljs.css";
