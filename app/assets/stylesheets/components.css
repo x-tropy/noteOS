@@ -17,6 +17,10 @@
     .button-group {
         @apply flex justify-center flex-shrink-0 border-r pr-1 border-r-gray-400;
 
+        .active {
+            @apply bg-black text-cyan-300;
+        }
+
         button {
             svg {
                 @apply rounded border-transparent border;

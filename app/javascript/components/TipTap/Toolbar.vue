@@ -31,6 +31,7 @@ import {
   IconCloudExclamation,
   IconList,
   IconListNumbers,
+  IconListCheck,
 } from "@tabler/icons-vue";
 import AddImagePopover from "~/components/TipTap/AddImagePopover.vue";
 import AttachFileDialog from "~/components/TipTap/AttachFileDialog.vue";
@@ -110,8 +111,11 @@ const submitArticle = async () => {
       </div>
 
       <div class="button-group">
-        <button @click.prevent="setLink(editor)">
-          <IconLink :class="{ 'bg-black': editor.isActive('link') }" />
+        <button
+          @click.prevent="setLink(editor)"
+          :class="{ active: editor.isActive('link') }"
+        >
+          <IconLink />
         </button>
         <button
           @click.prevent="unsetLink(editor)"
@@ -123,35 +127,41 @@ const submitArticle = async () => {
       <div class="button-group">
         <button
           @click.prevent="alignLeft(editor)"
-          :class="{ 'bg-black': editor.isActive({ textAlign: 'left' }) }"
+          :class="{ active: editor.isActive({ textAlign: 'left' }) }"
         >
           <IconAlignLeft2 />
         </button>
-          <button
-            @click.prevent="alignCenter(editor)"
-            :class="{ 'bg-black': editor.isActive({ textAlign: 'center' }) }"
-          >
-            <IconAlignCenter />
-          </button>
+        <button
+          @click.prevent="alignCenter(editor)"
+          :class="{ active: editor.isActive({ textAlign: 'center' }) }"
+        >
+          <IconAlignCenter />
+        </button>
         <button
           @click.prevent="alignRight(editor)"
-          :class="{ 'bg-black': editor.isActive({ textAlign: 'right' }) }"
+          :class="{ active: editor.isActive({ textAlign: 'right' }) }"
         >
           <IconAlignRight2 />
         </button>
       </div>
       <div class="button-group">
         <button
+          @click.prevent="editor.chain().focus().toggleBulletList().run()"
+          :class="{ active: editor.isActive('bulletList') }"
+        >
+          <IconList />
+        </button>
+        <button
           @click.prevent="editor.chain().focus().toggleOrderedList().run()"
-          :class="{ 'bg-black': editor.isActive('orderedList') }"
+          :class="{ active: editor.isActive('orderedList') }"
         >
           <IconListNumbers />
         </button>
         <button
-          @click.prevent="editor.chain().focus().toggleBulletList().run()"
-          :class="{ 'bg-black': editor.isActive('bulletList') }"
+          @click.prevent="editor.chain().focus().toggleTaskList().run()"
+          :class="{ active: editor.isActive('taskList') }"
         >
-          <IconList />
+          <IconListCheck />
         </button>
       </div>
       <div class="button-group">
@@ -190,7 +200,10 @@ const submitArticle = async () => {
         <TableButtonsPopover :editor="editor" />
       </div>
       <div class="button-group">
-        <button @click.prevent="editor.chain().focus().setDetails().run()">
+        <button
+          @click.prevent="editor.chain().focus().setDetails().run()"
+          :class="{ active: editor.isActive('details') }"
+        >
           <IconSquareRoundedPlus />
         </button>
         <button

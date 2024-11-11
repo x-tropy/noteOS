@@ -1,6 +1,6 @@
 <script setup>
 import { Editor } from "@tiptap/vue-3";
-import { IconBold, IconItalic, IconStrikethrough, IconCode, IconHighlight } from "@tabler/icons-vue";
+import { IconBold, IconItalic, IconStrikethrough, IconCode, IconHospital } from "@tabler/icons-vue";
 import { BubbleMenu } from "@tiptap/vue-3";
 
 const props = defineProps({
@@ -24,22 +24,22 @@ const props = defineProps({
       <IconBold />
     </button>
     <button
-      @click.prevent="editor.chain().focus().toggleItalic().run()"
-      :class="{ 'is-active': editor.isActive('italic') }"
-    >
-      <IconItalic />
-    </button>
-    <button
-      @click.prevent="editor.chain().focus().toggleStrike().run()"
-      :class="{ 'is-active': editor.isActive('strike') }"
+        @click.prevent="editor.chain().focus().toggleStrike().run()"
+        :class="{ 'is-active': editor.isActive('strike') }"
     >
       <IconStrikethrough />
     </button>
     <button
-      @click.prevent="editor.chain().focus().toggleHighlight().run()"
-      :class="{ 'is-active': editor.isActive('highlight') }"
+        @click.prevent="editor.chain().focus().toggleHighlight().run()"
+        :class="{ 'is-active': editor.isActive('highlight') }"
     >
-      <IconHighlight />
+      <IconHospital />
+    </button>
+    <button
+        @click.prevent="editor.chain().focus().toggleItalic().run()"
+        :class="{ 'is-active': editor.isActive('italic') }"
+    >
+      <IconItalic />
     </button>
     <button
       @click.prevent="editor.chain().focus().toggleCode().run()"
