@@ -52,7 +52,7 @@ async function uploadFile() {
     formData.append("attachment[contents]", file);
     formData.append("attachment[name]", "File Upload");
 
-    const response = await fetch("/items", {
+    const response = await fetch("/attachments", {
       method: "POST",
       headers: {
         "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
@@ -60,6 +60,7 @@ async function uploadFile() {
       },
       body: formData,
     });
+
 
     if (response.ok) {
       const data = await response.json();
@@ -138,8 +139,8 @@ onUnmounted(() => {
           </li>
         </ul>
         <div>
-          <button @click="closeModal">Cancel</button>
-          <button @click="uploadFile">Add file</button>
+          <button @click.prevent="closeModal">Cancel</button>
+          <button @click.prevent="uploadFile">Add file</button>
         </div>
       </div>
     </div>
