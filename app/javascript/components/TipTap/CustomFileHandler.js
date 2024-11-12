@@ -31,7 +31,7 @@ const uploadImage = async (editor, file) => {
   formData.append("attachment[contents]", file);
   formData.append("attachment[name]", "Image from clipboard");
 
-  const response = await fetch("/items", {
+  const response = await fetch("/attachments", {
     method: "POST",
     headers: {
       "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
