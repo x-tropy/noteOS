@@ -93,14 +93,14 @@ export async function handleSubmit(formElement) {
   const formData = new FormData(formElement);
   try {
     const response = await fetch(formElement.action, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "X-CSRF-Token": document.querySelector("[name='csrf-token']").content,
         Accept: "application/json",
       },
       body: formData,
     });
-    const data = response.json();
+    const data = await response.json();
     return data;
   } catch (e) {
     return { success: false, message: 'failed to post' };
