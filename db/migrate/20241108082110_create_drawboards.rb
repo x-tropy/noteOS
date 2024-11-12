@@ -1,6 +1,6 @@
 class CreateDrawboards < ActiveRecord::Migration[7.2]
   def change
-    create_table :sketches do |t|
+    create_table :drawboards do |t|
       t.string :title
       t.text :content
 
