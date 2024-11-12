@@ -104,13 +104,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="toc-container">
+  <div  v-if="headingCount >= 3" class="toc-container">
     <div id="toc">
-      <div v-if="headingCount >= 3" class="title">
+      <div class="title">
         <span>Table of Contents</span>
         <IconLayoutSidebarRightCollapseFilled v-if="floating" @click="collapseToc" id="collapse-icon" />
       </div>
-      <ul v-if="headingCount >= 3">
+      <ul>
         <li
           v-for="item in tocItems"
           :key="item.id"

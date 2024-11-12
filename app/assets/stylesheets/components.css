@@ -124,6 +124,9 @@
 
     &.floating {
         @apply shadow-elevation-lg w-56 pl-3;
+        .title:hover {
+            @apply cursor-pointer;
+        }
     }
 
     #toc {
