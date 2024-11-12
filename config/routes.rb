@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  resources :items
-  post 'items/download_image', to: 'items#download_image'
-  post 'items/upload_clipboard_image', to: 'items#upload_clipboard_image'
+  resources :attachments do
+    collection do
+      post :download_image
+      post :upload_clipboard_image
+    end
+  end
 
-  resources :drawboards
+  resources :sketches
 
   resources :articles do
     collection do
@@ -13,8 +16,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root "home#index", as: :homepage
-  get "/about", to: "home#about"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/lab", to: "home#lab"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -23,7 +25,4 @@ Rails.application.routes.draw do
   # Render dynamic PWA files from app/views/pwa/*
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end

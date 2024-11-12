@@ -1,6 +1,6 @@
 <template>
   <canvas
-    id="drawboard-canvas"
+    id="sketch-canvas"
     ref="canvasRef"
     class="border border-light"
   ></canvas>

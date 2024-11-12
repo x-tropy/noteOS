@@ -5,7 +5,7 @@ import {
 } from "@tiptap/core";
 
 /**
- * Matches a todo item to a - [ ] on input.
+ * Matches a todo attachment to a - [ ] on input.
  */
 export const inputRegex = /^\s*(\(( |x)?\))\s$/;
 

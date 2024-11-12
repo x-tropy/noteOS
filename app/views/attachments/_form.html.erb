@@ -1,10 +1,10 @@
-<%= form_with(model: item) do |form| %>
-  <% if item.errors.any? %>
+<%= form_with(model: attachment) do |form| %>
+  <% if attachment.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <h2><%= pluralize(attachment.errors.count, "error") %> prohibited this attachment from being saved:</h2>
 
       <ul>
-        <% item.errors.each do |error| %>
+        <% attachment.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

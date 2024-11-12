@@ -49,8 +49,8 @@ const formatSize = (size) => {
 async function uploadFile() {
   for (const file of files.value) {
     const formData = new FormData();
-    formData.append("item[contents]", file);
-    formData.append("item[name]", "File Upload");
+    formData.append("attachment[contents]", file);
+    formData.append("attachment[name]", "File Upload");
 
     const response = await fetch("/items", {
       method: "POST",

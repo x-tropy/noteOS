@@ -1,4 +1,4 @@
-class Drawboard < ApplicationRecord
+class Sketch < ApplicationRecord
   validates :title, presence: { message: "can't be blank!" }
 
   extend FriendlyId

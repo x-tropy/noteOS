@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_08_102758) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_12_144947) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -49,6 +49,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_08_102758) do
     t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
+  create_table "attachments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "article_id", null: false
@@ -57,16 +63,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_08_102758) do
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "drawboards", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.integer "author_id", null: false
-    t.index ["author_id"], name: "index_drawboards_on_author_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -80,10 +76,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_08_102758) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "items", force: :cascade do |t|
-    t.string "name"
+  create_table "sketches", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.integer "author_id", null: false
+    t.index ["author_id"], name: "index_sketches_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|

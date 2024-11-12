@@ -28,8 +28,8 @@ export default FileHandler.configure({
 
 const uploadImage = async (editor, file) => {
   const formData = new FormData();
-  formData.append("item[contents]", file);
-  formData.append("item[name]", "Image from clipboard");
+  formData.append("attachment[contents]", file);
+  formData.append("attachment[name]", "Image from clipboard");
 
   const response = await fetch("/items", {
     method: "POST",

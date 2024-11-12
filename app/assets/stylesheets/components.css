@@ -123,12 +123,12 @@
     @apply absolute right-0 top-24 h-[calc(100%-16px)] z-10 w-[calc((100%-750px)/2)] bg-white rounded-bl-lg rounded-tl-lg;
 
     &.floating {
-        @apply shadow-elevation-lg w-48 pl-3;
+        @apply shadow-elevation-lg w-56 pl-3;
     }
 
     #toc {
         font-size: 13px;
-        @apply sticky tracking-wide top-10 sm:text-xs ;
+        @apply sticky tracking-wide top-10 text-sm;
 
         .title {
             @apply font-semibold py-2 border-b border-light flex items-center justify-between;
@@ -141,6 +141,7 @@
             @apply flex flex-col text-gray-500 pt-2 font-medium h-[calc(100vh-70px)] overflow-y-scroll thin-scrollbar;
 
             li {
+                @apply relative;
                 &.active {
                     @apply text-blue-400;
 
@@ -150,7 +151,7 @@
                 }
 
                 a {
-                    @apply py-1 leading-tight block break-words;
+                    @apply py-[6px] leading-tight block break-words ;
 
                     &:hover {
                         @apply text-black;
@@ -159,7 +160,11 @@
             }
 
             .h3 {
-                @apply ml-4;
+                @apply ml-5;
+                /*&:before {*/
+                /*    content: "-";*/
+                /*    @apply absolute w-4 h-4 -left-3 top-1.5 font-mono;*/
+                /*}*/
             }
         }
     }

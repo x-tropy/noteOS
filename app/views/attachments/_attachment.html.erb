@@ -1,0 +1,26 @@
+<div id="<%= dom_id attachment %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= attachment.name %>
+  </p>
+
+  <p class="my-5 max-w-[300px]">
+    <strong class="block font-medium mb-1">Contents:</strong>
+    <% if attachment.contents.attached? %>
+      <% if attachment.contents.content_type.start_with? 'image/' %>
+        <img src=<%= attachment.contents.url %> alt="<%= attachment.contents.filename %>">
+      <% elsif attachment.contents.content_type.start_with? 'audio/' %>
+        <audio controls>
+          <source src=<%= attachment.contents.url %> type=<%= attachment.contents.content_type %>>
+        </audio>
+      <% elsif attachment.contents.content_type.start_with? 'video/' %>
+        <video controls>
+          <source src=<%= attachment.contents.url %> type=<%= attachment.contents.content_type %>>
+        </video>
+      <% else %>
+        <%= link_to attachment.contents.filename, attachment.contents %>
+      <% end %>
+    <% end %>
+  </p>
+
+</div>

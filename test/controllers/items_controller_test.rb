@@ -2,7 +2,7 @@ require "test_helper"
 
 class ItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @item = items(:one)
+    @attachment = items(:one)
   end
 
   test "should get index" do
@@ -15,32 +15,32 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create item" do
-    assert_difference("Item.count") do
-      post items_url, params: { item: { name: @item.name } }
+  test "should create attachment" do
+    assert_difference("Attachment.count") do
+      post items_url, params: { attachment: { name: @attachment.name } }
     end
 
-    assert_redirected_to item_url(Item.last)
+    assert_redirected_to item_url(Attachment.last)
   end
 
-  test "should show item" do
-    get item_url(@item)
+  test "should show attachment" do
+    get item_url(@attachment)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_item_url(@item)
+    get edit_item_url(@attachment)
     assert_response :success
   end
 
-  test "should update item" do
-    patch item_url(@item), params: { item: { name: @item.name } }
-    assert_redirected_to item_url(@item)
+  test "should update attachment" do
+    patch item_url(@attachment), params: { attachment: { name: @attachment.name } }
+    assert_redirected_to item_url(@attachment)
   end
 
-  test "should destroy item" do
-    assert_difference("Item.count", -1) do
-      delete item_url(@item)
+  test "should destroy attachment" do
+    assert_difference("Attachment.count", -1) do
+      delete item_url(@attachment)
     end
 
     assert_redirected_to items_url

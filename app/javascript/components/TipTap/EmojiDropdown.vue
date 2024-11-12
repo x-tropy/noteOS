@@ -37,7 +37,7 @@ const props = defineProps({
 // Define reactive state
 const selectedIndex = ref(0);
 
-// Watch `items` prop and reset `selectedIndex` when items change
+// Watch `attachments` prop and reset `selectedIndex` when attachments change
 watch(
   () => props.items,
   () => {

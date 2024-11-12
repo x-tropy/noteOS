@@ -51,7 +51,7 @@ export function externalImage(editor, url) {
 }
 
 export function scrapeImage(editor, url, useNative) {
-  fetch("/items/download_image", {
+  fetch("/attachments/download_image", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
