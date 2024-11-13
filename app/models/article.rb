@@ -7,6 +7,9 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :comments, dependent: :destroy
 
+  has_many :taggings, as: :taggable, dependent: :destroy
+  has_many :tags, through: :taggings
+
   def should_generate_new_friendly_id?
     title_changed? || super
   end
