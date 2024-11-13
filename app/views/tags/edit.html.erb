@@ -1,0 +1,12 @@
+<% content_for :title, "Editing tag" %>
+
+<h1>Editing tag</h1>
+
+<%= render "form", tag: @tag %>
+
+<br>
+
+<div>
+  <%= link_to "Show this tag", @tag %> |
+  <%= link_to "Back to tags", tags_path %>
+</div>

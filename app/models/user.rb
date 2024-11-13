@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :articles, foreign_key: :author_id
   has_many :sketches, foreign_key: :author_id
   has_many :comments
+  has_many :tags
 end

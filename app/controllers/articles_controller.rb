@@ -46,6 +46,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
+
       respond_to do |format|
         format.json { render json: { success: true, message: "Article updated successfully" } }
       end

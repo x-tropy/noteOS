@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :tags
+
   devise_for :users
   root "home#index", as: :homepage
 

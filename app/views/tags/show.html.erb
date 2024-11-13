@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tag %>
+
+<div>
+  <%= link_to "Edit this tag", edit_tag_path(@tag) %> |
+  <%= link_to "Back to tags", tags_path %>
+
+  <%= button_to "Destroy this tag", @tag, method: :delete %>
+</div>
