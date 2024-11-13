@@ -322,6 +322,7 @@
 
             p {
                 @apply my-1 mx-2 text-base;
+
                 code {
                     @apply text-[0.9em];
                 }
@@ -357,6 +358,34 @@
         cursor: col-resize;
     }
 
+
+    .youtube {
+        @apply my-2;
+    }
+
+    ol.footnotes {
+        @apply ml-0 pt-10;
+
+        li {
+            @apply ml-5;
+        }
+
+        &:has(li) {
+            @apply border-t border-light;
+        }
+    }
+
+    iframe[src*="figma.com"] {
+        @apply w-full my-4 border border-light;
+    }
+}
+
+/* for editor only */
+#tiptap-editor .ProseMirror {
+    a {
+        @apply cursor-text;
+    }
+
     .details {
         @apply flex my-4;
 
@@ -364,7 +393,9 @@
             @apply border-b border-light;
         }
 
-
+        & > div {
+            /*@apply flex-grow;*/
+        }
 
         & > button {
             @apply relative w-8 flex-shrink-0;
@@ -377,12 +408,15 @@
         }
 
         .details-summary {
-            @apply list-none text-xl h-8  pl-[1px] ;
+            @apply list-none text-xl h-8  pl-[1px] inline;
         }
 
         .details-content {
+            @apply my-4;
+
             p {
-                @apply my-0;
+                @apply !my-0;
+
                 a {
                     @apply break-all;
                 }
@@ -401,41 +435,25 @@
             }
         }
     }
-
-    .youtube {
-        @apply my-2;
-    }
-
-    ol.footnotes {
-        @apply ml-0 pt-10;
-        li {
-            @apply ml-5;
-        }
-        &:has(li) {
-            @apply border-t border-light;
-        }
-    }
-    iframe[src*="figma.com"] {
-        @apply w-full my-4 border border-light;
-    }
-}
-
-/* for editor only */
-#tiptap-editor .ProseMirror {
-    a {
-        @apply cursor-text;
-    }
 }
 
 /* for display only */
 .article {
+    details {
+        @apply my-4;
+    }
+
     .details-summary {
-        @apply cursor-pointer ml-8 relative;
+        @apply cursor-pointer ml-8 relative text-xl list-none;
 
     }
 
     .details-content {
-        @apply ml-8;
+        @apply ml-8 mt-4;
+
+        p {
+            @apply !my-0;
+        }
     }
 
     .details .details-summary::before {
