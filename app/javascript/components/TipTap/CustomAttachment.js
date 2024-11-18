@@ -44,7 +44,7 @@ export default Node.create({
           ["source", { src: node.attrs.src, type: node.attrs.type }],
         ],
       ];
-    } else if(node.attrs.type.includes("video")){
+    } else if (node.attrs.type.includes("video")) {
       childrens = [
         ["span", { class: "video-label" }, node.attrs.title],
         [
@@ -67,7 +67,7 @@ export default Node.create({
           [
             "span",
             { class: "download-link-label" },
-            `Type: ${node.attrs.type.split('/')[1]} | Size: ${node.attrs.size}`,
+            `Type: ${node.attrs.type.split("/")[1]} | Size: ${node.attrs.size}`,
           ],
         ],
       ];

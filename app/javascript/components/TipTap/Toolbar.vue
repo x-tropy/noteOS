@@ -51,6 +51,18 @@ const quitEditor = () => {
   headerMenu?.click();
 };
 
+const setDetails = () => {
+  props.editor.chain().focus().setDetails({ content: " " }).run();
+  props.editor.chain().focus().insertContent(" ").run();
+  const { state } = props.editor;
+  const { selection } = state;
+  // To fix bug caused by Chinese Input Method
+  props.editor.commands.setTextSelection({
+    from: selection.from - 1,
+    to: selection.to - 1,
+  });
+};
+
 const addYoutube = () => {
   const url = prompt("Enter YouTube URL");
   if (!url) return;
@@ -201,7 +213,7 @@ const submitArticle = async () => {
       </div>
       <div class="button-group">
         <button
-          @click.prevent="editor.chain().focus().setDetails().run()"
+          @click.prevent="setDetails"
           :class="{ active: editor.isActive('details') }"
         >
           <IconSquareRoundedPlus />
