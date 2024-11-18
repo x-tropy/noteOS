@@ -45,8 +45,8 @@ const uploadImage = async (editor, file) => {
     // Insert the image into the Tiptap editor
     editor.chain().focus().setImageWithCaption({ src: data.url }).run();
     editor.commands.setTextSelection({
-      from: selection.value.from + 1,
-      to: selection.value.to + 1,
+      from: selection.from + 1,
+      to: selection.to + 1,
     });
   } else {
     console.error("Image upload failed");
