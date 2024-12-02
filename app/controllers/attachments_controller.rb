@@ -1,6 +1,7 @@
 require 'open-uri'
 
 class AttachmentsController < ApplicationController
+  layout "note"
   before_action :set_attachment, only: %i[ show edit update destroy ]
   include ActiveStorage::SetCurrent
 

@@ -1,0 +1,43 @@
+<% content_for :specific_header do %>
+  <header class="<%= 'sticky top-0' unless request.path.ends_with?('/edit') %>">
+    <a class="logo" href="/articles">
+      <picture>
+        <source srcset="https://fly.storage.tigris.dev/vite/noteOS/images/icon.svg" media="(max-width: 640px)"/>
+        <img class="h-7 sm:h-5" src="https://fly.storage.tigris.dev/vite/images/noteOS.svg" alt="noteOS logo"/>
+      </picture>
+    </a>
+    <!--  <div class="breadcrumb">-->
+    <!--    <span class="attachment">Developer</span>-->
+    <!--    <span class="attachment">Rails Tutorial</span>-->
+    <!--  </div>-->
+    <div class="actions">
+      <% if user_signed_in? && controller_name == 'articles' %>
+
+        <%= link_to '', class: "action export-button" do %>
+          <span>Export</span>
+        <% end %>
+
+        <%= link_to '', class: "action share-button" do %>
+          <span>Share</span>
+        <% end %>
+
+        <% if cookies[:mode] == 'edit' %>
+          <%= link_to set_mode_articles_path(mode: 'display', article_slug: @article&.slug),
+                      method: :post, class: "action read-button", id: "quit-editor" do %>
+            <span>Read</span>
+          <% end %>
+        <% else %>
+          <%= link_to set_mode_articles_path(mode: 'edit', article_slug: @article&.slug),
+                      method: :post, class: "action edit-button" do %>
+            <span>Edit</span>
+          <% end %>
+        <% end %>
+
+        <%= link_to '', class: "action search-button" do %>
+          <span>Search</span>
+        <% end %>
+      <% end %>
+    </div>
+  </header>
+<% end %>
+<%= render template: "layouts/application" %>

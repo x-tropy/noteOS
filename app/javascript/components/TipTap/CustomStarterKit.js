@@ -6,13 +6,8 @@ const CustomStarterKit = StarterKit.configure({
   heading: {
     levels: [1, 2, 3],
   },
-}).extend({
-  addKeyboardShortcuts() {
-    return {
-      "Mod-l": () => this.editor.commands.toggleBulletList(),
-      "Mod-o": () => this.editor.commands.toggleOrderedList(),
-    };
-  },
-});
+  orderedList: false,
+  bulletList: false
+})
 
 export default CustomStarterKit;

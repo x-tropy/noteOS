@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :tags
 
+  get "/buwei", to: "buwei#index"
+
   devise_for :users
   root "home#index", as: :homepage
 

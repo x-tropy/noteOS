@@ -1,4 +1,5 @@
 class SketchesController < ApplicationController
+  layout "note"
   before_action :set_sketch, only: [:show, :edit, :update]
 
   def index

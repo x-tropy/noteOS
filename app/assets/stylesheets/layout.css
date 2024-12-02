@@ -38,6 +38,7 @@ header {
             &:hover {
                 @apply bg-stone-200;
             }
+
             span {
                 @apply hidden sm:inline;
             }
@@ -80,6 +81,7 @@ main {
 
 footer {
     @apply bg-black;
+
     p {
         .co-branded-logo {
             @apply h-5 w-[200px] mx-auto block py-12 bg-no-repeat bg-center;
@@ -90,4 +92,9 @@ footer {
     .copyright-notice {
         @apply text-gray-300 py-4 font-sans text-center text-xs bg-black border-t border-gray-500 tracking-wider;
     }
+}
+
+/* for visitor only */
+.logo {
+    @apply inline-block h-[20px] ml-4 mt-3;
 }

@@ -23,7 +23,7 @@ import TextAlign from "@tiptap/extension-text-align";
 import CustomFileHandler from "./TipTap/CustomFileHandler.js";
 import {
   ensureThreeEmptyParagraphs,
-  periodicTask
+  periodicTask,
 } from "./TipTap/EditorTasks.js";
 import CustomImage from "./TipTap/CustomImage.js";
 import CustomAttachment from "./TipTap/CustomAttachment.js";
@@ -35,10 +35,15 @@ import YouTube from "@tiptap/extension-youtube";
 import CustomCallout from "./TipTap/CustomCallout.js";
 import CustomTodoList from "./TipTap/CustomTodoList.js";
 import CustomTodoItem from "./TipTap/CustomTodoItem.js";
-import { getHierarchicalIndexes, TableOfContents } from '@tiptap-pro/extension-table-of-contents'
+import {
+  getHierarchicalIndexes,
+  TableOfContents,
+} from "@tiptap-pro/extension-table-of-contents";
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
+import OrderedList from "@tiptap/extension-ordered-list";
+import BulletList from "@tiptap/extension-bullet-list";
 import Document from "@tiptap/extension-document";
-import { Figma } from 'tiptap-extension-figma';
+import { Figma } from "tiptap-extension-figma";
 
 const props = defineProps({
   initialContent: {
@@ -59,6 +64,20 @@ onMounted(() => {
     content: props.initialContent || ``,
     extensions: [
       CustomStarterKit,
+      OrderedList.extend({
+        addKeyboardShortcuts() {
+          return {
+            "Mod-o": () => this.editor.commands.toggleOrderedList(),
+          };
+        },
+      }),
+      BulletList.extend({
+        addKeyboardShortcuts() {
+          return {
+            "Mod-l": () => this.editor.commands.toggleBulletList(),
+          };
+        },
+      }),
       Document.extend({
         content: "block+ footnotes?",
       }),
@@ -100,14 +119,13 @@ onMounted(() => {
       }),
       TableOfContents.configure({
         getIndex: getHierarchicalIndexes,
-        onUpdate: content => {
-          // console.log(content)
+        onUpdate: (content) => {
         },
       }),
       Footnotes,
       Footnote,
       FootnoteReference,
-      Figma
+      Figma,
     ],
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
@@ -124,37 +142,37 @@ onMounted(() => {
 const intervalId = periodicTask(editor);
 
 window.addEventListener("mousedown", (e) => {
-  const anchorEle = e.target.closest(".ProseMirror a")
+  const anchorEle = e.target.closest(".ProseMirror a");
   if (anchorEle) {
     // disabled dynamically added style
-    anchorEle.style = ""
+    anchorEle.style = "";
 
     if (e.ctrlKey) {
       if (anchorEle.classList.contains("internal")) {
-        window.open(anchorEle.href+"/edit", "_blank");
+        window.open(anchorEle.href + "/edit", "_blank");
       } else {
         window.open(anchorEle.href, "_blank");
       }
     }
   }
-})
+});
 
 window.addEventListener("mousemove", (e) => {
-  const anchorEle = e.target.closest(".ProseMirror a")
-  if (!anchorEle) return
+  const anchorEle = e.target.closest(".ProseMirror a");
+  if (!anchorEle) return;
 
-  if (!e.ctrlKey) anchorEle.style.cursor = ""
+  if (!e.ctrlKey) anchorEle.style.cursor = "";
   if (anchorEle && e.ctrlKey) {
-    anchorEle.style.cursor = "pointer"
+    anchorEle.style.cursor = "pointer";
   }
-})
+});
 
 window.addEventListener("mouseout", (e) => {
-  const anchorEle = e.target.closest(".ProseMirror a")
+  const anchorEle = e.target.closest(".ProseMirror a");
   if (anchorEle) {
-    anchorEle.style.cursor = ""
+    anchorEle.style.cursor = "";
   }
-})
+});
 
 onBeforeUnmount(() => {
   editor.value.destroy();
