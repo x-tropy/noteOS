@@ -96,5 +96,9 @@ footer {
 
 /* for visitor only */
 .logo {
-    @apply inline-block h-[20px] ml-4 mt-3;
+    @apply hidden lg:inline-block h-[20px] ml-4 mt-3 z-30;
+}
+
+#profile {
+    @apply w-full std:w-[750px] mx-auto relative lg:-top-10;
 }

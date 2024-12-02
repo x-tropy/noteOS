@@ -41,15 +41,16 @@ module.exports = {
         'elevation-lg': '0 0 0 1px rgba(17,20,24,.1),0 4px 8px rgba(17,20,24,.2),0 18px 46px 6px rgba(17,20,24,.2)',
       },
       screens: {
-        'std': '726px'
-      }
+        'xs': '500px',
+        'std': '750px'
+      },
+      aspectRatio: {
+        '21/9': '21 / 9',
+      },
     },
   },
   variants: {
     boxShadow: ['hover', 'active'], // Enable hover and active states for box-shadow
-  },
-  corePlugins: {
-    aspectRatio: false,
   },
   plugins: [
     require("@tailwindcss/typography"),

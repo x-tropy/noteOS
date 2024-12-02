@@ -1,22 +1,2 @@
-#profile {
-    @apply w-[750px] mx-auto relative -top-10;
-}
 
-#header {
-    @apply w-[585px];
 
-    h1 {
-        @apply font-serif text-2xl font-semibold tracking-wider mt-4 mb-2;
-    }
-
-    h2 {
-        @apply tracking-wide font-medium bg-gradient-to-r from-rose-500 via-fuchsia-500  via-violet-500  via-blue-500 via-cyan-500 to-emerald-500 bg-clip-text text-transparent;
-        span {
-            @apply text-black;
-        }
-    }
-}
-
-#portrait {
-    @apply absolute right-0 top-[265px];
-}
