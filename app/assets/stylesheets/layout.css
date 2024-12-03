@@ -97,7 +97,7 @@ footer {
 
 /* for visitor only */
 .logo-container {
-    @apply flex gap-1 sticky top-0 z-20;
+    @apply sticky top-0 z-20 inline-block;
 }
 
 .logo {
@@ -105,7 +105,7 @@ footer {
 }
 
 .badge {
-    @apply hidden lg:inline-block relative;
+    @apply hidden lg:inline-block relative bottom-3;
 }
 
 #profile {
