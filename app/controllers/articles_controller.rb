@@ -1,8 +1,15 @@
 class ArticlesController < ApplicationController
-  layout "note"
+  layout :set_layout
+
+  def set_layout
+    # Example condition: Check if the user is logged in
+    user_signed_in? ? "note" : "note_visitor"
+  end
 
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+
+  # TODO: require more precise access control!
+  before_action :authenticate_user!, only: [:edit, :update]
 
   def set_mode
     mode = params[:mode] # Expecting "display" or "edit"

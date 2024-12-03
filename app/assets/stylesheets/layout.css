@@ -96,8 +96,14 @@ footer {
 }
 
 /* for visitor only */
+.logo-container {
+    @apply flex gap-1 sticky top-0;
+}
 .logo {
-    @apply hidden lg:inline-block h-[20px] ml-4 mt-3 z-30;
+    @apply hidden lg:inline-block h-[20px] ml-4 mt-3 z-30 ;
+}
+.badge {
+    @apply hidden lg:inline-block;
 }
 
 #profile {

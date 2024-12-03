@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from "vue";
 import CoverArt from "./CoverArt.json";
-import { IconPhotoAi, IconRefresh, IconX } from "@tabler/icons-vue";
+import { IconPhotoAi, IconReload, IconX } from "@tabler/icons-vue";
 import { Tippy } from "vue-tippy";
 
 function getRandomItem(array, storageKey) {
@@ -68,9 +68,9 @@ const videoSrc = computed(
     @mouseleave="isImageVisible = true"
   >
     <div class="actions">
-      <tippy content="refresh">
+      <tippy content="next cover">
       <button class="btn refresh" @click="refreshItem">
-        <IconRefresh ref="refreshBtn" size="20" class="text-white" />
+        <IconReload ref="refreshBtn" size="20" class="text-white" />
       </button>
       </tippy>
       <tippy :content="showMetaInfo ? 'close' : 'about this AI art'">
@@ -120,7 +120,7 @@ const videoSrc = computed(
   @apply absolute top-4 pr-4 gap-2 w-full flex flex-row-reverse z-10;
 
   .btn {
-    @apply block z-20 p-1 rounded-lg bg-black bg-opacity-50 hover:bg-opacity-100 border border-white;
+    @apply block z-20 p-1 rounded-lg bg-black bg-opacity-50 shadow-elevation-md hover:bg-opacity-100 border border-white;
   }
 }
 
@@ -130,7 +130,7 @@ const videoSrc = computed(
 }
 
 .media-meta {
-  @apply absolute top-0 transition-opacity w-full h-full rounded-b-xl rounded-bl-xl duration-300 bg-white bg-opacity-40 backdrop-blur-lg overflow-scroll;
+  @apply absolute top-0 transition-opacity w-full h-full rounded-b-xl rounded-bl-xl duration-300 bg-white bg-opacity-50 backdrop-blur-lg overflow-scroll;
 
   p {
     @apply text-black font-serif text-base std:text-lg mt-14 mx-4 std:mx-auto std:w-2/3 font-light;

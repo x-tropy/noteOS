@@ -1,0 +1,100 @@
+[
+  {
+    "publishDate": "29 Oct 2024",
+    "title": "Video Resume ⏱5m 30s",
+    "href": "video-resume",
+    "tab": "About"
+  },
+  {
+    "publishDate": "13 Aug 2024",
+    "title": "Curriculum Vitae",
+    "href": "cv",
+    "tab": "About"
+  },
+  {
+    "publishDate": "22 Jun 2024",
+    "title": "Skills & Abilities",
+    "href": "skills-abilities",
+    "tab": "About"
+  },
+  {
+    "publishDate": "29 Oct 2024",
+    "title": "AI-Powered Automation in UI Design",
+    "href": "ai-powered-automation-in-ui-design",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "16 June 2024",
+    "title": "Why Cursor AI Did so Well",
+    "href": "why-cursor-ai-did-so-well",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "4 Nov 2023",
+    "title": "AI & Design System",
+    "href": "ai-design-system",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "19 May 2023",
+    "title": "Introduction to RAG",
+    "href": "introduction-to-rag",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "22 Jan 2023",
+    "title": "The Just Enough Tailwind CSS Guide",
+    "href": "the-just-enough-tailwind-css-guide",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "7 Sep 2023",
+    "title": "The 80% of UI",
+    "href": "the-80-of-ui",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "6 Feb 2024",
+    "title": "Why Spaced-Repetition Matters",
+    "href": "why-spaced-repetition-matters",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "15 Aug 2024",
+    "title": "Introduction to Multi-Agent System",
+    "href": "introduction-to-multi-agent-system",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "1 Dec 2024",
+    "editDate": "1 Dec 2024",
+    "title": "Roadmap of docRoll",
+    "href": "roadmap-of-docroll",
+    "tab": "Extropy tools"
+  },
+  {
+    "publishDate": "29 Oct 2024",
+    "editDate": "2 Dec 2024",
+    "title": "Roadmap of noteOS",
+    "href": "roadmap-of-noteos",
+    "tab": "Extropy tools"
+  },
+  {
+    "publishDate": "12 Oct 2024",
+    "title": "What is dbWizard",
+    "href": "what-is-dbwizard",
+    "tab": "Extropy tools"
+  },
+  {
+    "publishDate": "21 Nov 2024",
+    "title": "What is uniStack",
+    "href": "what-is-unistack",
+    "tab": "Extropy tools"
+  },
+  {
+    "publishDate": "29 Oct 2024",
+    "title": "What is Rote",
+    "href": "what-is-rote",
+    "tab": "Extropy tools"
+  }
+]

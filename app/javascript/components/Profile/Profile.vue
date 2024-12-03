@@ -1,6 +1,7 @@
 <script setup>
 import MediaHover from "@/components/Profile/MediaHover.vue";
 import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
+import Posts from "@/components/Profile/Posts.vue";
 </script>
 
 <template>
@@ -31,6 +32,9 @@ import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
         class="rounded-full w-full"
       />
     </div>
+  </div>
+  <div id="posts-container">
+    <Posts />
   </div>
 </template>
 
@@ -69,5 +73,8 @@ import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
       }
     }
   }
+}
+#posts-container {
+  @apply mt-10 relative sm:-top-20 px-4 std:px-0
 }
 </style>
