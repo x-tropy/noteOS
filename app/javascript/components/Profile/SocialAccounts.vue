@@ -7,13 +7,8 @@ import {
   IconBrandLinkedin,
   IconBrandX,
 } from "@tabler/icons-vue";
-import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css'; // Default CSS for tooltips
 
-// Function to initialize Tippy
-const setupTooltip = (el, content) => {
-  tippy(el, { content });
-};
+import { Tippy } from "vue-tippy";
 
 const items = [
   {
@@ -52,15 +47,24 @@ const items = [
 <template>
   <ul>
     <li v-for="(item, index) in items" :key="index">
-      <a :href="item.href" target="_blank"><component :is="item.icon" class="text-gray-400 hover:text-black transition-all" size="24" stroke="1.5" /></a>
+      <tippy :content="item.altText">
+        <a :href="item.href" target="_blank">
+          <component
+            :is="item.icon"
+            class="text-gray-400 hover:text-black transition-all"
+            size="24"
+            stroke="1.5"
+          />
+        </a>
+      </tippy>
     </li>
   </ul>
 </template>
 
 <style scoped>
-  li {
-    a {
-      @apply h-6 w-6;
-    }
+li {
+  a {
+    @apply h-6 w-6;
+  }
 }
 </style>

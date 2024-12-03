@@ -77,6 +77,7 @@
     "title-case": "^4.3.2",
     "vite-plugin-rails": "^0.5.0",
     "vue": "^3.5.12",
+    "vue-tippy": "v6",
     "vuedraggable": "^4.1.0"
   },
   "packageManager": "yarn@1.22.22"

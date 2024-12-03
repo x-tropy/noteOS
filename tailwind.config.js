@@ -44,6 +44,9 @@ module.exports = {
         'xs': '500px',
         'std': '750px'
       },
+      dropShadow: {
+        'text': '0 0px 3px rgba(256, 256, 256, 1)'
+      },
       aspectRatio: {
         '21/9': '21 / 9',
       },

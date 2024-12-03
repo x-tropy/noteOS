@@ -3116,6 +3116,13 @@ vue-demi@>=0.14.10:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
   integrity sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==
 
+vue-tippy@v6:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/vue-tippy/-/vue-tippy-6.5.0.tgz#c460a9d0d1161ba42fe446cd1fd1b016352cd589"
+  integrity sha512-U44UDETTLuZWZGosagslEwgimWQdt1JVSxfWStVPnVdeqo2jo9X5zW3SB04k7JaTFosdgrDhFsUDrd6n42Nh7Q==
+  dependencies:
+    tippy.js "^6.3.7"
+
 vue@^3.5.12:
   version "3.5.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.5.12.tgz#e08421c601b3617ea2c9ef0413afcc747130b36c"

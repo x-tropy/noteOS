@@ -20,8 +20,8 @@ import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
         <SocialAccounts class="social-accounts" />
       </div>
       <h2>
-        <span>💫</span>Reimage Programming<span>🖥️</span>,
-        Design<span>🎨</span>, and Human-Computer Interaction<span>🗣️</span> in
+        <span>💫 </span>Reimage <span>🖥️ </span>Programming,
+        <span>🎨 </span>Design, and <span>🗣️ </span>Human-Computer Interaction in
         the age of generative AI.
       </h2>
     </div>
@@ -43,7 +43,7 @@ import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
   @apply w-full relative grid grid-cols-4;
 
   #portrait {
-    @apply relative -top-10 sm:-top-12 std:-top-14 col-span-1;
+    @apply relative -top-10 sm:-top-12 std:-top-16 col-span-1;
   }
 
   .left {
@@ -57,7 +57,7 @@ import SocialAccounts from "@/components/Profile/SocialAccounts.vue";
       }
 
       .social-accounts {
-        @apply mr-0 mb-1 sm:mb-0 xs:mr-4 flex h-6 flex gap-3 mt-2;
+        @apply mr-0 mb-1 sm:mb-0 sm:mr-6 flex h-6 flex gap-3 mt-2;
       }
     }
 

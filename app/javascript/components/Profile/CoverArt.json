@@ -54,5 +54,47 @@
     "hasVideo": true,
     "genre": "AI art",
     "metaInfo": "A cute but giant Samoyed, with a beautiful girl who is shrunk to the size of the Samoyed's ear. The background features a giant Ferris wheel on the sea. Bright color palette, ultra-high definition."
+  },
+  {
+    "imgName": "statue-in-valley",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "A beautiful statue of a woman, covered in daisies, standing on a lush green hillside."
+  },
+  {
+    "imgName": "hihop-pharaoh",
+    "imgFormat": "png",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "A three-dimensional secret realm with geometric precision and neo-meticulous style. At the center of the scene is a giant Pharaoh mummy sitting on a glittering golden throne, holding a cup of coffee, wearing oversized sunglasses, and sipping through a straw. The overall background is deep blue, creating a nighttime ambiance."
+  },
+  {
+    "imgName": "girl-tiger-adventure",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "In a watercolor traditional Chinese painting style, a little girl holding a map, wearing a hat, and carrying a backpack, embarks on an adventure with a small tiger by her side."
+  },
+  {
+    "imgName": "astronaut-azaleas",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "Hyper-surrealism, a half-portrait of a human and an astronaut, set in a purple world with purple azaleas in various shades of purple. The background features a gradient of purple hues. Conceptualism, with soft, hazy lighting and refracted reflections."
+  },
+  {
+    "imgName": "popmart-boy",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "A boy stands in the middle of the road, surrounded by Pop Mart figures and a cyberpunk cityscape. Ultra HD, original character (OC), 4K, with rich details."
+  },
+  {
+    "imgName": "greatwall-sunset",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "A furry Great Wall, mountains, the sun, Beijing, with a clean scene. Jellycat, a clean background, depth of field, felt painting, wool felt, bright colors, childlike, whimsical, fluffy, stop-motion animation, and a miniature landscape."
   }
 ]
