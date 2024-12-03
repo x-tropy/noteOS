@@ -23,7 +23,7 @@ const filteredPosts = computed(() =>
   </ul>
   <ul class="posts-container">
     <li v-for="(post, index) in filteredPosts" :key="index" class="post">
-      <a :href="post.href">
+      <a :href="'/buwei/'+ post.href">
         <img
           :src="
             'https://fly.storage.tigris.dev/vite/noteOS/thumbnails/' +
