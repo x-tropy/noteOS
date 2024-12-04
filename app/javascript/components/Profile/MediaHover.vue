@@ -68,6 +68,7 @@ const videoSrc = computed(
     @mouseleave="isImageVisible = true"
     @touchstart="isImageVisible = false"
     @touchend="isImageVisible = true"
+    @contextmenu="e => e.preventDefault()"
   >
     <div class="actions">
       <tippy content="next cover">
