@@ -117,10 +117,10 @@ const videoSrc = computed(
 }
 
 .actions {
-  @apply absolute top-4 pr-4 gap-2 w-full flex flex-row-reverse z-10;
+  @apply absolute top-4 pr-4 gap-4 w-full flex flex-row-reverse z-10;
 
   .btn {
-    @apply block z-20 p-1 rounded-lg bg-black bg-opacity-50 shadow-elevation-md hover:bg-opacity-100 border border-white;
+    @apply block z-20 p-1 rounded-lg bg-black bg-opacity-40 shadow-elevation-md hover:bg-opacity-100 border-2 border-white;
   }
 }
 
