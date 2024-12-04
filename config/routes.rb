@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get "/buwei", to: "buwei#index"
 
   # Alias posts to articles
-  get 'buwei/:id', to: 'articles#show', as: :post
+  get 'buwei/:id', to: 'articles#show'
+  get 'buwei/:id/edit', to: 'articles#edit'
 
   devise_for :users
   root "home#index", as: :homepage
