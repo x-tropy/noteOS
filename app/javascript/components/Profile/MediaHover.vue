@@ -116,7 +116,7 @@ const videoSrc = computed(
 
 <style scoped>
 .media-container {
-  @apply w-full aspect-[21/9] rounded-b-xl rounded-bl-xl overflow-clip;
+  @apply w-full aspect-[21/9] std:rounded-b-xl std:rounded-bl-xl overflow-clip;
 }
 
 .actions {

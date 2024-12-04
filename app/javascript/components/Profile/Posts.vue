@@ -44,10 +44,10 @@ const filteredPosts = computed(() =>
 
 <style scoped>
 .tabs-container {
-  @apply flex flex-wrap gap-2 sticky top-0 p-1 rounded-b rounded-bl bg-opacity-30 backdrop-blur-lg bg-white;
+  @apply flex flex-wrap gap-1.5 sm:gap-2 sticky top-0 p-1 rounded-b rounded-bl bg-opacity-30 backdrop-blur-lg bg-white;
 
   .tab-item {
-    @apply text-xs sm:text-sm cursor-pointer rounded sm:rounded-md px-3 py-1.5 sm:px-5 sm:py-2 text-stone-500 hover:bg-stone-300 hover:text-stone-700 transition-colors font-semibold tracking-wide;
+    @apply text-xs sm:text-sm cursor-pointer rounded-full  px-3 py-1.5 sm:px-4 sm:py-2 text-stone-500 hover:bg-stone-300 hover:text-stone-700 transition-colors font-medium sm:font-semibold tracking-wide;
 
     &.active {
       @apply bg-black text-white hover:text-white;
@@ -56,7 +56,7 @@ const filteredPosts = computed(() =>
 }
 
 .posts-container {
-  @apply gap-3 std:grid std:grid-cols-2 my-8;
+  @apply gap-3 std:grid std:grid-cols-2 mt-4 mb-8;
 
   .post {
     @apply mb-6 std:mb-3;
