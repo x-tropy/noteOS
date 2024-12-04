@@ -130,8 +130,7 @@
     }
 
     #toc {
-        font-size: 13px;
-        @apply sticky tracking-wide top-10 text-sm;
+        @apply sticky tracking-wide top-10 text-[12.5px];
 
         .title {
             @apply font-semibold py-2 border-b border-light flex items-center justify-between;
@@ -154,7 +153,7 @@
                 }
 
                 a {
-                    @apply py-[6px] leading-tight block break-words ;
+                    @apply py-[5px] leading-tight block break-words ;
 
                     &:hover {
                         @apply text-black;

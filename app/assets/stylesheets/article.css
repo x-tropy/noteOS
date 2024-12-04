@@ -18,15 +18,15 @@
     }
 
     h1 {
-        @apply text-4xl mb-14 mt-16;
+        @apply text-[32px] mb-14 mt-16;
     }
 
     h2 {
-        @apply text-2xl mb-5 mt-12 scroll-mt-14;
+        @apply text-[24px] mb-5 mt-12 scroll-mt-14;
     }
 
     h3 {
-        @apply text-xl leading-9 mt-5 scroll-mt-10;
+        @apply text-xl leading-9 mt-8 mb-4 scroll-mt-10;
     }
 
     h1 code, h2 code, h3 code {
@@ -35,7 +35,7 @@
     }
 
     p {
-        @apply font-serif font-normal text-xl tracking-tight leading-8 my-4;
+        @apply font-serif font-normal text-[19px] tracking-tight leading-[30px] my-4;
         word-spacing: 1px;
 
 
