@@ -97,7 +97,7 @@ footer {
 
 /* for visitor only */
 .logo-container {
-    @apply sticky top-0 z-20 inline-block;
+    @apply fixed top-0 z-20 inline-block;
 }
 
 .logo {
