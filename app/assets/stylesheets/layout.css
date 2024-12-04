@@ -9,7 +9,7 @@ header {
     @apply bg-white z-50 flex items-center gap-1 h-10 shadow-elevation-xs bg-opacity-30 backdrop-blur-md;
 
     .logo {
-        @apply ml-3 py-2;
+        @apply ml-3;
     }
 
     .breadcrumb {
@@ -97,11 +97,11 @@ footer {
 
 /* for visitor only */
 .logo-container {
-    @apply fixed top-0 z-20 inline-block;
+    @apply fixed top-0 z-20 inline-block mt-3;
 }
 
 .logo {
-    @apply hidden lg:inline-block h-[20px] ml-4 mt-3 z-30 ;
+    @apply hidden lg:inline-block h-[20px] ml-4 z-30 ;
 }
 
 .badge {
@@ -109,5 +109,5 @@ footer {
 }
 
 #profile {
-    @apply w-full std:w-[750px] mx-auto relative lg:-top-10;
+    @apply w-full std:w-[750px] mx-auto relative;
 }
