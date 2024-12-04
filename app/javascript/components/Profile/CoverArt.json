@@ -96,5 +96,12 @@
     "hasVideo": true,
     "genre": "AI art",
     "metaInfo": "A furry Great Wall, mountains, the sun, Beijing, with a clean scene. Jellycat, a clean background, depth of field, felt painting, wool felt, bright colors, childlike, whimsical, fluffy, stop-motion animation, and a miniature landscape."
+  },
+  {
+    "imgName": "cat-sushi",
+    "imgFormat": "jpeg",
+    "hasVideo": true,
+    "genre": "AI art",
+    "metaInfo": "Illustration, Sharpie illustration, MBE illustration, a cute and soft adorable cat working in a sushi restaurant, clean background, solid colors, fairy tale style, high-end, clean lines, no text."
   }
 ]
