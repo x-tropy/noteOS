@@ -66,6 +66,8 @@ const videoSrc = computed(
     class="media-container"
     @mouseover="isImageVisible = false"
     @mouseleave="isImageVisible = true"
+    @touchstart="isImageVisible = false"
+    @touchend="isImageVisible = true"
   >
     <div class="actions">
       <tippy content="next cover">
