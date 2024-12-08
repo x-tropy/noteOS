@@ -35,7 +35,7 @@ const filteredPosts = computed(() =>
           {{ post.title }}
         </h3>
       </a>
-      <span class="text-stone-500 tracking-wide text-xs">{{
+      <span class="text-stone-400 tracking-wide text-xs">{{
         post.editDate ? "Edited at " + post.editDate : "Published at " + post.publishDate
       }}</span>
     </li>
@@ -47,7 +47,7 @@ const filteredPosts = computed(() =>
   @apply flex flex-wrap gap-1.5 sm:gap-2 sticky top-0 p-1 rounded-b rounded-bl bg-opacity-30 backdrop-blur-lg bg-white;
 
   .tab-item {
-    @apply text-xs sm:text-sm cursor-pointer rounded-full  px-3 py-1.5 sm:px-4 sm:py-2 text-stone-500 hover:bg-stone-300 hover:text-stone-700 transition-colors font-medium sm:font-semibold tracking-wide;
+    @apply text-xs sm:text-sm cursor-pointer rounded-full  px-3 py-1.5 sm:px-4 sm:py-2 text-stone-500 hover:bg-stone-200 hover:text-black transition-colors font-medium sm:font-semibold tracking-wide;
 
     &.active {
       @apply bg-black text-white hover:text-white;
@@ -63,12 +63,12 @@ const filteredPosts = computed(() =>
 
     &:hover {
       img {
-        @apply shadow-elevation-lg transition-all;
+        @apply shadow-elevation-md transition-all;
       }
     }
 
     img {
-      @apply aspect-[16/9] shadow-elevation-xs w-full rounded;
+      @apply aspect-[16/9] w-full rounded;
     }
   }
 }
