@@ -2,6 +2,7 @@
 const sections = [
   {
     icon: "edit-note",
+    image: "feature-block-1",
     color: "red",
     title: "Great Editing Experience",
     subtitle: [
@@ -13,6 +14,7 @@ const sections = [
   },
   {
     icon: "interview",
+    image: "feature-block-2",
     color: "blue",
     title: "Collaboration is Simple",
     subtitle: [
@@ -24,6 +26,7 @@ const sections = [
   },
   {
     icon: "book-open",
+    image: "feature-block-3",
     color: "green",
     title: "Publish Your Writings",
     subtitle: [
@@ -35,6 +38,7 @@ const sections = [
   },
   {
     icon: "circle-user-sparkle-2",
+    image: "feature-block-4",
     color: "purple",
     title: "Public profile Made Easy",
     subtitle: [
@@ -46,6 +50,7 @@ const sections = [
   },
   {
     icon: "side-profile-gear-1",
+    image: "feature-block-5",
     color: "orange",
     title: "Simple and Intuitive",
     subtitle: [
@@ -57,6 +62,7 @@ const sections = [
   },
   {
     icon: "cloud-mining",
+    image: "feature-block-6",
     color: "black",
     title: "Access Anywhere",
     subtitle: [
@@ -67,22 +73,23 @@ const sections = [
     ],
   },
 ];
+const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-20">
+  <div class="flex flex-col items-center gap-20 mt-20">
     <div
       class="flex flex-col items-center"
       v-for="(section, index) in sections"
     >
       <div
-        class="w-[70px] aspect-[1/1] rounded-full flex items-center justify-center"
+        class="w-[70px] aspect-[1/1] mb-4 rounded-full flex items-center justify-center"
         :class="`bg-decoration-${section.color}`"
       >
         <div class="p-2 rounded-xl bg-white bg-opacity-35 shadow-lg">
           <img
             class="w-6 aspect-[1/1] drop-shadow-lg"
-            :src="`https://fly.storage.tigris.dev/vite/noteOS/images/landing/${section.icon}.svg`"
+            :src="`${baseUrl}${section.icon}.svg`"
           />
         </div>
       </div>
@@ -92,7 +99,7 @@ const sections = [
           <template v-if="fragment.includes('icon')">
             <img
                 class="ml-2 mr-1 mt-0.5"
-              :src="`https://fly.storage.tigris.dev/vite/noteOS/images/landing/${fragment.slice(5)}.svg`"
+              :src="`${baseUrl}${fragment.slice(5)}.svg`"
             />
           </template>
           <template v-else>
@@ -100,6 +107,7 @@ const sections = [
           </template>
         </span>
       </h3>
+      <img class="w-[900px] border-2 border-gray-300 rounded-lg mt-8" :src="`${baseUrl}feature-block-${index+1}.png`" />
     </div>
   </div>
 </template>

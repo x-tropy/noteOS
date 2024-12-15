@@ -1,5 +1,5 @@
 .wrapper {
-    @apply mx-auto max-w-[1100px] px-4 overflow-hidden;
+    @apply mx-auto max-w-[1100px] px-4 relative;
 }
 
 .navbar {
