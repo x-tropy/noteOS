@@ -28,6 +28,7 @@
   "repository": "https://github.com/x-tropy/noteos.git",
   "author": "x-tropy <buweiliao@gmail.com>",
   "dependencies": {
+    "@lottiefiles/dotlottie-vue": "^0.5.3",
     "@rails/ujs": "^7.1.3-4",
     "@tabler/icons-vue": "^3.21.0",
     "@tiptap-pro/extension-details": "^2.13.0",
