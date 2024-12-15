@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :tags
 
+  get "/login", to: "login#index"
   get "/buwei", to: "buwei#index"
 
   # Alias posts to articles

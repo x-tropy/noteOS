@@ -1,9 +1,5 @@
-<h1 class="font-medium text-2xl">noteOS</h1>
-<% if user_signed_in? %>
-  <p>Welcome, <%= current_user.email %>!</p>
-  <%= link_to "Articles", articles_path %> |
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %> |
-  <%= link_to "Sign up", new_user_registration_path %>
-<% end %>
+<%= vite_javascript_tag 'landing' %>
+<%= vite_stylesheet_tag 'landing' %>
+
+<div id="landing">
+</div>

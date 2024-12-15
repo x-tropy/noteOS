@@ -1,0 +1,44 @@
+.wrapper {
+    @apply mx-auto max-w-[1100px] px-4 overflow-hidden;
+}
+
+.navbar {
+    @apply z-20 flex justify-between pt-2 lg:pt-3 pb-2 sticky top-0 rounded-b-xl shadow-elevation-xs bg-opacity-20 backdrop-blur-lg bg-white;
+    .github {
+        &:hover {
+            span {
+                @apply bg-gray-600 text-white transition-all;
+            }
+        }
+    }
+
+    .navbar-menu {
+        li {
+            @apply transition-all cursor-pointer relative;
+        }
+
+        li:hover {
+            @apply text-gray-500;
+
+            .indicator {
+                @apply w-6;
+            }
+        }
+
+        li.active {
+            @apply text-gray-600;
+
+            .indicator {
+                @apply w-full bg-gray-600;
+            }
+        }
+
+        .indicator {
+            @apply h-0.5 rounded w-0 bg-gray-500 transition-all absolute -top-3 ease-in-out;
+        }
+    }
+}
+
+.slider-slogan {
+    @apply flex flex-col items-center h-[250px] mt-10 md:mt-16 lg:mt-24 overflow-hidden;
+}

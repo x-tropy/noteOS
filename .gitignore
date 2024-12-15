@@ -49,6 +49,7 @@ node_modules
 .yarnrc
 /.yarn
 .npmrc
+yarn.lock
 
 # ignore font files
 /app/assets/fonts
