@@ -11,17 +11,17 @@ const slogans = [
 ];
 
 const players = slogans.map(
-  (slogan) =>
-    `https://fly.storage.tigris.dev/vite/noteOS/images/${slogan[1].toLowerCase()}.lottie`,
+    (slogan) =>
+        `https://fly.storage.tigris.dev/vite/noteOS/images/${slogan[1].toLowerCase()}.lottie`,
 );
 
 const currentIndex = ref(0);
 
 onMounted(
-  () =>
-    setInterval(() => {
-      currentIndex.value = (currentIndex.value + 1) % slogans.length;
-    }, 4000), // Change every 3 seconds
+    () =>
+        setInterval(() => {
+          currentIndex.value = (currentIndex.value + 1) % slogans.length;
+        }, 4000), // Change every 3 seconds
 );
 
 const currentItem = computed(() => slogans[currentIndex.value]);
@@ -40,21 +40,21 @@ const setItem = (el) => {
     <div class="slider-slogan">
       <transition name="slide-vertical" @before-enter="setItem" mode="out-in">
         <div
-          class="flex flex-col items-center font-bold text-[40px] md:text-[50px] lg:text-[70px] text-center leading-tight"
-          v-if="currentItem"
-          :key="currentItem"
+            class="flex flex-col items-center font-bold text-[40px] md:text-[50px] lg:text-[70px] text-center leading-tight"
+            v-if="currentItem"
+            :key="currentItem"
         >
           <div>{{ currentItem[0] }}</div>
           <div class="flex items-center">
             <div>with </div>
             <DotLottieVue
-              class="w-12 md:w-14 lg:w-20 aspect-[5/7] ml-1 lg:ml-2 relative"
-              autoplay
-              speed="1"
-              :src="players[currentIndex]"
+                class="w-12 md:w-14 lg:w-20 aspect-[5/7] ml-1 lg:ml-2 relative"
+                autoplay
+                speed="1"
+                :src="players[currentIndex]"
             />
             <div :class="`text-decoration-${currentItem[2]}`"
-              >{{ currentItem[1] }}.</div
+            >{{ currentItem[1] }}.</div
             >
           </div>
         </div>
@@ -67,8 +67,8 @@ const setItem = (el) => {
 .slide-vertical-enter-active,
 .slide-vertical-leave-active {
   transition:
-    transform 0.7s ease,
-    opacity 0.7s ease;
+      transform 0.7s ease,
+      opacity 0.7s ease;
 }
 
 .slide-vertical-enter-from {

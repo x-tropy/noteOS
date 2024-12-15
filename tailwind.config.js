@@ -77,5 +77,11 @@ module.exports = {
     "text-decoration-purple",
     "text-decoration-green",
     "text-decoration-black",
+    "bg-decoration-blue",
+    "bg-decoration-red",
+    "bg-decoration-orange",
+    "bg-decoration-purple",
+    "bg-decoration-green",
+    "bg-decoration-black",
   ]
 };

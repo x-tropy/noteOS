@@ -1,6 +1,6 @@
 <script setup>
 import Navbar from "./Navbar.vue";
-import Features from "./Features.vue";
+import Features from "./Features/Root.vue";
 import Installation from "./Installation.vue";
 import UserGuide from "./UserGuide.vue";
 import About from "./About.vue";
