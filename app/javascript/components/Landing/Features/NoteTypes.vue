@@ -9,7 +9,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
 
 <template>
 
-  <div class="flex mt-10 border-2 border-gray-300 rounded-lg">
+  <div class="flex mt-10 border-2 border-gray-200 rounded-lg">
     <div class="flex flex-col relative">
       <ul class="tab">
         <li
@@ -26,7 +26,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
     </div>
 
     <div class="mr-2">
-      <img :src="`${baseUrl}note-type-${tabNames[currentIndex].toLowerCase()}.png`" class="m-2 ml-0 bg-gray-300 rounded" />
+      <img :src="`${baseUrl}note-type-${tabNames[currentIndex].toLowerCase()}.png`" class="m-2 ml-0 border border-gray-200 bg-gray-300 rounded" />
     </div>
   </div>
 </template>
