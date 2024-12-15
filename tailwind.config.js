@@ -50,6 +50,16 @@ module.exports = {
       aspectRatio: {
         '21/9': '21 / 9',
       },
+      colors: {
+        decoration: {
+          blue: "#397CFF",
+          red: "#FF5454",
+          orange: "#FFA132",
+          purple: "#944BFD",
+          green: "#38BF09",
+          black: "#5B564E"
+        }
+      }
     },
   },
   variants: {
@@ -60,4 +70,12 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
   ],
+  safelist: [
+    "text-decoration-blue",
+    "text-decoration-red",
+    "text-decoration-orange",
+    "text-decoration-purple",
+    "text-decoration-green",
+    "text-decoration-black",
+  ]
 };
