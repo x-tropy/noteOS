@@ -8,7 +8,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/";
       id="6fdd1a85-f383-4870-83f6-ed06a84f4590"
       data-toc-id="6fdd1a85-f383-4870-83f6-ed06a84f4590"
     >
-      How to Install <i>noteOS</i>
+      How to Install noteOS
     </h1>
     <p>
       An easy way to host <i>noteOS</i> is by using the hosting service provided by
