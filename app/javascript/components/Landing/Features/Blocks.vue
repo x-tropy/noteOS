@@ -107,7 +107,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
           </template>
         </span>
       </h3>
-      <img class="w-[900px] border-2 border-gray-300 rounded-lg mt-8" :src="`${baseUrl}feature-block-${index+1}.png`" />
+      <img class="w-[900px] border-gray-300 rounded-lg mt-8" :class="{'border-2': index !== 5}" :src="`${baseUrl}feature-block-${index+1}.png`" />
     </div>
   </div>
 </template>
