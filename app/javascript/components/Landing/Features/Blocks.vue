@@ -77,7 +77,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-20 mt-20">
+  <div class="flex flex-col items-center gap-20 my-20">
     <div
       class="flex flex-col items-center"
       v-for="(section, index) in sections"

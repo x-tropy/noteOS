@@ -10,7 +10,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
 <template>
 
   <div class="flex mt-10 border-2 border-gray-200 rounded-lg">
-    <div class="flex flex-col relative  bg-gray-50">
+    <div class="flex flex-col relative  bg-gray-100">
       <ul class="tab">
         <li
           class="tab-select"
@@ -26,7 +26,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
     </div>
 
     <div class="mr-2">
-      <img :src="`${baseUrl}note-type-${tabNames[currentIndex].toLowerCase()}.png`" class="m-2 ml-0 rounded" />
+      <img :src="`${baseUrl}note-type-${tabNames[currentIndex].toLowerCase()}.png`" class="rounded" />
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/"
   @apply flex flex-col cursor-pointer m-2 gap-2 sticky top-20;
 
   .tab-select {
-    @apply px-3 py-1 rounded hover:bg-gray-200 hover:text-gray-500 font-semibold text-gray-400 transition-all;
+    @apply px-3 py-1 rounded hover:bg-white hover:text-gray-500 font-semibold text-gray-400 transition-all;
 
     &.active {
       @apply bg-gray-600 text-white;
