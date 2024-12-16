@@ -12,7 +12,7 @@ function updateIndex(i) {
   currentIndex.value = i;
 }
 
-const tabItems = [Features, UserGuide, Installation, About];
+const tabItems = [Features,  Installation, UserGuide, About];
 const currentItem = computed(() => tabItems[currentIndex.value]);
 </script>
 

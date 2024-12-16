@@ -40,7 +40,7 @@ function getFromLocalStorage() {
   return false;
 }
 
-const menuItems = ["Features", "User Guide", "Installation", "About"];
+const menuItems = ["Features",  "Installation", "User Guide", "About"];
 
 const props = defineProps({
   activeIndex: {

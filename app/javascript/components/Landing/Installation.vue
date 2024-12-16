@@ -8,10 +8,10 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/";
       id="6fdd1a85-f383-4870-83f6-ed06a84f4590"
       data-toc-id="6fdd1a85-f383-4870-83f6-ed06a84f4590"
     >
-      How to Install noteOS
+      How to Install <i>noteOS</i>
     </h1>
     <p>
-      An easy way to host noteOS is by using the hosting service provided by
+      An easy way to host <i>noteOS</i> is by using the hosting service provided by
       <a
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -19,7 +19,7 @@ const baseUrl = "https://fly.storage.tigris.dev/vite/noteOS/images/landing/";
         href="https://fly.io/docs/about/pricing/#free-allowances"
         >Fly.io</a
       >. However, you are free to choose any other cloud service provider that
-      suits your needs. noteOS is designed with a lightweight and efficient
+      suits your needs. <i>noteOS</i> is designed with a lightweight and efficient
       technology architecture, ensuring minimal hardware requirements. This
       allows users to comfortably utilize the free tiers offered by most cloud
       providers while still enjoying a stable and reliable hosting experience.
