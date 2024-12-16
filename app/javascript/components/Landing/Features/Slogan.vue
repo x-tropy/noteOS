@@ -21,7 +21,7 @@ onMounted(
   () =>
     setInterval(() => {
       currentIndex.value = (currentIndex.value + 1) % slogans.length;
-    }, 4000), // Change every 3 seconds
+    }, 3500),
 );
 
 const currentItem = computed(() => slogans[currentIndex.value]);
@@ -50,7 +50,7 @@ const setItem = (el) => {
             <DotLottieVue
               class="w-12 md:w-14 lg:w-20 aspect-[5/7] ml-1 lg:ml-2 relative"
               autoplay
-              speed="1"
+              speed="1.5"
               :src="players[currentIndex]"
             />
             <div :class="`text-decoration-${currentItem[2]}`">
