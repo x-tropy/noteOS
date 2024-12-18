@@ -55,7 +55,7 @@
 
 /* Spin animation */
 .spin {
-    animation: spin 1s ease-in-out infinite;
+    animation: spin 4s ease-in-out infinite;
 }
 
 @keyframes spin {
