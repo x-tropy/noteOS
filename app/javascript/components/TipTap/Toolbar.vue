@@ -90,6 +90,10 @@ const submitArticle = async () => {
       saveStatus.value = "Saved";
       saveButton.value.disabled = false;
     }, 1000);
+    // keep the green Saved status, if there isn't new changes happen within editor
+    const liveContent = props.editor.value.getHTML().trim();
+    const lastSavedArticleContent = localStorage.getItem("lastSavedArticleContent")
+    if (liveContent == lastSavedArticleContent) return
     setTimeout(() => {
       saveStatus.value = "Save";
     }, 2000);
