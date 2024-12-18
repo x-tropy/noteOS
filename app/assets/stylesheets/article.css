@@ -164,8 +164,8 @@
         @apply h-[24px] my-12 border-none;
 
         &::after {
-            @apply h-[24px] align-middle font-mono block text-center tracking-wider text-2xl;
-            content: '· · ·';
+            @apply h-[24px] leading-none align-middle font-mono block text-center tracking-wider text-2xl;
+            content: '. . .';
         }
     }
 
