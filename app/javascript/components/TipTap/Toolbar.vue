@@ -26,8 +26,9 @@ import {
   IconBracketsContain,
   IconDeviceFloppy,
   IconPower,
+  IconCircleDashedCheck,
+  IconCircleDashed,
   IconCircleCheckFilled,
-  IconRefresh,
   IconCloudExclamation,
   IconList,
   IconListNumbers,
@@ -231,10 +232,10 @@ const submitArticle = async () => {
     </div>
     <div class="fixed-buttons">
       <button @click.prevent="submitArticle" ref="saveButton" id="silent-sync">
-        <IconDeviceFloppy v-if="saveStatus === 'Save'" />
-        <IconRefresh v-else-if="saveStatus === 'Saving'" class="spin" />
+        <IconCircleDashedCheck v-if="saveStatus === 'Save'" />
+        <IconCircleDashed v-else-if="saveStatus === 'Saving'" class="spin" />
         <IconCloudExclamation v-else-if="saveStatus === 'Failed'" />
-        <IconCircleCheckFilled v-else />
+        <IconCircleCheckFilled class="text-green-500" v-else />
         <span>{{ saveStatus }}</span>
       </button>
       <button @click.prevent="quitEditor">
