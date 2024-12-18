@@ -223,11 +223,25 @@
             }
         }
 
-        &.img-50 {
+        &.img-40 {
             img {
-                @apply w-[50%];
+                @apply w-[40%];
             }
         }
+
+        &.img-60 {
+            img {
+                @apply w-[60%];
+            }
+        }
+
+
+        &.img-80 {
+            img {
+                @apply w-[80%];
+            }
+        }
+
 
         &.img-100 {
             img {

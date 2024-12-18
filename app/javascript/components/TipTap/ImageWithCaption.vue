@@ -1,6 +1,10 @@
 <template>
   <node-view-wrapper draggable="true">
-    <ContextMenu ref="menu" :model="items" class="bg-white p-2 shadow-elevation" />
+    <ContextMenu
+      ref="menu"
+      :model="items"
+      class="bg-white p-2 shadow-elevation"
+    />
     <figure @contextmenu="onImageRightClick" :class="imgClass" draggable="true">
       <img :src="props.node.attrs.src" />
       <figcaption
@@ -32,10 +36,24 @@ const items = ref([
     },
   },
   {
-    label: "50%",
+    label: "40%",
     command: () => {
-      props.updateAttributes({ class: "img-50" });
-      imgClass.value = "img-50";
+      props.updateAttributes({ class: "img-40" });
+      imgClass.value = "img-40";
+    },
+  },
+  {
+    label: "60%",
+    command: () => {
+      props.updateAttributes({ class: "img-60" });
+      imgClass.value = "img-60";
+    },
+  },
+  {
+    label: "80%",
+    command: () => {
+      props.updateAttributes({ class: "img-80" });
+      imgClass.value = "img-80";
     },
   },
   {
@@ -52,7 +70,7 @@ const items = ref([
       props.updateAttributes({ class: "img-original" });
       imgClass.value = "img-original";
     },
-  }
+  },
 ]);
 
 // Update caption in the node attributes
@@ -70,5 +88,4 @@ watch(
     caption.value = newCaption;
   },
 );
-
 </script>
