@@ -335,7 +335,7 @@
             @apply border border-light min-w-4 min-h-6 relative align-top box-border;
 
             p {
-                @apply my-1 mx-2 text-base;
+                @apply my-1 mx-2 text-[15px] leading-snug  font-sans tracking-wide;
 
                 code {
                     @apply text-[0.9em];
@@ -349,7 +349,7 @@
 
         th {
             p {
-                @apply font-semibold text-left;
+                @apply font-semibold text-base -tracking-normal text-left;
             }
         }
 
