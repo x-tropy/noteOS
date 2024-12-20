@@ -14,7 +14,7 @@ export function setLink(editor) {
   }
 
   // link belongs to me
-  const isInternalLink = url.startsWith("/");
+  const isInternalLink = url.startsWith("/") || url.includes("noteos.org");
 
   // prefix url with "https://"
   (function prefixWithHttps() {
