@@ -34,7 +34,7 @@ const items = [
   {
     icon: IconBrandX,
     altText: "X (twitter)",
-    href: "https://x.com/extropy_tools",
+    href: "https://x.com/extropy_ai",
   },
   {
     icon: IconBrandLinkedin,
