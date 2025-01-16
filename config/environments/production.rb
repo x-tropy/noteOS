@@ -27,18 +27,13 @@ Rails.application.configure do
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = "fly.storage.tigris.dev/vite/noteOS/"
-
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :tigris
-  config.active_storage.headers = {
-    "Cache-Control" => "public, max-age=31536000"
-  }
+  config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil

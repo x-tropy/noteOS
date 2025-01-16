@@ -59,12 +59,12 @@ RUN npm install
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
-    unzip awscliv2.zip && \
-    ./aws/install && \
-    rm -rf awscliv2.zip aws
-
-RUN aws s3 sync ./public/vite/assets/ s3://$BUCKET_NAME/noteOS/vite/assets/ --delete --endpoint-url $AWS_ENDPOINT_URL_S3 --exclude "*" --include "*.js" --include "*.css" --include "*.svg"
+#RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+#    unzip awscliv2.zip && \
+#    ./aws/install && \
+#    rm -rf awscliv2.zip aws
+#
+#RUN aws s3 sync ./public/vite/assets/ s3://$BUCKET_NAME/noteOS/vite/assets/ --delete --endpoint-url $AWS_ENDPOINT_URL_S3 --exclude "*" --include "*.js" --include "*.css" --include "*.svg"
 
 # Final stage for app image
 FROM base
