@@ -18,6 +18,30 @@
     "tab": "About"
   },
   {
+    "publishDate": "22 Jan 2023",
+    "title": "The Just Enough Tailwind CSS Guide",
+    "href": "the-just-enough-tailwind-css-guide",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "7 Sep 2023",
+    "title": "The 80% of UI",
+    "href": "the-80-of-ui",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "6 Feb 2024",
+    "title": "Why Spaced-Repetition Matters",
+    "href": "why-spaced-repetition-matters",
+    "tab": "Blog"
+  },
+  {
+    "publishDate": "15 Jan 2025",
+    "title": "AI's Role in Education",
+    "href": "ai-s-role-in-education",
+    "tab": "Blog"
+  },
+  {
     "publishDate": "29 Oct 2024",
     "title": "AI-Powered Automation in UI Design",
     "href": "ai-powered-automation-in-ui-design",
@@ -41,24 +65,7 @@
     "href": "introduction-to-rag",
     "tab": "Blog"
   },
-  {
-    "publishDate": "22 Jan 2023",
-    "title": "The Just Enough Tailwind CSS Guide",
-    "href": "the-just-enough-tailwind-css-guide",
-    "tab": "Blog"
-  },
-  {
-    "publishDate": "7 Sep 2023",
-    "title": "The 80% of UI",
-    "href": "the-80-of-ui",
-    "tab": "Blog"
-  },
-  {
-    "publishDate": "6 Feb 2024",
-    "title": "Why Spaced-Repetition Matters",
-    "href": "why-spaced-repetition-matters",
-    "tab": "Blog"
-  },
+
   {
     "publishDate": "15 Aug 2024",
     "title": "Introduction to Multi-Agent System",
