@@ -66,7 +66,7 @@ import Posts from "@/components/Profile/Posts.vue";
     }
 
     h2 {
-      @apply tracking-wide font-medium bg-gradient-to-r from-rose-500 via-fuchsia-500  via-violet-500  via-blue-500 via-cyan-500 to-emerald-500 bg-clip-text text-transparent -mr-10 sm:-mr-0;
+      @apply tracking-wide font-medium bg-gradient-to-r from-emerald-500 to-sky-400 bg-clip-text text-transparent -mr-10 sm:-mr-0;
 
       span {
         @apply text-black;
