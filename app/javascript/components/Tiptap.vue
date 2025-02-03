@@ -130,7 +130,7 @@ onMounted(() => {
     onUpdate: ({ editor }) => {
       props.onUpdateContent(editor.getHTML());
       if (!isUpdating.value) {
-        // ensureThreeEmptyParagraphs(editor, isUpdating);
+        ensureThreeEmptyParagraphs(editor, isUpdating);
       }
     },
   });
