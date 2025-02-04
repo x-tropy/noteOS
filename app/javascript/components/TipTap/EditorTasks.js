@@ -3,9 +3,6 @@
 export function ensureThreeEmptyParagraphs(editor, isUpdating) {
   const content = editor.getHTML();
 
-  // when there are footnotes, terminate
-  if (content.includes(`class="footnote-ref"`)) return;
-
   // Check if the content ends with exactly 3 empty <p> tags
   if (!content.endsWith("<p></p><p></p><p></p>")) {
     isUpdating.value = true; // Prevent triggering onUpdate again

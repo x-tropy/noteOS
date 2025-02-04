@@ -39,7 +39,6 @@ import {
   getHierarchicalIndexes,
   TableOfContents,
 } from "@tiptap-pro/extension-table-of-contents";
-import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 import OrderedList from "@tiptap/extension-ordered-list";
 import BulletList from "@tiptap/extension-bullet-list";
 import Document from "@tiptap/extension-document";
@@ -77,9 +76,6 @@ onMounted(() => {
             "Mod-l": () => this.editor.commands.toggleBulletList(),
           };
         },
-      }),
-      Document.extend({
-        content: "block+ footnotes?",
       }),
       CustomTypography,
       Highlight,
@@ -122,9 +118,6 @@ onMounted(() => {
         onUpdate: (content) => {
         },
       }),
-      Footnotes,
-      Footnote,
-      FootnoteReference,
       Figma,
     ],
     onUpdate: ({ editor }) => {

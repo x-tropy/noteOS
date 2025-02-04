@@ -229,9 +229,6 @@ const submitArticle = async () => {
         >
           <IconSquareRoundedMinus2 />
         </button>
-        <button @click.prevent="editor.chain().focus().addFootnote().run()">
-          <IconBracketsContain />
-        </button>
       </div>
     </div>
     <div class="fixed-buttons">
