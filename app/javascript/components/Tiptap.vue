@@ -77,6 +77,9 @@ onMounted(() => {
           };
         },
       }),
+      Document.extend({
+        content: "block+",
+      }),
       CustomTypography,
       Highlight,
       CustomCodeBlock,
